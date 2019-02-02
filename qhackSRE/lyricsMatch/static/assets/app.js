@@ -70,7 +70,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		
 		console.log('start recording');//DEBUG
 		
-		$scope.encoder = new Worker('encoder.js');
+		$scope.encoder = new Worker('/static/assets/encoder.js');
         
         if ($scope.wav_format == true){
             $scope.encoder.postMessage({ cmd: 'save_as_wavfile'});

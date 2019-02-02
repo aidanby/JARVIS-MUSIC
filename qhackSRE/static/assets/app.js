@@ -70,7 +70,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		
 		console.log('start recording');//DEBUG
 		
-		$scope.encoder = new Worker('encoder.js');
+		$scope.encoder = new Worker('/static/assets/encoder.js');
         
         if ($scope.wav_format == true){
             $scope.encoder.postMessage({ cmd: 'save_as_wavfile'});
@@ -206,6 +206,17 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		$scope.node.disconnect();
 		$scope.input = $scope.node = null;
 
+
+	};
+	
+	//create A-element for data BLOB and trigger download
+		$scope.forceDownload = function(blob, filename){
+			 var data = new FormData();
+			 data.append('audio', blob)
+			console.log(typeof blob)
+    var data = new FormData();
+		data.append('audio', blob)
+		console.log(typeof blob)
 		$.ajax({
         url: 'http://127.0.0.1:8000/lyricsmatch/audioupload',
         data: data,
@@ -222,15 +233,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
             }
         }
 	});
-	};
-	
-	//create A-element for data BLOB and trigger download
-		$scope.forceDownload = function(blob, filename){
-			 var data = new FormData();
-			 data.append('audio', blob)
-			console.log(typeof blob)
 
-		 
 		 
 		 var url = (window.URL || window.webkitURL).createObjectURL(blob);
 		 var link = window.document.createElement('a');
