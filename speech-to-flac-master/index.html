@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="recorder">
-<body style="background-image: linear-gradient(to right, #91ADBC, white)" >
 
 	<head>
 		<meta charset="utf-8">
@@ -12,18 +11,13 @@
 		<style type="text/css"> .red-btn { color: #D00000; } .green-btn { color: #00D000; } .blue-btn { color: #0000D0; } .inline { display: inline; } .code-em{ font-family: monospace; } </style>
 	</head>
 	<body ng-controller="RecorderController">
+	<body style="background-image: linear-gradient(to right, #91ADBC, white)" >
+
 		<div class="container well">
-			<h1 class="text-center">Record FLAC from the Browser</h1>
+			<h1 class="text-center">QHacks 2019 Song Finder</h1>
+			<h2 class="text-center">Recording Voice to Save Lyrics</h2>
 			<div class="row">
-				<div class="offset3 span3 text-left">
-					<label>Compression: <select ng-model="compression" ng-options="b for b in compressions" ng-disabled="wav_format"></select></label>
-				</div>
-				<div class="span3 text-left">
-					<label>Auto Select Input Sample Rate: <input type="checkbox" ng-model="autoSelectSamplerate" ng-click="setResultMode(isASREnabled);" /></label>
-				</div>
-				<div class="span3 text-left">
-					<label>Input Sample Rate: <select ng-model="samplerate" ng-options="s + ' Hz' for s in samplerates" ng-disabled="wav_format || autoSelectSamplerate"></select></label>
-				</div>
+				
 			</div>
 			<div class="row">
 				<div class="offset3 span3 text-center"><button class="btn" ng-click="startRecording()" ng-disabled="recording"><i class="icon-circle" ng-class="recordButtonStyle"></i>&nbsp;Start recording</button></div>
@@ -46,28 +40,11 @@
 					<input type="radio" name="format" ng-click="recordaswave(false);" value="flac" checked>FLAC-file
 					<input type="radio" name="format" ng-click="recordaswave(true);" value="wav">WAV-file<br>
 					
+					<div class="box blue"> </div>
+					
 					<br>
 					
 					<div ng-show="!wav_format">
-						<input type="checkbox" ng-disabled="isNotASRCapable" ng-model="isASREnabled" ng-click="setResultMode(isASREnabled);" />
-							<span ng-show="!isNotASRCapable">Send Audio to Speech Recognition (instead of File)</span>
-							<div ng-show="isNotASRCapable" class="inline">
-								<s>Send Audio to Speech Recognition (instead of File)</s><br>
-								<div class="alert alert-warning alert-dismissible">
-									Disabled: Need authorization for accessing Google Cloud Speech API (see comment in app.js)
-									<br/>
-									<em>
-										For testing, you can generate an <span class="code-em">access token</span> using your 
-										<span class="code-em">service key</span> and set it as query param:
-										(e.g. see the example Node.js script <span class="code-em">create_access_token.js</span>)
-									</em>
-									<br/>
-									<code>https://...?key=&lt;the generated access token&gt;</code>
-									<br/>
-									<em>Alternatively, you can set an <span class="code-em">API key</span> as query param:</em>
-									<code>https://...?auth=apiKey&key=&lt;your API key&gt;</code>
-									<br>
-									<strong>WARNING</strong> you should take care to keep your <span class="code-em">API key</span> secret!!!
 									
 								</div>
 							</div>
@@ -88,19 +65,15 @@
                 </div>
 
 			</div>
+			
+			
 		</div>
+		
+<div class="offset3 span6">
 <p>Press on the "Start recording button" to start the recording per microphone - permission by the user is required.<br>
 To end the recording press on "Stop recording".<br>
-The compression and input-sample-rate options are only applicable for FLAC file format download.<br>
-The input sample rate in Chrome is - as of now - 44100 Hz. If you change that, the recorded sample may be played slower or faster than expected.</p>
 <p>
-Important:<br>
-<br>
-If running the HTML page directly from the file system, then Chrome needs to be started with flag
-<code>--allow-file-access-from-files</code>.
-Otherwise the web worker cannot be loaded.<br>
-If you want to use the Google Speech Recognition web service, you may need to start Chrome with the flag
-<code>--disable-web-security</code>; <b>WARNING:</b> you should not browse the Internet when this flag is active.
-</p>
+</div>
+
 	</body>
 </html>
