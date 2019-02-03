@@ -18,8 +18,6 @@
 		<script src="{% static 'assets/encoder.js' %}"></script>
 		<script src="{% static 'assets/app.js' %}"></script>
 
-
-
 		<style type="text/css" .red-btn { color: #D00000; } .green-btn { color: #00D000; } .blue-btn { color: #0000D0; } .inline { display: inline; } .code-em{ font-family: monospace; }> </style>
 	</head>
 	<body ng-controller="RecorderController">
@@ -92,7 +90,16 @@
 
 		  <!--User's text-->
 		<div style="width:500px;height:300px;border:1px solid #000;" div class="offset0.5 span 6;"
-		>  {{list_of_songs}}</div>
+		>
+		<ul>
+			<!--< a href = "/polls/{{ question.id }}/" > {{question.question_text}} < / a >-->
+    	{% for song in list_of_songs %}
+        	<li><a href = "{{song.1}}" > {{song.0}} </a></li>
+    	{% endfor %}
+    	</ul>
+
+
+		</div>
 		
 <div class="offset3 span6">
 <p>Press on the "Start recording button" to start the recording per microphone - permission by the user is required.<br>

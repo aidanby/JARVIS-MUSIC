@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
-from django.core.files.storage import default_storage
 from django.core.files.storage import FileSystemStorage
+from lyricsMatch.semantic_search.unsupervised_search import search_lyrics
 # Create your views here.
 
 def index(request):
@@ -12,8 +12,23 @@ def index(request):
 
 
 def find_lyrics(request):
+    user_text = request.GET.get('user_text')
+    returned_songs = search_lyrics(user_text)
+
+    # < a href = "/polls/{{ question.id }}/" > {{question.question_text}} < / a >
+    list_of_songs = []
+
+    # list[0] sone name, list[1] singer name, list[2] youtube link
+    for key in returned_songs:
+        asong_list = returned_songs[key]
+        song_name = asong_list[0]
+        singer_name = asong_list[1]
+        youtube_link = asong_list[2]
+        # html_code = "<a href = " + youtube_link + ">" + song_name + ", by" + singer_name+ "</a>"
+        list_of_songs.append([song_name, youtube_link])
+
     template = loader.get_template('lyricsMatch/index.html')
-    context = {'list_of_songs': 'find_lyrics'}
+    context = {'list_of_songs': list_of_songs}
     return HttpResponse(template.render(context, request))
 
 
@@ -36,4 +51,4 @@ def voiceToText():
     :return:
     '''
     print("do voice to text")
-    file = default_storage.open(file_name)
+
