@@ -12,7 +12,6 @@
 		<script src="js/app.js"></script>
 		
 		
-		
 		<title>QHacks 2019 Lyrics to Song Finder</title>
 		<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
 		<link href="https://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
@@ -21,11 +20,12 @@
 		<style type="text/css"> .red-btn { color: #D00000; } .green-btn { color: #00D000; } .blue-btn { color: #0000D0; } .inline { display: inline; } .code-em{ font-family: monospace; } </style>
 	</head>
 	<body ng-controller="RecorderController">
-	<body style="background-image: linear-gradient(to right, #91ADBC, white)" >
+	<body style="background-image: linear-gradient(to right, #91ADBC, purple)" >
 
 		<div class="container well">
-			<h1 class="text-center">QHacks 2019 Song Finder</h1>
-			<h2 class="text-center">Recording Voice to Save Lyrics</h2>
+			
+			<center><h1 style="font-family:verdana; color:#731b1b">QHacks 2019 Song Finder</h1></center>
+			<center><h2 style="font-family:verdana; color:#731b1b" >Recording Voice to Save Lyrics</h2></center>
 			<div class="row">
 				
 			</div>
@@ -53,6 +53,12 @@
 					</div>
                 </div>
 
+				<style>
+
+
+				</style>
+				
+				
 			</div>
 			<div class="row" >
 				<div class="offset3 span6">
@@ -72,17 +78,163 @@
 			
 		</div>
 		
-		<div style="width:500px;height:300px;border:1px solid #000;" div class="offset1 span 6;"
-		>  User's text</div>
 		
-		<div style="width:500px;height:300px;border:1px solid #000;" div class="offset0.5 span 6;"
+		
+		<center><div style="font-size: 20px; font-family:verdana; color:#731b1b; padding:10px">
+		Enter Lyrics here:
+		</div></center>
+	<center><textarea cols=5 rows=5>
+	</textarea></center>
+	
+	<center><div style="font-size: 20px; padding:15px; font-family:verdana; color:#731b1b"><button class="btn2" ng-click="clickSubmit()"><i></i>&nbsp;Find Song</button></div></center>
+
+		<style>
+		 {
+        width: 140px;
+        height: 80px;
+		}
+		</style>
+		
+		
+		<div style="width:800px;height:300px;border:5px solid #000; padding:10px; border-radius:25px; margin-bottom: 50px; font-size: 20px;" div class="offset2 span 6;"
 		>  List of songs</div>
+		</div>
 		
 <div class="offset3 span6">
 <p>Press on the "Start recording button" to start the recording per microphone - permission by the user is required.<br>
 To end the recording press on "Stop recording".<br>
 <p>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<head>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="pie-bar-multi-graph.css" rel="stylesheet">
+</head>
+<body>
+	<div id="graph-chart"> </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+	<script src="pie-bar-multi-graph.js"></script>
+	<script>
+			var football = [
+				{id:1, name: '2011-12', value: 204,
+					 categories:[
+						 {
+							name: 'La Liga',
+							categories:
+							 [
+								 { name: 'Lionel Messi', value: 50},
+								 { name: 'Christiano Ronaldo', value: 46},
+								 { name: 'Karim Benzema', value: 21}
+							 ],
+						 },
+						 {
+							name: 'Champions League',
+							categories:
+							 [
+								 { name: 'Lionel Messi', value: 14},
+								 { name: 'Christiano Ronaldo', value: 12},
+								 { name: 'Sergio Aguero', value: 1}
+							 ]
+						},
+						 {
+							name: 'English Premier League',
+							categories:
+							 [
+								 { name: 'Sergio Aguero', value: 23},
+								 { name: 'Suarez', value: 10},
+								 { name: 'Wayne Rooney', value: 27}
+							 ]
+						 }
+					 ]
+				},
+				{id:2, name: '2012-13', value: 173,
+					 categories:[
+						 {
+							name: 'La Liga',
+							categories:
+							 [
+								 { name: 'Lionel Messi', value: 46},
+								 { name: 'Christiano Ronaldo', value: 34},
+								 { name: 'Karim Benzema', value: 11}
+							 ],
+						 },
+						 {
+							name: 'Champions League',
+							categories:
+							 [
+								 { name: 'Lionel Messi', value: 8},
+								 { name: 'Christiano Ronaldo', value: 12},
+								 { name: 'Sergio Aguero', value: 2}
+							 ]
+						},
+						 {
+							name: 'English Premier League',
+							categories:
+								[
+									{ name: 'Sergio Aguero', value: 12},
+									{ name: 'Suarez', value: 23},
+									{ name: 'Wayne Rooney', value: 12}
+								]
+						 }
+					 ]
+				},
+				{id:3, name: '2013-14', value: 170,
+					 categories:[
+						 {
+							name: 'La Liga',
+							categories:
+							 [
+								 { name: 'Lionel Messi', value: 28},
+								 { name: 'Christiano Ronaldo', value: 31},
+								 { name: 'Karim Benzema', value: 17}
+							 ],
+						 },
+						 {
+							name: 'Champions League',
+							categories:
+							 [
+								 { name: 'Lionel Messi', value: 8},
+								 { name: 'Christiano Ronaldo', value: 17},
+								 { name: 'Sergio Aguero', value: 6}
+							 ]
+						},
+						 {
+							name: 'English Premier League',
+							categories:
+								[
+								   { name: 'Sergio Aguero', value: 17},
+								   { name: 'Suarez', value: 31},
+								   { name: 'Wayne Rooney', value: 17}
+							   ]
+						 }
+					 ]
+				}
+			];
+			var config = {
+					width: 900,
+					height: 350,
+					valueProp: 'value',
+					labelProp: 'name',
+					subProp: 'categories',
+					id: '#graph-chart',
+					ratio: 0.7,
+					textOffsetHeight: 45
+				}
+			graph = new multiGraphChart(config, football);
+	</script>
+</body>
+
 
 	</body>
 </html>

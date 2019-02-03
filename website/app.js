@@ -231,6 +231,7 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		 
 		 
 		 var url = (window.URL || window.webkitURL).createObjectURL(blob);
+		 
 		 var link = window.document.createElement('a');
 		 link.href = url;
 		 link.download = filename || 'output.flac';
@@ -240,10 +241,6 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		 link.dispatchEvent(click);
 		 
 	 };
-	
-	
-	
-
 	
 	
 	$scope.num = 0;
@@ -274,7 +271,6 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 		  var language = $scope.language;
 		  var key = $scope._google_api_key;
 		  var alternatives = $scope._asr_alternatives;
-
 		  
 		  // use FileReader to convert Blob to base64 encoded data-URL
 		  var reader = new window.FileReader();

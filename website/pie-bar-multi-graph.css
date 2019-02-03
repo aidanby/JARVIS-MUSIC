@@ -1,0 +1,19 @@
+
+#graph-chart-multi text {
+  font: 10px sans-serif;
+}
+#graph-chart-multi .x.axis path,#graph-chart-multi .tick line {  display: none; }
+
+
+#graph-chart-multi .axis {  font: 10px airbnb-cereal; }
+#graph-chart-multi #pie-chart-svg path:hover {opacity: 0.98;}
+#graph-chart-multi-bar-svg rect:hover {  fill:purple; }
+#graph-chart-multi #legend-table{
+	display: inline-block;
+	/*margin-bottom: 6%;*/
+}
+#graph-chart-multi #legend-table table{font: 12px airbnb-cereal; border-collapse: collapse;}
+#graph-chart-multi table.legend tr:first-child{border-top: 1px solid #e2e2e2;}
+#graph-chart-multi table.legend tr{border-bottom: 1px solid #e2e2e2;}
+#graph-chart-multi #legend-table td{padding: 4px 5px; }
+.highlight-row {background-color: #eaeaea; opacity: 0.5;}
