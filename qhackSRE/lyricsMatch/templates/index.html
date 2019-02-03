@@ -20,7 +20,7 @@
 		<style type="text/css"> .red-btn { color: #D00000; } .green-btn { color: #00D000; } .blue-btn { color: #0000D0; } .inline { display: inline; } .code-em{ font-family: monospace; } </style>
 	</head>
 	<body ng-controller="RecorderController">
-	<body style="background-image: linear-gradient(to right, #91ADBC, purple)" >
+	<body style="background-image: linear-gradient(to right, #91ADBC, white)" >
 
 		<div class="container well">
 			
@@ -60,7 +60,7 @@
 				
 				
 			</div>
-			<div class="row" >
+			<div class="row" text-align="center" >
 				<div class="offset3 span6">
 					<label ng-show="!wav_format && result_mode == 'asr'">Recognition Language: <select ng-model="language" ng-options="l for l in languages"></select></label>
 				</div>
@@ -85,14 +85,23 @@
 		</div></center>
 
 		<center>
-		<form action="/lyricsmatch/find_lyrics" method="get">
-  				<input id='user_text' type="textarea rows=5" name="user_text" value=""><br>
-			<input type="submit" value="Find Song">
+		<form action="/lyricsmatch/find_lyrics" method="get" height="300px" id="form">
+				<textarea class="text-center offset3 span6 form-group" id='user_text' type="textarea" cols="10" name="user_text" value=""></textarea><br>
+  				<input type="submit" style="background-color: black;
+  border: none;
+  color: white;
+  padding: 20px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;"value="Find Song">
 		</form>
+
+			
 		</center>
 	
 	<!--<center><div style="font-size: 20px; padding:15px; font-family:verdana; color:#731b1b"><button class="btn2" ng-click="clickSubmit()"><i></i>&nbsp;Find Song</button></div></center>-->
 
+	
 		<style>
 		 {
         width: 140px;
@@ -101,7 +110,7 @@
 		</style>
 		
 		
-		<div style="width:800px;height:300px;border:5px solid #000; padding:10px; border-radius:25px; margin-bottom: 50px; font-size: 20px;" div class="offset2 span 6;">  <ul>
+		<div style="width:800px;height:300px;border:5px solid #000; padding:10px; border-radius:25px; margin-bottom: 50px; font-size: 30px; line-height: 80px; color: black" div class="offset2 span 6;">  <ul>
 			<!--< a href = "/polls/{{ question.id }}/" > {{question.question_text}} < / a >-->
     	{% for song in list_of_songs %}
         	<li><a href = "{{song.1}}" > {{song.0}} </a></li>
