@@ -1,0 +1,666 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.Dns.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.Dns.v1.DnsService">
+            <summary>The Dns Service.</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.DnsService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.DnsService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.DnsService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.DnsService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.DnsService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Google Cloud DNS API.</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.DnsService.Scope.CloudPlatform">
+            <summary>View and manage your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.DnsService.Scope.CloudPlatformReadOnly">
+            <summary>View your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.DnsService.Scope.NdevClouddnsReadonly">
+            <summary>View your DNS records hosted by Google Cloud DNS</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.DnsService.Scope.NdevClouddnsReadwrite">
+            <summary>View and manage your DNS records hosted by Google Cloud DNS</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.Changes">
+            <summary>Gets the Changes resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.ManagedZones">
+            <summary>Gets the ManagedZones resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.Projects">
+            <summary>Gets the Projects resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsService.ResourceRecordSets">
+            <summary>Gets the ResourceRecordSets resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.DnsBaseServiceRequest`1">
+            <summary>A base abstract class for Dns requests.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new DnsBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+            assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-user
+            limits.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.DnsBaseServiceRequest`1.InitParameters">
+            <summary>Initializes Dns parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ChangesResource">
+            <summary>The "changes" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.ChangesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.Create(Google.Apis.Dns.v1.Data.Change,System.String,System.String)">
+            <summary>Atomically update the ResourceRecordSet collection.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Identifies the project addressed by this request.</param>
+            <param
+            name="managedZone">Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ChangesResource.CreateRequest">
+            <summary>Atomically update the ResourceRecordSet collection.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Dns.v1.Data.Change,System.String,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.CreateRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.CreateRequest.ManagedZone">
+            <summary>Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.Get(System.String,System.String,System.String)">
+            <summary>Fetch the representation of an existing Change.</summary>
+            <param name="project">Identifies the project addressed by this request.</param>
+            <param
+            name="managedZone">Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</param>
+            <param name="changeId">The identifier of the requested change, from a previous
+            ResourceRecordSetsChangeResponse.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ChangesResource.GetRequest">
+            <summary>Fetch the representation of an existing Change.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.GetRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.GetRequest.ManagedZone">
+            <summary>Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.GetRequest.ChangeId">
+            <summary>The identifier of the requested change, from a previous
+            ResourceRecordSetsChangeResponse.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.List(System.String,System.String)">
+            <summary>Enumerate Changes to a ResourceRecordSet collection.</summary>
+            <param name="project">Identifies the project addressed by this request.</param>
+            <param
+            name="managedZone">Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ChangesResource.ListRequest">
+            <summary>Enumerate Changes to a ResourceRecordSet collection.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.ManagedZone">
+            <summary>Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.MaxResults">
+            <summary>Optional. Maximum number of results to be returned. If unspecified, the server will decide how
+            many results to return.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.PageToken">
+            <summary>Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+            continue a previous list request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.SortBy">
+            <summary>Sorting criterion. The only supported value is change sequence.</summary>
+            [default: changeSequence]
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ChangesResource.ListRequest.SortByEnum">
+            <summary>Sorting criterion. The only supported value is change sequence.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.SortOrder">
+            <summary>Sorting order direction: 'ascending' or 'descending'.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ChangesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ChangesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ManagedZonesResource">
+            <summary>The "managedZones" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.ManagedZonesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.Create(Google.Apis.Dns.v1.Data.ManagedZone,System.String)">
+            <summary>Create a new ManagedZone.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Identifies the project addressed by this request.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest">
+            <summary>Create a new ManagedZone.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Dns.v1.Data.ManagedZone,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.Delete(System.String,System.String)">
+            <summary>Delete a previously created ManagedZone.</summary>
+            <param name="project">Identifies the project addressed by this request.</param>
+            <param
+            name="managedZone">Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ManagedZonesResource.DeleteRequest">
+            <summary>Delete a previously created ManagedZone.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.DeleteRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.DeleteRequest.ManagedZone">
+            <summary>Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.Get(System.String,System.String)">
+            <summary>Fetch the representation of an existing ManagedZone.</summary>
+            <param name="project">Identifies the project addressed by this request.</param>
+            <param
+            name="managedZone">Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ManagedZonesResource.GetRequest">
+            <summary>Fetch the representation of an existing ManagedZone.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.GetRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.GetRequest.ManagedZone">
+            <summary>Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.List(System.String)">
+            <summary>Enumerate ManagedZones that have been created but not yet deleted.</summary>
+            <param name="project">Identifies the project addressed by this request.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest">
+            <summary>Enumerate ManagedZones that have been created but not yet deleted.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.DnsName">
+            <summary>Restricts the list to return only zones with this domain name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.MaxResults">
+            <summary>Optional. Maximum number of results to be returned. If unspecified, the server will decide how
+            many results to return.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.PageToken">
+            <summary>Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+            continue a previous list request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ManagedZonesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ProjectsResource">
+            <summary>The "projects" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.ProjectsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ProjectsResource.Get(System.String)">
+            <summary>Fetch the representation of an existing Project.</summary>
+            <param name="project">Identifies the project addressed by this request.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ProjectsResource.GetRequest">
+            <summary>Fetch the representation of an existing Project.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ProjectsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ProjectsResource.GetRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ProjectsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ProjectsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ProjectsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ProjectsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ResourceRecordSetsResource">
+            <summary>The "resourceRecordSets" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Dns.v1.ResourceRecordSetsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ResourceRecordSetsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ResourceRecordSetsResource.List(System.String,System.String)">
+            <summary>Enumerate ResourceRecordSets that have been created but not yet deleted.</summary>
+            <param name="project">Identifies the project addressed by this request.</param>
+            <param
+            name="managedZone">Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</param>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest">
+            <summary>Enumerate ResourceRecordSets that have been created but not yet deleted.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.Project">
+            <summary>Identifies the project addressed by this request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.ManagedZone">
+            <summary>Identifies the managed zone addressed by this request. Can be the managed zone name or
+            id.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.MaxResults">
+            <summary>Optional. Maximum number of results to be returned. If unspecified, the server will decide how
+            many results to return.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.Name">
+            <summary>Restricts the list to return only records with this fully qualified domain name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.PageToken">
+            <summary>Optional. A tag returned by a previous list request that was truncated. Use this parameter to
+            continue a previous list request.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.Type">
+            <summary>Restricts the list to return only records of this type. If present, the "name" parameter must
+            also be present.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Dns.v1.ResourceRecordSetsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.Data.Change">
+            <summary>An atomic update to a collection of ResourceRecordSets.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Change.Additions">
+            <summary>Which ResourceRecordSets to add?</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Change.Deletions">
+            <summary>Which ResourceRecordSets to remove? Must match existing data exactly.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Change.Id">
+            <summary>Unique identifier for the resource; defined by the server (output only).</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Change.Kind">
+            <summary>Identifies what kind of resource this is. Value: the fixed string "dns#change".</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Change.StartTime">
+            <summary>The time that this operation was started by the server (output only). This is in RFC3339 text
+            format.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Change.Status">
+            <summary>Status of the operation (output only).</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Change.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.Data.ChangesListResponse">
+            <summary>The response to a request to enumerate Changes to a ResourceRecordSets collection.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ChangesListResponse.Changes">
+            <summary>The requested changes.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ChangesListResponse.Kind">
+            <summary>Type of resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ChangesListResponse.NextPageToken">
+             <summary>The presence of this field indicates that there exist more results following your last page of
+             results in pagination order. To fetch them, make another list request using this value as your pagination
+             token.
+            
+             In this way you can retrieve the complete contents of even very large collections one page at a time.
+             However, if the contents of the collection change between the first and last paginated list request, the set
+             of all elements returned will be an inconsistent view of the collection. There is no way to retrieve a
+             "snapshot" of collections larger than the maximum page size.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ChangesListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.Data.ManagedZone">
+            <summary>A zone is a subtree of the DNS namespace under one administrative responsibility. A ManagedZone is a
+            resource that represents a DNS zone hosted by the Cloud DNS service.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.CreationTime">
+            <summary>The time that this resource was created on the server. This is in RFC3339 text format. Output
+            only.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.Description">
+            <summary>A mutable string of at most 1024 characters associated with this resource for the user's
+            convenience. Has no effect on the managed zone's function.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.DnsName">
+            <summary>The DNS name of this managed zone, for instance "example.com.".</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.Id">
+            <summary>Unique identifier for the resource; defined by the server (output only)</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.Kind">
+            <summary>Identifies what kind of resource this is. Value: the fixed string "dns#managedZone".</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.Name">
+            <summary>User assigned name for this resource. Must be unique within the project. The name must be 1-63
+            characters long, must begin with a letter, end with a letter or digit, and only contain lowercase letters,
+            digits or dashes.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.NameServerSet">
+            <summary>Optionally specifies the NameServerSet for this ManagedZone. A NameServerSet is a set of DNS name
+            servers that all host the same ManagedZones. Most users will leave this field unset.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.NameServers">
+            <summary>Delegate your managed_zone to these virtual name servers; defined by the server (output
+            only)</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZone.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZonesListResponse.Kind">
+            <summary>Type of resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZonesListResponse.ManagedZones">
+            <summary>The managed zone resources.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZonesListResponse.NextPageToken">
+             <summary>The presence of this field indicates that there exist more results following your last page of
+             results in pagination order. To fetch them, make another list request using this value as your page token.
+            
+             In this way you can retrieve the complete contents of even very large collections one page at a time.
+             However, if the contents of the collection change between the first and last paginated list request, the set
+             of all elements returned will be an inconsistent view of the collection. There is no way to retrieve a
+             consistent snapshot of a collection larger than the maximum page size.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ManagedZonesListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.Data.Project">
+            <summary>A project resource. The project is a top level container for resources including Cloud DNS
+            ManagedZones. Projects can be created only in the APIs console.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Project.Id">
+            <summary>User assigned unique identifier for the resource (output only).</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Project.Kind">
+            <summary>Identifies what kind of resource this is. Value: the fixed string "dns#project".</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Project.Number">
+            <summary>Unique numeric identifier for the resource; defined by the server (output only).</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Project.Quota">
+            <summary>Quotas assigned to this project (output only).</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Project.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.Data.Quota">
+            <summary>Limits associated with a Project.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Quota.Kind">
+            <summary>Identifies what kind of resource this is. Value: the fixed string "dns#quota".</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Quota.ManagedZones">
+            <summary>Maximum allowed number of managed zones in the project.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Quota.ResourceRecordsPerRrset">
+            <summary>Maximum allowed number of ResourceRecords per ResourceRecordSet.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Quota.RrsetAdditionsPerChange">
+            <summary>Maximum allowed number of ResourceRecordSets to add per ChangesCreateRequest.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Quota.RrsetDeletionsPerChange">
+            <summary>Maximum allowed number of ResourceRecordSets to delete per ChangesCreateRequest.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Quota.RrsetsPerManagedZone">
+            <summary>Maximum allowed number of ResourceRecordSets per zone in the project.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Quota.TotalRrdataSizePerChange">
+            <summary>Maximum allowed size for total rrdata in one ChangesCreateRequest in bytes.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.Quota.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Dns.v1.Data.ResourceRecordSet">
+            <summary>A unit of data that will be returned by the DNS servers.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSet.Kind">
+            <summary>Identifies what kind of resource this is. Value: the fixed string
+            "dns#resourceRecordSet".</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSet.Name">
+            <summary>For example, www.example.com.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSet.Rrdatas">
+            <summary>As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1).</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSet.Ttl">
+            <summary>Number of seconds that this ResourceRecordSet can be cached by resolvers.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSet.Type">
+            <summary>The identifier of a supported record type, for example, A, AAAA, MX, TXT, and so on.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSet.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSetsListResponse.Kind">
+            <summary>Type of resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSetsListResponse.NextPageToken">
+             <summary>The presence of this field indicates that there exist more results following your last page of
+             results in pagination order. To fetch them, make another list request using this value as your pagination
+             token.
+            
+             In this way you can retrieve the complete contents of even very large collections one page at a time.
+             However, if the contents of the collection change between the first and last paginated list request, the set
+             of all elements returned will be an inconsistent view of the collection. There is no way to retrieve a
+             consistent snapshot of a collection larger than the maximum page size.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSetsListResponse.Rrsets">
+            <summary>The resource record set resources.</summary>
+        </member>
+        <member name="P:Google.Apis.Dns.v1.Data.ResourceRecordSetsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+    </members>
+</doc>

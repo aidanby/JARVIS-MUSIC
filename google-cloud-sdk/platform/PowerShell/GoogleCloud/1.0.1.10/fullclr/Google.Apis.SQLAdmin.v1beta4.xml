@@ -1,0 +1,2699 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.SQLAdmin.v1beta4</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SQLAdminService">
+            <summary>The SQLAdmin Service.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Cloud SQL Administration API.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Scope.CloudPlatform">
+            <summary>View and manage your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Scope.SqlserviceAdmin">
+            <summary>Manage your Google SQL Service instances</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.BackupRuns">
+            <summary>Gets the BackupRuns resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Databases">
+            <summary>Gets the Databases resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Flags">
+            <summary>Gets the Flags resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Instances">
+            <summary>Gets the Instances resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Operations">
+            <summary>Gets the Operations resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.SslCerts">
+            <summary>Gets the SslCerts resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Tiers">
+            <summary>Gets the Tiers resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminService.Users">
+            <summary>Gets the Users resource.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1">
+            <summary>A base abstract class for SQLAdmin requests.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new SQLAdminBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.Alt">
+            <summary>Data format for the response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.AltEnum">
+            <summary>Data format for the response.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+            assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.UserIp">
+            <summary>IP address of the site where the request originates. Use this if you want to enforce per-user
+            limits.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SQLAdminBaseServiceRequest`1.InitParameters">
+            <summary>Initializes SQLAdmin parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource">
+            <summary>The "backupRuns" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.Delete(System.String,System.String,System.Int64)">
+            <summary>Deletes the backup taken by a backup run.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+            <param name="id">The ID
+            of the Backup Run to delete. To find a Backup Run ID, use the list method.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest">
+            <summary>Deletes the backup taken by a backup run.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.Int64)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest.Id">
+            <summary>The ID of the Backup Run to delete. To find a Backup Run ID, use the list method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.Get(System.String,System.String,System.Int64)">
+            <summary>Retrieves a resource containing information about a backup run.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+            <param name="id">The ID
+            of this Backup Run.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest">
+            <summary>Retrieves a resource containing information about a backup run.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.Int64)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest.Id">
+            <summary>The ID of this Backup Run.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.Insert(Google.Apis.SQLAdmin.v1beta4.Data.BackupRun,System.String,System.String)">
+            <summary>Creates a new backup run on demand. This method is applicable only to Second Generation
+            instances.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest">
+            <summary>Creates a new backup run on demand. This method is applicable only to Second Generation
+            instances.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.BackupRun,System.String,System.String)">
+            <summary>Constructs a new Insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.List(System.String,System.String)">
+            <summary>Lists all backup runs associated with a given instance and configuration in the reverse
+            chronological order of the enqueued time.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest">
+            <summary>Lists all backup runs associated with a given instance and configuration in the reverse
+            chronological order of the enqueued time.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.MaxResults">
+            <summary>Maximum number of backup runs per response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.PageToken">
+            <summary>A previously-returned page token representing part of the larger set of results to
+            view.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.BackupRunsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.DatabasesResource">
+            <summary>The "databases" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.Delete(System.String,System.String,System.String)">
+            <summary>Deletes a database from a Cloud SQL instance.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+            <param
+            name="database">Name of the database to be deleted in the instance.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest">
+            <summary>Deletes a database from a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest.Database">
+            <summary>Name of the database to be deleted in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.Get(System.String,System.String,System.String)">
+            <summary>Retrieves a resource containing information about a database inside a Cloud SQL instance.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+            <param
+            name="database">Name of the database in the instance.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest">
+            <summary>Retrieves a resource containing information about a database inside a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest.Database">
+            <summary>Name of the database in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.Insert(Google.Apis.SQLAdmin.v1beta4.Data.Database,System.String,System.String)">
+            <summary>Inserts a resource containing information about a database inside a Cloud SQL instance.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest">
+            <summary>Inserts a resource containing information about a database inside a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.Database,System.String,System.String)">
+            <summary>Constructs a new Insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.List(System.String,System.String)">
+            <summary>Lists databases in the specified Cloud SQL instance.</summary>
+            <param name="project">Project ID of the project for which to list Cloud SQL instances.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.ListRequest">
+            <summary>Lists databases in the specified Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.ListRequest.Project">
+            <summary>Project ID of the project for which to list Cloud SQL instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.ListRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.Patch(Google.Apis.SQLAdmin.v1beta4.Data.Database,System.String,System.String,System.String)">
+            <summary>Updates a resource containing information about a database inside a Cloud SQL instance. This method
+            supports patch semantics.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+            <param
+            name="database">Name of the database to be updated in the instance.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest">
+            <summary>Updates a resource containing information about a database inside a Cloud SQL instance. This method
+            supports patch semantics.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.Database,System.String,System.String,System.String)">
+            <summary>Constructs a new Patch request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.Database">
+            <summary>Name of the database to be updated in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.Update(Google.Apis.SQLAdmin.v1beta4.Data.Database,System.String,System.String,System.String)">
+            <summary>Updates a resource containing information about a database inside a Cloud SQL instance.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+            <param
+            name="database">Name of the database to be updated in the instance.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest">
+            <summary>Updates a resource containing information about a database inside a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.Database,System.String,System.String,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.Database">
+            <summary>Name of the database to be updated in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.DatabasesResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.FlagsResource">
+            <summary>The "flags" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.FlagsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.FlagsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.FlagsResource.List">
+            <summary>List all available database flags for Google Cloud SQL instances.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.FlagsResource.ListRequest">
+            <summary>List all available database flags for Google Cloud SQL instances.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.FlagsResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.FlagsResource.ListRequest.DatabaseVersion">
+            <summary>Database version for flag retrieval. Flags are specific to the database version.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.FlagsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.FlagsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.FlagsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.FlagsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource">
+            <summary>The "instances" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.InstancesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Clone(Google.Apis.SQLAdmin.v1beta4.Data.InstancesCloneRequest,System.String,System.String)">
+            <summary>Creates a Cloud SQL instance as a clone of the source instance. The API is not ready for Second
+            Generation instances yet.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the source as well as the clone Cloud SQL instance.</param>
+            <param
+            name="instance">The ID of the Cloud SQL instance to be cloned (source). This does not include the project
+            ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest">
+            <summary>Creates a Cloud SQL instance as a clone of the source instance. The API is not ready for Second
+            Generation instances yet.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.InstancesCloneRequest,System.String,System.String)">
+            <summary>Constructs a new Clone request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.Project">
+            <summary>Project ID of the source as well as the clone Cloud SQL instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.Instance">
+            <summary>The ID of the Cloud SQL instance to be cloned (source). This does not include the project
+            ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.CloneRequest.InitParameters">
+            <summary>Initializes Clone parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Delete(System.String,System.String)">
+            <summary>Deletes a Cloud SQL instance.</summary>
+            <param name="project">Project ID of the project that contains the instance to be deleted.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.DeleteRequest">
+            <summary>Deletes a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.DeleteRequest.Project">
+            <summary>Project ID of the project that contains the instance to be deleted.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.DeleteRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Export(Google.Apis.SQLAdmin.v1beta4.Data.InstancesExportRequest,System.String,System.String)">
+            <summary>Exports data from a Cloud SQL instance to a Google Cloud Storage bucket as a MySQL dump
+            file.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance to be exported.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest">
+            <summary>Exports data from a Cloud SQL instance to a Google Cloud Storage bucket as a MySQL dump
+            file.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.InstancesExportRequest,System.String,System.String)">
+            <summary>Constructs a new Export request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.Project">
+            <summary>Project ID of the project that contains the instance to be exported.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ExportRequest.InitParameters">
+            <summary>Initializes Export parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Failover(Google.Apis.SQLAdmin.v1beta4.Data.InstancesFailoverRequest,System.String,System.String)">
+            <summary>Failover the instance to its failover replica instance.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">ID of the project that contains the read replica.</param>
+            <param name="instance">Cloud
+            SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest">
+            <summary>Failover the instance to its failover replica instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.InstancesFailoverRequest,System.String,System.String)">
+            <summary>Constructs a new Failover request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.Project">
+            <summary>ID of the project that contains the read replica.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.FailoverRequest.InitParameters">
+            <summary>Initializes Failover parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Get(System.String,System.String)">
+            <summary>Retrieves a resource containing information about a Cloud SQL instance.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.GetRequest">
+            <summary>Retrieves a resource containing information about a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.GetRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.GetRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Import(Google.Apis.SQLAdmin.v1beta4.Data.InstancesImportRequest,System.String,System.String)">
+            <summary>Imports data into a Cloud SQL instance from a MySQL dump file in Google Cloud Storage.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest">
+            <summary>Imports data into a Cloud SQL instance from a MySQL dump file in Google Cloud Storage.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.InstancesImportRequest,System.String,System.String)">
+            <summary>Constructs a new Import request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ImportRequest.InitParameters">
+            <summary>Initializes Import parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Insert(Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance,System.String)">
+            <summary>Creates a new Cloud SQL instance.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project to which the newly created Cloud SQL instances should
+            belong.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest">
+            <summary>Creates a new Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance,System.String)">
+            <summary>Constructs a new Insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest.Project">
+            <summary>Project ID of the project to which the newly created Cloud SQL instances should
+            belong.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.List(System.String)">
+            <summary>Lists instances under a given project in the alphabetical order of the instance name.</summary>
+            <param name="project">Project ID of the project for which to list Cloud SQL instances.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest">
+            <summary>Lists instances under a given project in the alphabetical order of the instance name.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.Project">
+            <summary>Project ID of the project for which to list Cloud SQL instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.Filter">
+            <summary>An expression for filtering the results of the request, such as by name or label.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.MaxResults">
+            <summary>The maximum number of results to return per response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.PageToken">
+            <summary>A previously-returned page token representing part of the larger set of results to
+            view.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Patch(Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance,System.String,System.String)">
+            <summary>Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
+            include values for all the settings that you want to retain. For partial updates, use patch.. This method
+            supports patch semantics.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest">
+            <summary>Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
+            include values for all the settings that you want to retain. For partial updates, use patch.. This method
+            supports patch semantics.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance,System.String,System.String)">
+            <summary>Constructs a new Patch request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplica(System.String,System.String)">
+            <summary>Promotes the read replica instance to be a stand-alone Cloud SQL instance.</summary>
+            <param name="project">ID of the project that contains the read replica.</param>
+            <param name="instance">Cloud
+            SQL read replica instance name.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplicaRequest">
+            <summary>Promotes the read replica instance to be a stand-alone Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplicaRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new PromoteReplica request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplicaRequest.Project">
+            <summary>ID of the project that contains the read replica.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplicaRequest.Instance">
+            <summary>Cloud SQL read replica instance name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplicaRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplicaRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplicaRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.PromoteReplicaRequest.InitParameters">
+            <summary>Initializes PromoteReplica parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfig(System.String,System.String)">
+            <summary>Deletes all client certificates and generates a new server SSL certificate for the instance. The
+            changes will not take effect until the instance is restarted. Existing instances without a server
+            certificate will need to call this once to set a server certificate.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfigRequest">
+            <summary>Deletes all client certificates and generates a new server SSL certificate for the instance. The
+            changes will not take effect until the instance is restarted. Existing instances without a server
+            certificate will need to call this once to set a server certificate.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfigRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new ResetSslConfig request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfigRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfigRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfigRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfigRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfigRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.ResetSslConfigRequest.InitParameters">
+            <summary>Initializes ResetSslConfig parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Restart(System.String,System.String)">
+            <summary>Restarts a Cloud SQL instance.</summary>
+            <param name="project">Project ID of the project that contains the instance to be restarted.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestartRequest">
+            <summary>Restarts a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestartRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Restart request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestartRequest.Project">
+            <summary>Project ID of the project that contains the instance to be restarted.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestartRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestartRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestartRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestartRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestartRequest.InitParameters">
+            <summary>Initializes Restart parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackup(Google.Apis.SQLAdmin.v1beta4.Data.InstancesRestoreBackupRequest,System.String,System.String)">
+            <summary>Restores a backup of a Cloud SQL instance.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest">
+            <summary>Restores a backup of a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.InstancesRestoreBackupRequest,System.String,System.String)">
+            <summary>Constructs a new RestoreBackup request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.RestoreBackupRequest.InitParameters">
+            <summary>Initializes RestoreBackup parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplica(System.String,System.String)">
+            <summary>Starts the replication in the read replica instance.</summary>
+            <param name="project">ID of the project that contains the read replica.</param>
+            <param name="instance">Cloud
+            SQL read replica instance name.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplicaRequest">
+            <summary>Starts the replication in the read replica instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplicaRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new StartReplica request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplicaRequest.Project">
+            <summary>ID of the project that contains the read replica.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplicaRequest.Instance">
+            <summary>Cloud SQL read replica instance name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplicaRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplicaRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplicaRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StartReplicaRequest.InitParameters">
+            <summary>Initializes StartReplica parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplica(System.String,System.String)">
+            <summary>Stops the replication in the read replica instance.</summary>
+            <param name="project">ID of the project that contains the read replica.</param>
+            <param name="instance">Cloud
+            SQL read replica instance name.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplicaRequest">
+            <summary>Stops the replication in the read replica instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplicaRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new StopReplica request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplicaRequest.Project">
+            <summary>ID of the project that contains the read replica.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplicaRequest.Instance">
+            <summary>Cloud SQL read replica instance name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplicaRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplicaRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplicaRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.StopReplicaRequest.InitParameters">
+            <summary>Initializes StopReplica parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLog(Google.Apis.SQLAdmin.v1beta4.Data.InstancesTruncateLogRequest,System.String,System.String)">
+            <summary>Truncate MySQL general and slow query log tables</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the Cloud SQL project.</param>
+            <param name="instance">Cloud SQL instance
+            ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest">
+            <summary>Truncate MySQL general and slow query log tables</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.InstancesTruncateLogRequest,System.String,System.String)">
+            <summary>Constructs a new TruncateLog request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.Project">
+            <summary>Project ID of the Cloud SQL project.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.TruncateLogRequest.InitParameters">
+            <summary>Initializes TruncateLog parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.Update(Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance,System.String,System.String)">
+            <summary>Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
+            include values for all the settings that you want to retain. For partial updates, use patch.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest">
+            <summary>Updates settings of a Cloud SQL instance. Caution: This is not a partial update, so you must
+            include values for all the settings that you want to retain. For partial updates, use patch.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance,System.String,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.InstancesResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.OperationsResource">
+            <summary>The "operations" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.OperationsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.OperationsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.OperationsResource.Get(System.String,System.String)">
+            <summary>Retrieves an instance operation that has been performed on an instance.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="operation">Instance operation ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.OperationsResource.GetRequest">
+            <summary>Retrieves an instance operation that has been performed on an instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.OperationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.GetRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.GetRequest.Operation">
+            <summary>Instance operation ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.OperationsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.OperationsResource.List(System.String,System.String)">
+            <summary>Lists all instance operations that have been performed on the given Cloud SQL instance in the
+            reverse chronological order of the start time.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest">
+            <summary>Lists all instance operations that have been performed on the given Cloud SQL instance in the
+            reverse chronological order of the start time.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.MaxResults">
+            <summary>Maximum number of operations per response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.PageToken">
+            <summary>A previously-returned page token representing part of the larger set of results to
+            view.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.OperationsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SslCertsResource">
+            <summary>The "sslCerts" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeral(Google.Apis.SQLAdmin.v1beta4.Data.SslCertsCreateEphemeralRequest,System.String,System.String)">
+            <summary>Generates a short-lived X509 certificate containing the provided public key and signed by a private
+            key specific to the target instance. Users may use the certificate to authenticate as themselves when
+            connecting to the database.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the Cloud SQL project.</param>
+            <param name="instance">Cloud SQL instance
+            ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest">
+            <summary>Generates a short-lived X509 certificate containing the provided public key and signed by a private
+            key specific to the target instance. Users may use the certificate to authenticate as themselves when
+            connecting to the database.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.SslCertsCreateEphemeralRequest,System.String,System.String)">
+            <summary>Constructs a new CreateEphemeral request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.Project">
+            <summary>Project ID of the Cloud SQL project.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.CreateEphemeralRequest.InitParameters">
+            <summary>Initializes CreateEphemeral parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.Delete(System.String,System.String,System.String)">
+            <summary>Deletes the SSL certificate. The change will not take effect until the instance is
+            restarted.</summary>
+            <param name="project">Project ID of the project that contains the instance to be deleted.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+            <param
+            name="sha1Fingerprint">Sha1 FingerPrint.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest">
+            <summary>Deletes the SSL certificate. The change will not take effect until the instance is
+            restarted.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest.Project">
+            <summary>Project ID of the project that contains the instance to be deleted.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest.Sha1Fingerprint">
+            <summary>Sha1 FingerPrint.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.Get(System.String,System.String,System.String)">
+            <summary>Retrieves a particular SSL certificate. Does not include the private key (required for usage). The
+            private key must be saved from the response to initial creation.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+            <param
+            name="sha1Fingerprint">Sha1 FingerPrint.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest">
+            <summary>Retrieves a particular SSL certificate. Does not include the private key (required for usage). The
+            private key must be saved from the response to initial creation.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest.Sha1Fingerprint">
+            <summary>Sha1 FingerPrint.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.Insert(Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertRequest,System.String,System.String)">
+            <summary>Creates an SSL certificate and returns it along with the private key and server certificate
+            authority. The new certificate will not be usable until the instance is restarted.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project to which the newly created Cloud SQL instances should
+            belong.</param>
+            <param name="instance">Cloud SQL instance ID. This does not include the project
+            ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest">
+            <summary>Creates an SSL certificate and returns it along with the private key and server certificate
+            authority. The new certificate will not be usable until the instance is restarted.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertRequest,System.String,System.String)">
+            <summary>Constructs a new Insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.Project">
+            <summary>Project ID of the project to which the newly created Cloud SQL instances should
+            belong.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.List(System.String,System.String)">
+            <summary>Lists all of the current SSL certificates for the instance.</summary>
+            <param name="project">Project ID of the project for which to list Cloud SQL instances.</param>
+            <param
+            name="instance">Cloud SQL instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.ListRequest">
+            <summary>Lists all of the current SSL certificates for the instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.ListRequest.Project">
+            <summary>Project ID of the project for which to list Cloud SQL instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.ListRequest.Instance">
+            <summary>Cloud SQL instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.SslCertsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.TiersResource">
+            <summary>The "tiers" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.TiersResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.TiersResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.TiersResource.List(System.String)">
+            <summary>Lists all available service tiers for Google Cloud SQL, for example D1, D2. For related
+            information, see Pricing.</summary>
+            <param name="project">Project ID of the project for which to list tiers.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.TiersResource.ListRequest">
+            <summary>Lists all available service tiers for Google Cloud SQL, for example D1, D2. For related
+            information, see Pricing.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.TiersResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.TiersResource.ListRequest.Project">
+            <summary>Project ID of the project for which to list tiers.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.TiersResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.TiersResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.TiersResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.TiersResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.UsersResource">
+            <summary>The "users" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.SQLAdmin.v1beta4.UsersResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.Delete(System.String,System.String,System.String,System.String)">
+            <summary>Deletes a user from a Cloud SQL instance.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+            <param name="host">Host
+            of the user in the instance.</param>
+            <param name="name">Name of the user in the instance.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest">
+            <summary>Deletes a user from a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.Host">
+            <summary>Host of the user in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.Name">
+            <summary>Name of the user in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.Insert(Google.Apis.SQLAdmin.v1beta4.Data.User,System.String,System.String)">
+            <summary>Creates a new user in a Cloud SQL instance.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest">
+            <summary>Creates a new user in a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.User,System.String,System.String)">
+            <summary>Constructs a new Insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.InsertRequest.InitParameters">
+            <summary>Initializes Insert parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.List(System.String,System.String)">
+            <summary>Lists users in the specified Cloud SQL instance.</summary>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.UsersResource.ListRequest">
+            <summary>Lists users in the specified Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.ListRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.ListRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.Update(Google.Apis.SQLAdmin.v1beta4.Data.User,System.String,System.String,System.String,System.String)">
+            <summary>Updates an existing user in a Cloud SQL instance.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="project">Project ID of the project that contains the instance.</param>
+            <param
+            name="instance">Database instance ID. This does not include the project ID.</param>
+            <param name="host">Host
+            of the user in the instance.</param>
+            <param name="name">Name of the user in the instance.</param>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest">
+            <summary>Updates an existing user in a Cloud SQL instance.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.SQLAdmin.v1beta4.Data.User,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.Project">
+            <summary>Project ID of the project that contains the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.Instance">
+            <summary>Database instance ID. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.Host">
+            <summary>Host of the user in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.Name">
+            <summary>Name of the user in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.SQLAdmin.v1beta4.UsersResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.AclEntry">
+            <summary>An entry for an Access Control list.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.AclEntry.ExpirationTimeRaw">
+            <summary>The time when this access control entry expires in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.AclEntry.ExpirationTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.AclEntry.ExpirationTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.AclEntry.Kind">
+            <summary>This is always sql#aclEntry.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.AclEntry.Name">
+            <summary>An optional label to identify this entry.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.AclEntry.Value">
+            <summary>The whitelisted value for the access control list.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.AclEntry.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.BackupConfiguration">
+            <summary>Database instance backup configuration.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupConfiguration.BinaryLogEnabled">
+            <summary>Whether binary log is enabled. If backup configuration is disabled, binary log must be disabled as
+            well.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupConfiguration.Enabled">
+            <summary>Whether this configuration is enabled.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupConfiguration.Kind">
+            <summary>This is always sql#backupConfiguration.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupConfiguration.StartTime">
+            <summary>Start time for the daily backup configuration in UTC timezone in the 24 hour format -
+            HH:MM.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupConfiguration.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun">
+            <summary>A database instance backup run resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.Description">
+            <summary>The description of this run, only applicable to on-demand backups.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.EndTimeRaw">
+            <summary>The time the backup operation completed in UTC timezone in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.EndTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.EndTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.EnqueuedTimeRaw">
+            <summary>The time the run was enqueued in UTC timezone in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.EnqueuedTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.EnqueuedTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.Error">
+            <summary>Information about why the backup operation failed. This is only present if the run has the FAILED
+            status.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.Id">
+            <summary>A unique identifier for this backup run. Note that this is unique only within the scope of a
+            particular Cloud SQL instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.Instance">
+            <summary>Name of the database instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.Kind">
+            <summary>This is always sql#backupRun.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.SelfLink">
+            <summary>The URI of this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.StartTimeRaw">
+            <summary>The time the backup operation actually started in UTC timezone in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.StartTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.StartTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.Status">
+            <summary>The status of this run.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.Type">
+            <summary>The type of this run; can be either "AUTOMATED" or "ON_DEMAND".</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.WindowStartTimeRaw">
+            <summary>The start time of the backup window during which this the backup was attempted in RFC 3339 format,
+            for example 2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.WindowStartTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.WindowStartTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRun.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.BackupRunsListResponse">
+            <summary>Backup run list results.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRunsListResponse.Items">
+            <summary>A list of backup runs in reverse chronological order of the enqueued time.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRunsListResponse.Kind">
+            <summary>This is always sql#backupRunsList.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRunsListResponse.NextPageToken">
+            <summary>The continuation token, used to page through large result sets. Provide this value in a subsequent
+            request to return the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BackupRunsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.BinLogCoordinates">
+            <summary>Binary log coordinates.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BinLogCoordinates.BinLogFileName">
+            <summary>Name of the binary log file for a Cloud SQL instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BinLogCoordinates.BinLogPosition">
+            <summary>Position (offset) within the binary log file.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BinLogCoordinates.Kind">
+            <summary>This is always sql#binLogCoordinates.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.BinLogCoordinates.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.CloneContext">
+            <summary>Database instance clone context.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.CloneContext.BinLogCoordinates">
+            <summary>Binary log coordinates, if specified, indentify the the position up to which the source instance
+            should be cloned. If not specified, the source instance is cloned up to the most recent binary log
+            coordintes.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.CloneContext.DestinationInstanceName">
+            <summary>Name of the Cloud SQL instance to be created as a clone.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.CloneContext.Kind">
+            <summary>This is always sql#cloneContext.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.CloneContext.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.Database">
+            <summary>A database resource inside a Cloud SQL instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Database.Charset">
+            <summary>The MySQL charset value.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Database.Collation">
+            <summary>The MySQL collation value.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Database.ETag">
+            <summary>HTTP 1.1 Entity tag for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Database.Instance">
+            <summary>The name of the Cloud SQL instance. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Database.Kind">
+            <summary>This is always sql#database.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Database.Name">
+            <summary>The name of the database in the Cloud SQL instance. This does not include the project ID or
+            instance name.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Database.Project">
+            <summary>The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed
+            if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Database.SelfLink">
+            <summary>The URI of this resource.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseFlags">
+            <summary>MySQL flags for Cloud SQL instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseFlags.Name">
+            <summary>The name of the flag. These flags are passed at instance startup, so include both MySQL server
+            options and MySQL system variables. Flags should be specified with underscores, not hyphens. For more
+            information, see Configuring MySQL Flags in the Google Cloud SQL documentation, as well as the official
+            MySQL documentation for server options and system variables.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseFlags.Value">
+            <summary>The value of the flag. Booleans should be set to on for true and off for false. This field must be
+            omitted if the flag doesn't take a value.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseFlags.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance">
+            <summary>A Cloud SQL instance resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.BackendType">
+            <summary>FIRST_GEN: Basic Cloud SQL instance that runs in a Google-managed container. SECOND_GEN: A newer
+            Cloud SQL backend that runs in a Compute Engine VM. EXTERNAL: A MySQL server that is not managed by
+            Google.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.ConnectionName">
+            <summary>Connection name of the Cloud SQL instance used in connection strings.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.CurrentDiskSize">
+            <summary>The current disk usage of the instance in bytes. This property has been deprecated. Users should
+            use the "cloudsql.googleapis.com/database/disk/bytes_used" metric in Cloud Monitoring API instead. Please
+            see https://groups.google.com/d/msg/google-cloud-sql-announce/I_7-F9EBhT0/BtvFtdFeAgAJ for
+            details.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.DatabaseVersion">
+            <summary>The database engine type and version. The databaseVersion field can not be changed after instance
+            creation. MySQL Second Generation instances: MYSQL_5_7 (default) or MYSQL_5_6. PostgreSQL instances:
+            POSTGRES_9_6 MySQL First Generation instances: MYSQL_5_6 (default) or MYSQL_5_5</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.ETag">
+            <summary>HTTP 1.1 Entity tag for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.FailoverReplica">
+            <summary>The name and status of the failover replica. This property is applicable only to Second Generation
+            instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.GceZone">
+            <summary>The GCE zone that the instance is serving from. In case when the instance is failed over to standby
+            zone, this value may be different with what user specified in the settings.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.InstanceType">
+            <summary>The instance type. This can be one of the following. CLOUD_SQL_INSTANCE: A Cloud SQL instance that
+            is not replicating from a master. ON_PREMISES_INSTANCE: An instance running on the customer's premises.
+            READ_REPLICA_INSTANCE: A Cloud SQL instance configured as a read-replica.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.IpAddresses">
+            <summary>The assigned IP addresses for the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.Ipv6Address">
+            <summary>The IPv6 address assigned to the instance. This property is applicable only to First Generation
+            instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.Kind">
+            <summary>This is always sql#instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.MasterInstanceName">
+            <summary>The name of the instance which will act as master in the replication setup.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.MaxDiskSize">
+            <summary>The maximum disk size of the instance in bytes.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.Name">
+            <summary>Name of the Cloud SQL instance. This does not include the project ID.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.OnPremisesConfiguration">
+            <summary>Configuration specific to on-premises instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.Project">
+            <summary>The project ID of the project containing the Cloud SQL instance. The Google apps domain is prefixed
+            if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.Region">
+            <summary>The geographical region. Can be us-central (FIRST_GEN instances only), us-central1 (SECOND_GEN
+            instances only), asia-east1 or europe-west1. Defaults to us-central or us-central1 depending on the instance
+            type (First Generation or Second Generation). The region can not be changed after instance
+            creation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.ReplicaConfiguration">
+            <summary>Configuration specific to read-replicas replicating from on-premises masters.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.ReplicaNames">
+            <summary>The replicas of the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.SelfLink">
+            <summary>The URI of this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.ServerCaCert">
+            <summary>SSL configuration.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.ServiceAccountEmailAddress">
+            <summary>The service account email address assigned to the instance. This property is applicable only to
+            Second Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.Settings">
+            <summary>The user settings.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.State">
+            <summary>The current serving state of the Cloud SQL instance. This can be one of the following. RUNNABLE:
+            The instance is running, or is ready to run when accessed. SUSPENDED: The instance is not available, for
+            example due to problems with billing. PENDING_CREATE: The instance is being created. MAINTENANCE: The
+            instance is down for maintenance. FAILED: The instance creation failed. UNKNOWN_STATE: The state of the
+            instance is unknown.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.SuspensionReason">
+            <summary>If the instance state is SUSPENDED, the reason for the suspension.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.FailoverReplicaData">
+            <summary>The name and status of the failover replica. This property is applicable only to Second Generation
+            instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.FailoverReplicaData.Available">
+            <summary>The availability status of the failover replica. A false status indicates that the failover
+            replica is out of sync. The master can only failover to the falover replica when the status is
+            true.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabaseInstance.FailoverReplicaData.Name">
+            <summary>The name of the failover replica. If specified at instance creation, a failover replica is
+            created for the instance. The name doesn't include the project ID. This property is applicable only to
+            Second Generation instances.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.DatabasesListResponse">
+            <summary>Database list response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabasesListResponse.Items">
+            <summary>List of database resources in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabasesListResponse.Kind">
+            <summary>This is always sql#databasesList.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.DatabasesListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext">
+            <summary>Database instance export context.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.CsvExportOptions">
+            <summary>Options for exporting data as CSV.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.Databases">
+            <summary>Databases (for example, guestbook) from which the export is made. If fileType is SQL and no
+            database is specified, all databases are exported. If fileType is CSV, you can optionally specify at most
+            one database to export. If csvExportOptions.selectQuery also specifies the database, this field will be
+            ignored.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.FileType">
+            <summary>The file type for the specified uri. SQL: The file contains SQL statements. CSV: The file contains
+            CSV data.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.Kind">
+            <summary>This is always sql#exportContext.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.SqlExportOptions">
+            <summary>Options for exporting data as SQL statements.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.Uri">
+            <summary>The path to the file in Google Cloud Storage where the export will be stored. The URI is in the
+            form gs://bucketName/fileName. If the file already exists, the operation fails. If fileType is SQL and the
+            filename ends with .gz, the contents are compressed.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.CsvExportOptionsData">
+            <summary>Options for exporting data as CSV.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.CsvExportOptionsData.SelectQuery">
+            <summary>The select query used to extract the data.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.SqlExportOptionsData">
+            <summary>Options for exporting data as SQL statements.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.SqlExportOptionsData.SchemaOnly">
+            <summary>Export only schemas.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ExportContext.SqlExportOptionsData.Tables">
+            <summary>Tables to export, or that were exported, from the specified database. If you specify tables,
+            specify one and only one database.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.FailoverContext">
+            <summary>Database instance failover context.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.FailoverContext.Kind">
+            <summary>This is always sql#failoverContext.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.FailoverContext.SettingsVersion">
+            <summary>The current settings version of this instance. Request will be rejected if this version doesn't
+            match the current settings version.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.FailoverContext.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.Flag">
+            <summary>A Google Cloud SQL service flag resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.AllowedStringValues">
+            <summary>For STRING flags, a list of strings that the value can be set to.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.AppliesTo">
+            <summary>The database version this flag applies to. Can be MYSQL_5_5, MYSQL_5_6, or MYSQL_5_7. MYSQL_5_7 is
+            applicable only to Second Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.Kind">
+            <summary>This is always sql#flag.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.MaxValue">
+            <summary>For INTEGER flags, the maximum allowed value.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.MinValue">
+            <summary>For INTEGER flags, the minimum allowed value.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.Name">
+            <summary>This is the name of the flag. Flag names always use underscores, not hyphens, e.g.
+            max_allowed_packet</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.RequiresRestart">
+            <summary>Indicates whether changing this flag will trigger a database restart. Only applicable to Second
+            Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.Type">
+            <summary>The type of the flag. Flags are typed to being BOOLEAN, STRING, INTEGER or NONE. NONE is used for
+            flags which do not take a value, such as skip_grant_tables.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Flag.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.FlagsListResponse">
+            <summary>Flags list response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.FlagsListResponse.Items">
+            <summary>List of flags.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.FlagsListResponse.Kind">
+            <summary>This is always sql#flagsList.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.FlagsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext">
+            <summary>Database instance import context.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.CsvImportOptions">
+            <summary>Options for importing data as CSV.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.Database">
+            <summary>The database (for example, guestbook) to which the import is made. If fileType is SQL and no
+            database is specified, it is assumed that the database is specified in the file to be imported. If fileType
+            is CSV, it must be specified.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.FileType">
+            <summary>The file type for the specified uri. SQL: The file contains SQL statements. CSV: The file contains
+            CSV data.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.ImportUser">
+            <summary>The PostgreSQL user for this import operation. Defaults to cloudsqlsuperuser. Used only for
+            PostgreSQL instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.Kind">
+            <summary>This is always sql#importContext.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.Uri">
+            <summary>A path to the file in Google Cloud Storage from which the import is made. The URI is in the form
+            gs://bucketName/fileName. Compressed gzip files (.gz) are supported when fileType is SQL.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.CsvImportOptionsData">
+            <summary>Options for importing data as CSV.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.CsvImportOptionsData.Columns">
+            <summary>The columns to which CSV data is imported. If not specified, all columns of the database table
+            are loaded with CSV data.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ImportContext.CsvImportOptionsData.Table">
+            <summary>The table to which CSV data is imported.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.InstancesCloneRequest">
+            <summary>Database instance clone request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesCloneRequest.CloneContext">
+            <summary>Contains details about the clone operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesCloneRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.InstancesExportRequest">
+            <summary>Database instance export request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesExportRequest.ExportContext">
+            <summary>Contains details about the export operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesExportRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.InstancesFailoverRequest">
+            <summary>Instance failover request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesFailoverRequest.FailoverContext">
+            <summary>Failover Context.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesFailoverRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.InstancesImportRequest">
+            <summary>Database instance import request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesImportRequest.ImportContext">
+            <summary>Contains details about the import operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesImportRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.InstancesListResponse">
+            <summary>Database instances list response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesListResponse.Items">
+            <summary>List of database instance resources.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesListResponse.Kind">
+            <summary>This is always sql#instancesList.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesListResponse.NextPageToken">
+            <summary>The continuation token, used to page through large result sets. Provide this value in a subsequent
+            request to return the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.InstancesRestoreBackupRequest">
+            <summary>Database instance restore backup request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesRestoreBackupRequest.RestoreBackupContext">
+            <summary>Parameters required to perform the restore backup operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesRestoreBackupRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.InstancesTruncateLogRequest">
+            <summary>Instance truncate log request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesTruncateLogRequest.TruncateLogContext">
+            <summary>Contains details about the truncate log operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.InstancesTruncateLogRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.IpConfiguration">
+            <summary>IP Management configuration.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpConfiguration.AuthorizedNetworks">
+            <summary>The list of external networks that are allowed to connect to the instance using the IP. In CIDR
+            notation, also known as 'slash' notation (e.g. 192.168.100.0/24).</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpConfiguration.Ipv4Enabled">
+            <summary>Whether the instance should be assigned an IP address or not.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpConfiguration.RequireSsl">
+            <summary>Whether SSL connections over IP should be enforced or not.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpConfiguration.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.IpMapping">
+            <summary>Database instance IP Mapping.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpMapping.IpAddress">
+            <summary>The IP address assigned.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpMapping.TimeToRetireRaw">
+            <summary>The due time for this IP to be retired in RFC 3339 format, for example 2012-11-15T16:19:00.094Z.
+            This field is only available when the IP is scheduled to be retired.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpMapping.TimeToRetire">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.IpMapping.TimeToRetireRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpMapping.Type">
+            <summary>The type of this IP address. A PRIMARY address is an address that can accept incoming connections.
+            An OUTGOING address is the source address of connections originating from the instance, if
+            supported.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.IpMapping.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.LocationPreference">
+            <summary>Preferred location. This specifies where a Cloud SQL instance should preferably be located, either in a
+            specific Compute Engine zone, or co-located with an App Engine application. Note that if the preferred location
+            is not available, the instance will be located as close as possible within the region. Only one location may be
+            specified.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.LocationPreference.FollowGaeApplication">
+            <summary>The AppEngine application to follow, it must be in the same region as the Cloud SQL
+            instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.LocationPreference.Kind">
+            <summary>This is always sql#locationPreference.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.LocationPreference.Zone">
+            <summary>The preferred Compute Engine zone (e.g. us-centra1-a, us-central1-b, etc.).</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.LocationPreference.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.MaintenanceWindow">
+            <summary>Maintenance window. This specifies when a v2 Cloud SQL instance should preferably be restarted for
+            system maintenance puruposes.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MaintenanceWindow.Day">
+            <summary>day of week (1-7), starting on Monday.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MaintenanceWindow.Hour">
+            <summary>hour of day - 0 to 23.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MaintenanceWindow.Kind">
+            <summary>This is always sql#maintenanceWindow.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MaintenanceWindow.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration">
+            <summary>Read-replica configuration specific to MySQL databases.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.CaCertificate">
+            <summary>PEM representation of the trusted CA's x509 certificate.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.ClientCertificate">
+            <summary>PEM representation of the slave's x509 certificate.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.ClientKey">
+            <summary>PEM representation of the slave's private key. The corresponsing public key is encoded in the
+            client's certificate.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.ConnectRetryInterval">
+            <summary>Seconds to wait between connect retries. MySQL's default is 60 seconds.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.DumpFilePath">
+            <summary>Path to a SQL dump file in Google Cloud Storage from which the slave instance is to be created. The
+            URI is in the form gs://bucketName/fileName. Compressed gzip files (.gz) are also supported. Dumps should
+            have the binlog co-ordinates from which replication should begin. This can be accomplished by setting
+            --master-data to 1 when using mysqldump.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.Kind">
+            <summary>This is always sql#mysqlReplicaConfiguration.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.MasterHeartbeatPeriod">
+            <summary>Interval in milliseconds between replication heartbeats.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.Password">
+            <summary>The password for the replication connection.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.SslCipher">
+            <summary>A list of permissible ciphers to use for SSL encryption.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.Username">
+            <summary>The username for the replication connection.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.VerifyServerCertificate">
+            <summary>Whether or not to check the master's Common Name value in the certificate that it sends during the
+            SSL handshake.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.MySqlReplicaConfiguration.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.OnPremisesConfiguration">
+            <summary>On-premises instance configuration.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OnPremisesConfiguration.HostPort">
+            <summary>The host and port of the on-premises instance in host:port format</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OnPremisesConfiguration.Kind">
+            <summary>This is always sql#onPremisesConfiguration.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OnPremisesConfiguration.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.Operation">
+            <summary>An Operations resource contains information about database instance operations such as create, delete,
+            and restart. Operations resources are created in response to operations that were initiated; you never create
+            them directly.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.EndTimeRaw">
+            <summary>The time this operation finished in UTC timezone in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.EndTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.EndTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.Error">
+            <summary>If errors occurred during processing of this operation, this field will be populated.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.ExportContext">
+            <summary>The context for export operation, if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.ImportContext">
+            <summary>The context for import operation, if applicable.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.InsertTimeRaw">
+            <summary>The time this operation was enqueued in UTC timezone in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.InsertTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.InsertTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.Kind">
+            <summary>This is always sql#operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.Name">
+            <summary>An identifier that uniquely identifies the operation. You can use this identifier to retrieve the
+            Operations resource that has information about the operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.OperationType">
+            <summary>The type of the operation. Valid values are CREATE, DELETE, UPDATE, RESTART, IMPORT, EXPORT,
+            BACKUP_VOLUME, RESTORE_VOLUME, CREATE_USER, DELETE_USER, CREATE_DATABASE, DELETE_DATABASE .</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.SelfLink">
+            <summary>The URI of this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.StartTimeRaw">
+            <summary>The time this operation actually started in UTC timezone in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.StartTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.StartTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.Status">
+            <summary>The status of an operation. Valid values are PENDING, RUNNING, DONE, UNKNOWN.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.TargetId">
+            <summary>Name of the database instance related to this operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.TargetProject">
+            <summary>The project ID of the target instance related to this operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.User">
+            <summary>The email address of the user who initiated this operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Operation.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.OperationError">
+            <summary>Database instance operation error.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationError.Code">
+            <summary>Identifies the specific error that occurred.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationError.Kind">
+            <summary>This is always sql#operationError.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationError.Message">
+            <summary>Additional information about the error encountered.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationError.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.OperationErrors">
+            <summary>Database instance operation errors list wrapper.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationErrors.Errors">
+            <summary>The list of errors encountered while processing this operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationErrors.Kind">
+            <summary>This is always sql#operationErrors.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationErrors.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.OperationsListResponse">
+            <summary>Database instance list operations response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationsListResponse.Items">
+            <summary>List of operation resources.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationsListResponse.Kind">
+            <summary>This is always sql#operationsList.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationsListResponse.NextPageToken">
+            <summary>The continuation token, used to page through large result sets. Provide this value in a subsequent
+            request to return the next page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.OperationsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.ReplicaConfiguration">
+            <summary>Read-replica configuration for connecting to the master.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ReplicaConfiguration.FailoverTarget">
+            <summary>Specifies if the replica is the failover target. If the field is set to true the replica will be
+            designated as a failover replica. In case the master instance fails, the replica instance will be promoted
+            as the new master instance. Only one replica can be specified as failover target, and the replica has to be
+            in different zone with the master instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ReplicaConfiguration.Kind">
+            <summary>This is always sql#replicaConfiguration.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ReplicaConfiguration.MysqlReplicaConfiguration">
+            <summary>MySQL specific configuration when replicating from a MySQL on-premises master. Replication
+            configuration information such as the username, password, certificates, and keys are not stored in the
+            instance metadata. The configuration information is used only to set up the replication connection and is
+            stored by MySQL in a file named master.info in the data directory.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.ReplicaConfiguration.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.RestoreBackupContext">
+            <summary>Database instance restore from backup context.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.RestoreBackupContext.BackupRunId">
+            <summary>The ID of the backup run to restore from.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.RestoreBackupContext.InstanceId">
+            <summary>The ID of the instance that the backup was taken from.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.RestoreBackupContext.Kind">
+            <summary>This is always sql#restoreBackupContext.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.RestoreBackupContext.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.Settings">
+            <summary>Database instance settings.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.ActivationPolicy">
+            <summary>The activation policy specifies when the instance is activated; it is applicable only when the
+            instance state is RUNNABLE. The activation policy cannot be updated together with other settings for Second
+            Generation instances. Valid values: ALWAYS: The instance is on; it is not deactivated by inactivity. NEVER:
+            The instance is off; it is not activated, even if a connection request arrives. ON_DEMAND: The instance
+            responds to incoming requests, and turns itself off when not in use. Instances with PER_USE pricing turn off
+            after 15 minutes of inactivity. Instances with PER_PACKAGE pricing turn off after 12 hours of
+            inactivity.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.AuthorizedGaeApplications">
+            <summary>The App Engine app IDs that can access this instance. This property is only applicable to First
+            Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.AvailabilityType">
+            <summary>Reserved for future use.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.BackupConfiguration">
+            <summary>The daily backup configuration for the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.CrashSafeReplicationEnabled">
+            <summary>Configuration specific to read replica instances. Indicates whether database flags for crash-safe
+            replication are enabled. This property is only applicable to First Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.DataDiskSizeGb">
+            <summary>The size of data disk, in GB. The data disk size minimum is 10GB. Applies only to Second Generation
+            instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.DataDiskType">
+            <summary>The type of data disk. Only supported for Second Generation instances. The default type is PD_SSD.
+            Applies only to Second Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.DatabaseFlags">
+            <summary>The database flags passed to the instance at startup.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.DatabaseReplicationEnabled">
+            <summary>Configuration specific to read replica instances. Indicates whether replication is enabled or
+            not.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.IpConfiguration">
+            <summary>The settings for IP Management. This allows to enable or disable the instance IP and manage which
+            external networks can connect to the instance. The IPv4 address cannot be disabled for Second Generation
+            instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.Kind">
+            <summary>This is always sql#settings.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.LocationPreference">
+            <summary>The location preference settings. This allows the instance to be located as near as possible to
+            either an App Engine app or GCE zone for better performance. App Engine co-location is only applicable to
+            First Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.MaintenanceWindow">
+            <summary>The maintenance window for this instance. This specifies when the instance may be restarted for
+            maintenance purposes. Applies only to Second Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.PricingPlan">
+            <summary>The pricing plan for this instance. This can be either PER_USE or PACKAGE. Only PER_USE is
+            supported for Second Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.ReplicationType">
+            <summary>The type of replication this instance uses. This can be either ASYNCHRONOUS or SYNCHRONOUS. This
+            property is only applicable to First Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.SettingsVersion">
+            <summary>The version of instance settings. This is a required field for update method to make sure
+            concurrent updates are handled properly. During update, use the most recent settingsVersion value for this
+            instance and do not try to update this value.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.StorageAutoResize">
+            <summary>Configuration to increase storage size automatically. The default value is true. Applies only to
+            Second Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.StorageAutoResizeLimit">
+            <summary>The maximum size to which storage capacity can be automatically increased. The default value is 0,
+            which specifies that there is no limit. Applies only to Second Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.Tier">
+            <summary>The tier of service for this instance, for example D1, D2. For more information, see
+            pricing.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.UserLabels">
+            <summary>User-provided labels, represented as a dictionary where each label is a single key value
+            pair.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Settings.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.SslCert">
+            <summary>SslCerts Resource</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.Cert">
+            <summary>PEM representation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.CertSerialNumber">
+            <summary>Serial number, as extracted from the certificate.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.CommonName">
+            <summary>User supplied name. Constrained to [a-zA-Z.-_ ]+.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.CreateTimeRaw">
+            <summary>The time when the certificate was created in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.CreateTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.CreateTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.ExpirationTimeRaw">
+            <summary>The time when the certificate expires in RFC 3339 format, for example
+            2012-11-15T16:19:00.094Z.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.ExpirationTime">
+            <summary><seealso cref="T:System.DateTime"/> representation of <see cref="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.ExpirationTimeRaw"/>.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.Instance">
+            <summary>Name of the database instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.Kind">
+            <summary>This is always sql#sslCert.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.SelfLink">
+            <summary>The URI of this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.Sha1Fingerprint">
+            <summary>Sha1 Fingerprint.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCert.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.SslCertDetail">
+            <summary>SslCertDetail.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertDetail.CertInfo">
+            <summary>The public information about the cert.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertDetail.CertPrivateKey">
+            <summary>The private key for the client cert, in pem format. Keep private in order to protect your
+            security.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertDetail.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsCreateEphemeralRequest">
+            <summary>SslCerts create ephemeral certificate request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsCreateEphemeralRequest.PublicKey">
+            <summary>PEM encoded public key to include in the signed certificate.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsCreateEphemeralRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertRequest">
+            <summary>SslCerts insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertRequest.CommonName">
+            <summary>User supplied name. Must be a distinct name from the other certificates for this instance. New
+            certificates will not be usable until the instance is restarted.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertResponse">
+            <summary>SslCert insert response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertResponse.ClientCert">
+            <summary>The new client certificate and private key. The new certificate will not work until the instance is
+            restarted for First Generation instances.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertResponse.Kind">
+            <summary>This is always sql#sslCertsInsert.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertResponse.Operation">
+            <summary>The operation to track the ssl certs insert request.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertResponse.ServerCaCert">
+            <summary>The server Certificate Authority's certificate. If this is missing you can force a new one to be
+            generated by calling resetSslConfig method on instances resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsInsertResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsListResponse">
+            <summary>SslCerts list response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsListResponse.Items">
+            <summary>List of client certificates for the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsListResponse.Kind">
+            <summary>This is always sql#sslCertsList.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.SslCertsListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.Tier">
+            <summary>A Google Cloud SQL service tier resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Tier.DiskQuota">
+            <summary>The maximum disk size of this tier in bytes.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Tier.RAM">
+            <summary>The maximum RAM usage of this tier in bytes.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Tier.Kind">
+            <summary>This is always sql#tier.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Tier.Region">
+            <summary>The applicable regions for this tier.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Tier.TierValue">
+            <summary>An identifier for the service tier, for example D1, D2 etc. For related information, see
+            Pricing.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.Tier.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.TiersListResponse">
+            <summary>Tiers list response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.TiersListResponse.Items">
+            <summary>List of tiers.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.TiersListResponse.Kind">
+            <summary>This is always sql#tiersList.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.TiersListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.TruncateLogContext">
+            <summary>Database Instance truncate log context.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.TruncateLogContext.Kind">
+            <summary>This is always sql#truncateLogContext.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.TruncateLogContext.LogType">
+            <summary>The type of log to truncate. Valid values are MYSQL_GENERAL_TABLE and MYSQL_SLOW_TABLE.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.TruncateLogContext.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.User">
+            <summary>A Cloud SQL user resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.User.ETag">
+            <summary>HTTP 1.1 Entity tag for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.User.Host">
+            <summary>The host name from which the user can connect. For insert operations, host defaults to an empty
+            string. For update operations, host is specified as part of the request URL. The host name cannot be updated
+            after insertion.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.User.Instance">
+            <summary>The name of the Cloud SQL instance. This does not include the project ID. Can be omitted for update
+            since it is already specified on the URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.User.Kind">
+            <summary>This is always sql#user.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.User.Name">
+            <summary>The name of the user in the Cloud SQL instance. Can be omitted for update since it is already
+            specified on the URL.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.User.Password">
+            <summary>The password for the user.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.User.Project">
+            <summary>The project ID of the project containing the Cloud SQL database. The Google apps domain is prefixed
+            if applicable. Can be omitted for update since it is already specified on the URL.</summary>
+        </member>
+        <member name="T:Google.Apis.SQLAdmin.v1beta4.Data.UsersListResponse">
+            <summary>User list response.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.UsersListResponse.Items">
+            <summary>List of user resources in the instance.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.UsersListResponse.Kind">
+            <summary>This is always sql#usersList.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.UsersListResponse.NextPageToken">
+            <summary>An identifier that uniquely identifies the operation. You can use this identifier to retrieve the
+            Operations resource that has information about the operation.</summary>
+        </member>
+        <member name="P:Google.Apis.SQLAdmin.v1beta4.Data.UsersListResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+    </members>
+</doc>

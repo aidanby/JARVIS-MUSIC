@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "data": {
+        "contents_checksum": "a802de1c3fd4c5879bdd04c71e121bbac9ffdd90ae980c0a5225671f8ff37ac0", 
+        "source": "", 
+        "type": "tar"
+      }, 
+      "dependencies": [
+        "bundled-python", 
+        "core"
+      ], 
+      "details": {
+        "description": "Provides stand-alone Python install.", 
+        "display_name": "Bundled Python"
+      }, 
+      "id": "bundled-python-windows-x86_64", 
+      "is_configuration": false, 
+      "is_hidden": true, 
+      "is_required": false, 
+      "platform": {
+        "architectures": [
+          "x86_64"
+        ], 
+        "operating_systems": [
+          "WINDOWS"
+        ]
+      }, 
+      "version": {
+        "build_number": 20190127142748, 
+        "version_string": "2.7.13"
+      }
+    }
+  ], 
+  "revision": 20190127142748, 
+  "schema_version": {
+    "no_update": false, 
+    "url": "https://dl.google.com/dl/cloudsdk/channels/rapid/google-cloud-sdk.tar.gz", 
+    "version": 3
+  }, 
+  "version": "232.0.0"
+}

@@ -1,0 +1,2523 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.CloudResourceManager.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService">
+            <summary>The CloudResourceManager Service.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Google Cloud Resource Manager API.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Scope.CloudPlatform">
+            <summary>View and manage your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Scope.CloudPlatformReadOnly">
+            <summary>View your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Folders">
+            <summary>Gets the Folders resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Liens">
+            <summary>Gets the Liens resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Operations">
+            <summary>Gets the Operations resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Organizations">
+            <summary>Gets the Organizations resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerService.Projects">
+            <summary>Gets the Projects resource.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1">
+            <summary>A base abstract class for CloudResourceManager requests.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new CloudResourceManagerBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.Xgafv">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.XgafvEnum">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.XgafvEnum.Value1">
+            <summary>v1 error format</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.XgafvEnum.Value2">
+            <summary>v2 error format</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.AccessToken">
+            <summary>OAuth access token.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.Alt">
+            <summary>Data format for response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.AltEnum">
+            <summary>Data format for response.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.AltEnum.Media">
+            <summary>Media download with context-dependent Content-Type</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.AltEnum.Proto">
+            <summary>Responses with Content-Type of application/x-protobuf</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.BearerToken">
+            <summary>OAuth bearer token.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.Callback">
+            <summary>JSONP</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.Pp">
+            <summary>Pretty-print response.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+            assigned to a user, but should not exceed 40 characters.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.UploadType">
+            <summary>Legacy upload protocol for media (e.g. "media", "multipart").</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.UploadProtocol">
+            <summary>Upload protocol for media (e.g. "raw", "multipart").</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.CloudResourceManagerBaseServiceRequest`1.InitParameters">
+            <summary>Initializes CloudResourceManager parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.FoldersResource">
+            <summary>The "folders" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.FoldersResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest,System.String)">
+            <summary>Clears a `Policy` from a resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource for the `Policy` to clear.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest">
+            <summary>Clears a `Policy` from a resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest,System.String)">
+            <summary>Constructs a new ClearOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest.Resource">
+            <summary>Name of the resource for the `Policy` to clear.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ClearOrgPolicyRequest.InitParameters">
+            <summary>Initializes ClearOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest,System.String)">
+            <summary>Gets the effective `Policy` on a resource. This is the result of merging `Policies` in the resource
+            hierarchy. The returned `Policy` will not have an `etag`set because it is a computed `Policy` across
+            multiple resources.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">The name of the resource to start computing the effective `Policy`.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest">
+            <summary>Gets the effective `Policy` on a resource. This is the result of merging `Policies` in the resource
+            hierarchy. The returned `Policy` will not have an `etag`set because it is a computed `Policy` across
+            multiple resources.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest,System.String)">
+            <summary>Constructs a new GetEffectiveOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest.Resource">
+            <summary>The name of the resource to start computing the effective `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.GetEffectiveOrgPolicyRequest.InitParameters">
+            <summary>Initializes GetEffectiveOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest,System.String)">
+             <summary>Gets a `Policy` on a resource.
+            
+             If no `Policy` is set on the resource, a `Policy` is returned with default values including
+             `POLICY_TYPE_NOT_SET` for the `policy_type oneof`. The `etag` value can be used with `SetOrgPolicy()` to
+             create or update a `Policy` during read-modify-write.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">Name of the resource the `Policy` is set on.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest">
+             <summary>Gets a `Policy` on a resource.
+            
+             If no `Policy` is set on the resource, a `Policy` is returned with default values including
+             `POLICY_TYPE_NOT_SET` for the `policy_type oneof`. The `etag` value can be used with `SetOrgPolicy()` to
+             create or update a `Policy` during read-modify-write.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest,System.String)">
+            <summary>Constructs a new GetOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest.Resource">
+            <summary>Name of the resource the `Policy` is set on.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.GetOrgPolicyRequest.InitParameters">
+            <summary>Initializes GetOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraints(Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest,System.String)">
+            <summary>Lists `Constraints` that could be applied on the specified resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource to list `Constraints` for.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest">
+            <summary>Lists `Constraints` that could be applied on the specified resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest,System.String)">
+            <summary>Constructs a new ListAvailableOrgPolicyConstraints request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest.Resource">
+            <summary>Name of the resource to list `Constraints` for.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ListAvailableOrgPolicyConstraintsRequest.InitParameters">
+            <summary>Initializes ListAvailableOrgPolicyConstraints parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPolicies(Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest,System.String)">
+            <summary>Lists all the `Policies` set for a particular resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource to list Policies for.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest">
+            <summary>Lists all the `Policies` set for a particular resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest,System.String)">
+            <summary>Constructs a new ListOrgPolicies request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest.Resource">
+            <summary>Name of the resource to list Policies for.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.ListOrgPoliciesRequest.InitParameters">
+            <summary>Initializes ListOrgPolicies parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest,System.String)">
+             <summary>Updates the specified `Policy` on the resource. Creates a new `Policy` for that `Constraint` on the
+             resource if one does not exist.
+            
+             Not supplying an `etag` on the request `Policy` results in an unconditional write of the `Policy`.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">Resource name of the resource to attach the `Policy`.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest">
+             <summary>Updates the specified `Policy` on the resource. Creates a new `Policy` for that `Constraint` on the
+             resource if one does not exist.
+            
+             Not supplying an `etag` on the request `Policy` results in an unconditional write of the `Policy`.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest,System.String)">
+            <summary>Constructs a new SetOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest.Resource">
+            <summary>Resource name of the resource to attach the `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.FoldersResource.SetOrgPolicyRequest.InitParameters">
+            <summary>Initializes SetOrgPolicy parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.LiensResource">
+            <summary>The "liens" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.LiensResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.Create(Google.Apis.CloudResourceManager.v1.Data.Lien)">
+             <summary>Create a Lien which applies to the resource denoted by the `parent` field.
+            
+             Callers of this method will require permission on the `parent` resource. For example, applying to
+             `projects/1234` requires permission `resourcemanager.projects.updateLiens`.
+            
+             NOTE: Some resources may limit the number of Liens which may be applied.</summary>
+             <param name="body">The body of the request.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.LiensResource.CreateRequest">
+             <summary>Create a Lien which applies to the resource denoted by the `parent` field.
+            
+             Callers of this method will require permission on the `parent` resource. For example, applying to
+             `projects/1234` requires permission `resourcemanager.projects.updateLiens`.
+            
+             NOTE: Some resources may limit the number of Liens which may be applied.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.Lien)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.Delete(System.String)">
+             <summary>Delete a Lien by `name`.
+            
+             Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent`
+             of `projects/1234` requires permission `resourcemanager.projects.updateLiens`.</summary>
+             <param name="name">The name/identifier of the Lien to delete.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.LiensResource.DeleteRequest">
+             <summary>Delete a Lien by `name`.
+            
+             Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent`
+             of `projects/1234` requires permission `resourcemanager.projects.updateLiens`.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.DeleteRequest.Name">
+            <summary>The name/identifier of the Lien to delete.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.List">
+             <summary>List all Liens applied to the `parent` resource.
+            
+             Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent`
+             of `projects/1234` requires permission `resourcemanager.projects.get`.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest">
+             <summary>List all Liens applied to the `parent` resource.
+            
+             Callers of this method will require permission on the `parent` resource. For example, a Lien with a `parent`
+             of `projects/1234` requires permission `resourcemanager.projects.get`.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest.PageToken">
+            <summary>The `next_page_token` value returned from a previous List request, if any.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest.PageSize">
+            <summary>The maximum number of items to return. This is a suggestion for the server.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest.Parent">
+            <summary>The name of the resource to list all attached Liens. For example, `projects/1234`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.LiensResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OperationsResource">
+            <summary>The "operations" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.OperationsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OperationsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OperationsResource.Get(System.String)">
+            <summary>Gets the latest state of a long-running operation.  Clients can use this method to poll the
+            operation result at intervals as recommended by the API service.</summary>
+            <param name="name">The name of the operation resource.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OperationsResource.GetRequest">
+            <summary>Gets the latest state of a long-running operation.  Clients can use this method to poll the
+            operation result at intervals as recommended by the API service.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OperationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OperationsResource.GetRequest.Name">
+            <summary>The name of the operation resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OperationsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OperationsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OperationsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OperationsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource">
+            <summary>The "organizations" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.OrganizationsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest,System.String)">
+            <summary>Clears a `Policy` from a resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource for the `Policy` to clear.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest">
+            <summary>Clears a `Policy` from a resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest,System.String)">
+            <summary>Constructs a new ClearOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest.Resource">
+            <summary>Name of the resource for the `Policy` to clear.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ClearOrgPolicyRequest.InitParameters">
+            <summary>Initializes ClearOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.Get(System.String)">
+            <summary>Fetches an Organization resource identified by the specified resource name.</summary>
+            <param name="name">The resource name of the Organization to fetch, e.g. "organizations/1234".</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetRequest">
+            <summary>Fetches an Organization resource identified by the specified resource name.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetRequest.Name">
+            <summary>The resource name of the Organization to fetch, e.g. "organizations/1234".</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest,System.String)">
+            <summary>Gets the effective `Policy` on a resource. This is the result of merging `Policies` in the resource
+            hierarchy. The returned `Policy` will not have an `etag`set because it is a computed `Policy` across
+            multiple resources.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">The name of the resource to start computing the effective `Policy`.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest">
+            <summary>Gets the effective `Policy` on a resource. This is the result of merging `Policies` in the resource
+            hierarchy. The returned `Policy` will not have an `etag`set because it is a computed `Policy` across
+            multiple resources.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest,System.String)">
+            <summary>Constructs a new GetEffectiveOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest.Resource">
+            <summary>The name of the resource to start computing the effective `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetEffectiveOrgPolicyRequest.InitParameters">
+            <summary>Initializes GetEffectiveOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicy(Google.Apis.CloudResourceManager.v1.Data.GetIamPolicyRequest,System.String)">
+             <summary>Gets the access control policy for an Organization resource. May be empty if no such policy or
+             resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123".
+            
+             Authorization requires the Google IAM permission `resourcemanager.organizations.getIamPolicy` on the
+             specified organization</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy is being requested. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest">
+             <summary>Gets the access control policy for an Organization resource. May be empty if no such policy or
+             resource exists. The `resource` field should be the organization's resource name, e.g. "organizations/123".
+            
+             Authorization requires the Google IAM permission `resourcemanager.organizations.getIamPolicy` on the
+             specified organization</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetIamPolicyRequest,System.String)">
+            <summary>Constructs a new GetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being requested. See the operation documentation
+            for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetIamPolicyRequest.InitParameters">
+            <summary>Initializes GetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest,System.String)">
+             <summary>Gets a `Policy` on a resource.
+            
+             If no `Policy` is set on the resource, a `Policy` is returned with default values including
+             `POLICY_TYPE_NOT_SET` for the `policy_type oneof`. The `etag` value can be used with `SetOrgPolicy()` to
+             create or update a `Policy` during read-modify-write.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">Name of the resource the `Policy` is set on.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest">
+             <summary>Gets a `Policy` on a resource.
+            
+             If no `Policy` is set on the resource, a `Policy` is returned with default values including
+             `POLICY_TYPE_NOT_SET` for the `policy_type oneof`. The `etag` value can be used with `SetOrgPolicy()` to
+             create or update a `Policy` during read-modify-write.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest,System.String)">
+            <summary>Constructs a new GetOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest.Resource">
+            <summary>Name of the resource the `Policy` is set on.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.GetOrgPolicyRequest.InitParameters">
+            <summary>Initializes GetOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraints(Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest,System.String)">
+            <summary>Lists `Constraints` that could be applied on the specified resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource to list `Constraints` for.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest">
+            <summary>Lists `Constraints` that could be applied on the specified resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest,System.String)">
+            <summary>Constructs a new ListAvailableOrgPolicyConstraints request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest.Resource">
+            <summary>Name of the resource to list `Constraints` for.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListAvailableOrgPolicyConstraintsRequest.InitParameters">
+            <summary>Initializes ListAvailableOrgPolicyConstraints parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPolicies(Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest,System.String)">
+            <summary>Lists all the `Policies` set for a particular resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource to list Policies for.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest">
+            <summary>Lists all the `Policies` set for a particular resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest,System.String)">
+            <summary>Constructs a new ListOrgPolicies request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest.Resource">
+            <summary>Name of the resource to list Policies for.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.ListOrgPoliciesRequest.InitParameters">
+            <summary>Initializes ListOrgPolicies parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.Search(Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsRequest)">
+             <summary>Searches Organization resources that are visible to the user and satisfy the specified filter. This
+             method returns Organizations in an unspecified order. New Organizations do not necessarily appear at the end
+             of the results.
+            
+             Search will only return organizations on which the user has the permission
+             `resourcemanager.organizations.get`</summary>
+             <param name="body">The body of the request.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SearchRequest">
+             <summary>Searches Organization resources that are visible to the user and satisfy the specified filter. This
+             method returns Organizations in an unspecified order. New Organizations do not necessarily appear at the end
+             of the results.
+            
+             Search will only return organizations on which the user has the permission
+             `resourcemanager.organizations.get`</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SearchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsRequest)">
+            <summary>Constructs a new Search request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SearchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SearchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SearchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SearchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SearchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SearchRequest.InitParameters">
+            <summary>Initializes Search parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicy(Google.Apis.CloudResourceManager.v1.Data.SetIamPolicyRequest,System.String)">
+             <summary>Sets the access control policy on an Organization resource. Replaces any existing policy. The
+             `resource` field should be the organization's resource name, e.g. "organizations/123".
+            
+             Authorization requires the Google IAM permission `resourcemanager.organizations.setIamPolicy` on the
+             specified organization</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy is being specified. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest">
+             <summary>Sets the access control policy on an Organization resource. Replaces any existing policy. The
+             `resource` field should be the organization's resource name, e.g. "organizations/123".
+            
+             Authorization requires the Google IAM permission `resourcemanager.organizations.setIamPolicy` on the
+             specified organization</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Constructs a new SetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being specified. See the operation documentation
+            for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetIamPolicyRequest.InitParameters">
+            <summary>Initializes SetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest,System.String)">
+             <summary>Updates the specified `Policy` on the resource. Creates a new `Policy` for that `Constraint` on the
+             resource if one does not exist.
+            
+             Not supplying an `etag` on the request `Policy` results in an unconditional write of the `Policy`.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">Resource name of the resource to attach the `Policy`.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest">
+             <summary>Updates the specified `Policy` on the resource. Creates a new `Policy` for that `Constraint` on the
+             resource if one does not exist.
+            
+             Not supplying an `etag` on the request `Policy` results in an unconditional write of the `Policy`.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest,System.String)">
+            <summary>Constructs a new SetOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest.Resource">
+            <summary>Resource name of the resource to attach the `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.SetOrgPolicyRequest.InitParameters">
+            <summary>Initializes SetOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissions(Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsRequest,System.String)">
+             <summary>Returns permissions that a caller has on the specified Organization. The `resource` field should be
+             the organization's resource name, e.g. "organizations/123".
+            
+             There are no permissions required for making this API call.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy detail is being requested. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest">
+             <summary>Returns permissions that a caller has on the specified Organization. The `resource` field should be
+             the organization's resource name, e.g. "organizations/123".
+            
+             There are no permissions required for making this API call.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsRequest,System.String)">
+            <summary>Constructs a new TestIamPermissions request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy detail is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.OrganizationsResource.TestIamPermissionsRequest.InitParameters">
+            <summary>Initializes TestIamPermissions parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource">
+            <summary>The "projects" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.CloudResourceManager.v1.ProjectsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest,System.String)">
+            <summary>Clears a `Policy` from a resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource for the `Policy` to clear.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest">
+            <summary>Clears a `Policy` from a resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest,System.String)">
+            <summary>Constructs a new ClearOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest.Resource">
+            <summary>Name of the resource for the `Policy` to clear.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ClearOrgPolicyRequest.InitParameters">
+            <summary>Initializes ClearOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.Create(Google.Apis.CloudResourceManager.v1.Data.Project)">
+             <summary>Request that a new Project be created. The result is an Operation which can be used to track the
+             creation process. It is automatically deleted after a few hours, so there is no need to call
+             DeleteOperation.
+            
+             Our SLO permits Project creation to take up to 30 seconds at the 90th percentile. As of 2016-08-29, we are
+             observing 6 seconds 50th percentile latency. 95th percentile latency is around 11 seconds. We recommend
+             polling at the 5th second with an exponential backoff.
+            
+             Authorization requires the Google IAM permission `resourcemanager.projects.create` on the specified parent
+             for the new project.</summary>
+             <param name="body">The body of the request.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.CreateRequest">
+             <summary>Request that a new Project be created. The result is an Operation which can be used to track the
+             creation process. It is automatically deleted after a few hours, so there is no need to call
+             DeleteOperation.
+            
+             Our SLO permits Project creation to take up to 30 seconds at the 90th percentile. As of 2016-08-29, we are
+             observing 6 seconds 50th percentile latency. 95th percentile latency is around 11 seconds. We recommend
+             polling at the 5th second with an exponential backoff.
+            
+             Authorization requires the Google IAM permission `resourcemanager.projects.create` on the specified parent
+             for the new project.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.Project)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.Delete(System.String)">
+             <summary>Marks the Project identified by the specified `project_id` (for example, `my-project-123`) for
+             deletion. This method will only affect the Project if the following criteria are met:
+            
+             + The Project does not have a billing account associated with it. + The Project has a lifecycle state of
+             ACTIVE.
+            
+             This method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion starts at an
+             unspecified time, at which point the Project is no longer accessible.
+            
+             Until the deletion completes, you can check the lifecycle state checked by retrieving the Project with
+             GetProject, and the Project remains visible to ListProjects. However, you cannot update the project.
+            
+             After the deletion completes, the Project is not retrievable by the  GetProject and ListProjects methods.
+            
+             The caller must have modify permissions for this Project.</summary>
+             <param name="projectId">The Project ID (for example, `foo-bar-123`).
+            
+             Required.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.DeleteRequest">
+             <summary>Marks the Project identified by the specified `project_id` (for example, `my-project-123`) for
+             deletion. This method will only affect the Project if the following criteria are met:
+            
+             + The Project does not have a billing account associated with it. + The Project has a lifecycle state of
+             ACTIVE.
+            
+             This method changes the Project's lifecycle state from ACTIVE to DELETE_REQUESTED. The deletion starts at an
+             unspecified time, at which point the Project is no longer accessible.
+            
+             Until the deletion completes, you can check the lifecycle state checked by retrieving the Project with
+             GetProject, and the Project remains visible to ListProjects. However, you cannot update the project.
+            
+             After the deletion completes, the Project is not retrievable by the  GetProject and ListProjects methods.
+            
+             The caller must have modify permissions for this Project.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.DeleteRequest.ProjectId">
+             <summary>The Project ID (for example, `foo-bar-123`).
+            
+             Required.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.Get(System.String)">
+             <summary>Retrieves the Project identified by the specified `project_id` (for example, `my-project-123`).
+            
+             The caller must have read permissions for this Project.</summary>
+             <param name="projectId">The Project ID (for example, `my-project-123`).
+            
+             Required.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetRequest">
+             <summary>Retrieves the Project identified by the specified `project_id` (for example, `my-project-123`).
+            
+             The caller must have read permissions for this Project.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetRequest.ProjectId">
+             <summary>The Project ID (for example, `my-project-123`).
+            
+             Required.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestry(Google.Apis.CloudResourceManager.v1.Data.GetAncestryRequest,System.String)">
+             <summary>Gets a list of ancestors in the resource hierarchy for the Project identified by the specified
+             `project_id` (for example, `my-project-123`).
+            
+             The caller must have read permissions for this Project.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The Project ID (for example, `my-project-123`).
+            
+             Required.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest">
+             <summary>Gets a list of ancestors in the resource hierarchy for the Project identified by the specified
+             `project_id` (for example, `my-project-123`).
+            
+             The caller must have read permissions for this Project.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetAncestryRequest,System.String)">
+            <summary>Constructs a new GetAncestry request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest.ProjectId">
+             <summary>The Project ID (for example, `my-project-123`).
+            
+             Required.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetAncestryRequest.InitParameters">
+            <summary>Initializes GetAncestry parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest,System.String)">
+            <summary>Gets the effective `Policy` on a resource. This is the result of merging `Policies` in the resource
+            hierarchy. The returned `Policy` will not have an `etag`set because it is a computed `Policy` across
+            multiple resources.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">The name of the resource to start computing the effective `Policy`.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest">
+            <summary>Gets the effective `Policy` on a resource. This is the result of merging `Policies` in the resource
+            hierarchy. The returned `Policy` will not have an `etag`set because it is a computed `Policy` across
+            multiple resources.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest,System.String)">
+            <summary>Constructs a new GetEffectiveOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest.Resource">
+            <summary>The name of the resource to start computing the effective `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetEffectiveOrgPolicyRequest.InitParameters">
+            <summary>Initializes GetEffectiveOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicy(Google.Apis.CloudResourceManager.v1.Data.GetIamPolicyRequest,System.String)">
+             <summary>Returns the IAM access control policy for the specified Project. Permission is denied if the policy
+             or the resource does not exist.
+            
+             Authorization requires the Google IAM permission `resourcemanager.projects.getIamPolicy` on the
+             project</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy is being requested. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest">
+             <summary>Returns the IAM access control policy for the specified Project. Permission is denied if the policy
+             or the resource does not exist.
+            
+             Authorization requires the Google IAM permission `resourcemanager.projects.getIamPolicy` on the
+             project</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetIamPolicyRequest,System.String)">
+            <summary>Constructs a new GetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being requested. See the operation documentation
+            for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetIamPolicyRequest.InitParameters">
+            <summary>Initializes GetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest,System.String)">
+             <summary>Gets a `Policy` on a resource.
+            
+             If no `Policy` is set on the resource, a `Policy` is returned with default values including
+             `POLICY_TYPE_NOT_SET` for the `policy_type oneof`. The `etag` value can be used with `SetOrgPolicy()` to
+             create or update a `Policy` during read-modify-write.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">Name of the resource the `Policy` is set on.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest">
+             <summary>Gets a `Policy` on a resource.
+            
+             If no `Policy` is set on the resource, a `Policy` is returned with default values including
+             `POLICY_TYPE_NOT_SET` for the `policy_type oneof`. The `etag` value can be used with `SetOrgPolicy()` to
+             create or update a `Policy` during read-modify-write.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest,System.String)">
+            <summary>Constructs a new GetOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest.Resource">
+            <summary>Name of the resource the `Policy` is set on.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.GetOrgPolicyRequest.InitParameters">
+            <summary>Initializes GetOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.List">
+            <summary>Lists Projects that are visible to the user and satisfy the specified filter. This method returns
+            Projects in an unspecified order. New Projects do not necessarily appear at the end of the list.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest">
+            <summary>Lists Projects that are visible to the user and satisfy the specified filter. This method returns
+            Projects in an unspecified order. New Projects do not necessarily appear at the end of the list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest.PageSize">
+             <summary>The maximum number of Projects to return in the response. The server can return fewer Projects
+             than requested. If unspecified, server picks an appropriate default.
+            
+             Optional.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest.Filter">
+             <summary>An expression for filtering the results of the request.  Filter rules are case insensitive. The
+             fields eligible for filtering are:
+            
+             + `name` + `id` + labels.key where *key* is the name of a label
+            
+             Some examples of using labels as filters:
+            
+             |Filter|Description| |------|-----------| |name:how*|The project's name starts with "how".|
+             |name:Howl|The project's name is `Howl` or `howl`.| |name:HOWL|Equivalent to above.|
+             |NAME:howl|Equivalent to above.| |labels.color:*|The project has the label `color`.|
+             |labels.color:red|The project's label `color` has the value `red`.| |labels.color:redlabels.size:big|The
+             project's label `color` has the value `red` and its label `size` has the value `big`.
+            
+             If you specify a filter that has both `parent.type` and `parent.id`, then the
+             `resourcemanager.projects.list` permission is checked on the parent. If the user has this permission,
+             all projects under the parent will be returned after remaining filters have been applied. If the user
+             lacks this permission, then all projects for which the user has the `resourcemanager.projects.get`
+             permission will be returned after remaining filters have been applied. If no filter is specified, the
+             call will return projects for which the user has `resourcemanager.projects.get` permissions.
+            
+             Optional.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest.PageToken">
+             <summary>A pagination token returned from a previous call to ListProjects that indicates from where
+             listing should continue.
+            
+             Optional.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraints(Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest,System.String)">
+            <summary>Lists `Constraints` that could be applied on the specified resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource to list `Constraints` for.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest">
+            <summary>Lists `Constraints` that could be applied on the specified resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest,System.String)">
+            <summary>Constructs a new ListAvailableOrgPolicyConstraints request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest.Resource">
+            <summary>Name of the resource to list `Constraints` for.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListAvailableOrgPolicyConstraintsRequest.InitParameters">
+            <summary>Initializes ListAvailableOrgPolicyConstraints parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPolicies(Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest,System.String)">
+            <summary>Lists all the `Policies` set for a particular resource.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">Name of the resource to list Policies for.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest">
+            <summary>Lists all the `Policies` set for a particular resource.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest,System.String)">
+            <summary>Constructs a new ListOrgPolicies request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest.Resource">
+            <summary>Name of the resource to list Policies for.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.ListOrgPoliciesRequest.InitParameters">
+            <summary>Initializes ListOrgPolicies parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicy(Google.Apis.CloudResourceManager.v1.Data.SetIamPolicyRequest,System.String)">
+             <summary>Sets the IAM access control policy for the specified Project. Replaces any existing policy.
+            
+             The following constraints apply when using `setIamPolicy()`:
+            
+             + Project does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of a `Policy`.
+            
+             + The owner role can be granted only to `user` and `serviceAccount`.
+            
+             + Service accounts can be made owners of a project directly without any restrictions. However, to be added
+             as an owner, a user must be invited via Cloud Platform console and must accept the invitation.
+            
+             + A user cannot be granted the owner role using `setIamPolicy()`. The user must be granted the owner role
+             using the Cloud Platform Console and must explicitly accept the invitation.
+            
+             + Invitations to grant the owner role cannot be sent using `setIamPolicy()`; they must be sent only using
+             the Cloud Platform Console.
+            
+             + Membership changes that leave the project without any owners that have accepted the Terms of Service (ToS)
+             will be rejected.
+            
+             + If the project is not part of an organization, there must be at least one owner who has accepted the Terms
+             of Service (ToS) agreement in the policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
+             from the policy will fail. This restriction also applies to legacy projects that no longer have owners who
+             have accepted the ToS. Edits to IAM policies will be rejected until the lack of a ToS-accepting owner is
+             rectified.
+            
+             + Calling this method requires enabling the App Engine Admin API.
+            
+             Note: Removing service accounts from policies or changing their roles can render services completely
+             inoperable. It is important to understand how the service account is being used before removing or updating
+             its roles.
+            
+             Authorization requires the Google IAM permission `resourcemanager.projects.setIamPolicy` on the
+             project</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy is being specified. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest">
+             <summary>Sets the IAM access control policy for the specified Project. Replaces any existing policy.
+            
+             The following constraints apply when using `setIamPolicy()`:
+            
+             + Project does not support `allUsers` and `allAuthenticatedUsers` as `members` in a `Binding` of a `Policy`.
+            
+             + The owner role can be granted only to `user` and `serviceAccount`.
+            
+             + Service accounts can be made owners of a project directly without any restrictions. However, to be added
+             as an owner, a user must be invited via Cloud Platform console and must accept the invitation.
+            
+             + A user cannot be granted the owner role using `setIamPolicy()`. The user must be granted the owner role
+             using the Cloud Platform Console and must explicitly accept the invitation.
+            
+             + Invitations to grant the owner role cannot be sent using `setIamPolicy()`; they must be sent only using
+             the Cloud Platform Console.
+            
+             + Membership changes that leave the project without any owners that have accepted the Terms of Service (ToS)
+             will be rejected.
+            
+             + If the project is not part of an organization, there must be at least one owner who has accepted the Terms
+             of Service (ToS) agreement in the policy. Calling `setIamPolicy()` to remove the last ToS-accepted owner
+             from the policy will fail. This restriction also applies to legacy projects that no longer have owners who
+             have accepted the ToS. Edits to IAM policies will be rejected until the lack of a ToS-accepting owner is
+             rectified.
+            
+             + Calling this method requires enabling the App Engine Admin API.
+            
+             Note: Removing service accounts from policies or changing their roles can render services completely
+             inoperable. It is important to understand how the service account is being used before removing or updating
+             its roles.
+            
+             Authorization requires the Google IAM permission `resourcemanager.projects.setIamPolicy` on the
+             project</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Constructs a new SetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being specified. See the operation documentation
+            for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetIamPolicyRequest.InitParameters">
+            <summary>Initializes SetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicy(Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest,System.String)">
+             <summary>Updates the specified `Policy` on the resource. Creates a new `Policy` for that `Constraint` on the
+             resource if one does not exist.
+            
+             Not supplying an `etag` on the request `Policy` results in an unconditional write of the `Policy`.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">Resource name of the resource to attach the `Policy`.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest">
+             <summary>Updates the specified `Policy` on the resource. Creates a new `Policy` for that `Constraint` on the
+             resource if one does not exist.
+            
+             Not supplying an `etag` on the request `Policy` results in an unconditional write of the `Policy`.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest,System.String)">
+            <summary>Constructs a new SetOrgPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest.Resource">
+            <summary>Resource name of the resource to attach the `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.SetOrgPolicyRequest.InitParameters">
+            <summary>Initializes SetOrgPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissions(Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsRequest,System.String)">
+             <summary>Returns permissions that a caller has on the specified Project.
+            
+             There are no permissions required for making this API call.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy detail is being requested. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest">
+             <summary>Returns permissions that a caller has on the specified Project.
+            
+             There are no permissions required for making this API call.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsRequest,System.String)">
+            <summary>Constructs a new TestIamPermissions request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy detail is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.TestIamPermissionsRequest.InitParameters">
+            <summary>Initializes TestIamPermissions parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.Undelete(Google.Apis.CloudResourceManager.v1.Data.UndeleteProjectRequest,System.String)">
+             <summary>Restores the Project identified by the specified `project_id` (for example, `my-project-123`). You
+             can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED. After deletion
+             starts, the Project cannot be restored.
+            
+             The caller must have modify permissions for this Project.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The project ID (for example, `foo-bar-123`).
+            
+             Required.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest">
+             <summary>Restores the Project identified by the specified `project_id` (for example, `my-project-123`). You
+             can only use this method for a Project that has a lifecycle state of DELETE_REQUESTED. After deletion
+             starts, the Project cannot be restored.
+            
+             The caller must have modify permissions for this Project.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.UndeleteProjectRequest,System.String)">
+            <summary>Constructs a new Undelete request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest.ProjectId">
+             <summary>The project ID (for example, `foo-bar-123`).
+            
+             Required.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.UndeleteRequest.InitParameters">
+            <summary>Initializes Undelete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.Update(Google.Apis.CloudResourceManager.v1.Data.Project,System.String)">
+             <summary>Updates the attributes of the Project identified by the specified `project_id` (for example, `my-
+             project-123`).
+            
+             The caller must have modify permissions for this Project.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The project ID (for example, `my-project-123`).
+            
+             Required.</param>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest">
+             <summary>Updates the attributes of the Project identified by the specified `project_id` (for example, `my-
+             project-123`).
+            
+             The caller must have modify permissions for this Project.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.CloudResourceManager.v1.Data.Project,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest.ProjectId">
+             <summary>The project ID (for example, `my-project-123`).
+            
+             Required.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.CloudResourceManager.v1.ProjectsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Ancestor">
+            <summary>Identifying information for a single ancestor of a project.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Ancestor.ResourceId">
+            <summary>Resource id of the ancestor.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Ancestor.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.AuditConfig">
+             <summary>Specifies the audit configuration for a service. The configuration determines which permission types
+             are logged, and what identities, if any, are exempted from logging. An AuditConfig must have one or more
+             AuditLogConfigs.
+            
+             If there are AuditConfigs for both `allServices` and a specific service, the union of the two AuditConfigs is
+             used for that service: the log_types specified in each AuditConfig are enabled, and the exempted_members in each
+             AuditConfig are exempted.
+            
+             Example Policy with multiple AuditConfigs:
+            
+             { "audit_configs": [ { "service": "allServices" "audit_log_configs": [ { "log_type": "DATA_READ",
+             "exempted_members": [ "user:foo@gmail.com" ] }, { "log_type": "DATA_WRITE", }, { "log_type": "ADMIN_READ", } ]
+             }, { "service": "fooservice.googleapis.com" "audit_log_configs": [ { "log_type": "DATA_READ", }, { "log_type":
+             "DATA_WRITE", "exempted_members": [ "user:bar@gmail.com" ] } ] } ] }
+            
+             For fooservice, this policy enables DATA_READ, DATA_WRITE and ADMIN_READ logging. It also exempts foo@gmail.com
+             from DATA_READ logging, and bar@gmail.com from DATA_WRITE logging.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.AuditConfig.AuditLogConfigs">
+            <summary>The configuration for logging of each type of permission. Next ID: 4</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.AuditConfig.Service">
+            <summary>Specifies a service that will be enabled for audit logging. For example, `storage.googleapis.com`,
+            `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.AuditConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.AuditLogConfig">
+             <summary>Provides the configuration for logging a type of permissions. Example:
+            
+             { "audit_log_configs": [ { "log_type": "DATA_READ", "exempted_members": [ "user:foo@gmail.com" ] }, {
+             "log_type": "DATA_WRITE", } ] }
+            
+             This enables 'DATA_READ' and 'DATA_WRITE' logging, while exempting foo@gmail.com from DATA_READ
+             logging.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.AuditLogConfig.ExemptedMembers">
+            <summary>Specifies the identities that do not cause logging for this type of permission. Follows the same
+            format of Binding.members.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.AuditLogConfig.LogType">
+            <summary>The log type that this config enables.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.AuditLogConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Binding">
+            <summary>Associates `members` with a `role`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Binding.Members">
+             <summary>Specifies the identities requesting access for a Cloud Platform resource. `members` can have the
+             following values:
+            
+             * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google
+             account.
+            
+             * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google
+             account or a service account.
+            
+             * `user:{emailid}`: An email address that represents a specific Google account. For example,
+             `alice@gmail.com` or `joe@example.com`.
+            
+             * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-
+             app@appspot.gserviceaccount.com`.
+            
+             * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`.
+            
+             * `domain:{domain}`: A Google Apps domain name that represents all the users of that domain. For example,
+             `google.com` or `example.com`.
+            
+             </summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Binding.Role">
+            <summary>Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
+            Required</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Binding.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.BooleanConstraint">
+             <summary>A `Constraint` that is either enforced or not.
+            
+             For example a constraint `constraints/compute.disableSerialPortAccess`. If it is enforced on a VM instance,
+             serial port connections will not be opened to that instance.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.BooleanConstraint.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.BooleanPolicy">
+            <summary>Used in `policy_type` to specify how `boolean_policy` will behave at this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.BooleanPolicy.Enforced">
+             <summary>If `true`, then the `Policy` is enforced. If `false`, then any configuration is acceptable.
+            
+             Suppose you have a `Constraint` `constraints/compute.disableSerialPortAccess` with `constraint_default` set
+             to `ALLOW`. A `Policy` for that `Constraint` exhibits the following behavior: - If the `Policy` at this
+             resource has enforced set to `false`, serial port connection attempts will be allowed. - If the `Policy` at
+             this resource has enforced set to `true`, serial port connection attempts will be refused. - If the `Policy`
+             at this resource is `RestoreDefault`, serial port connection attempts will be allowed. - If no `Policy` is
+             set at this resource or anywhere higher in the resource hierarchy, serial port connection attempts will be
+             allowed. - If no `Policy` is set at this resource, but one exists higher in the resource hierarchy, the
+             behavior is as if the`Policy` were set at this resource.
+            
+             The following examples demonstrate the different possible layerings:
+            
+             Example 1 (nearest `Constraint` wins): `organizations/foo` has a `Policy` with: {enforced: false}
+             `projects/bar` has no `Policy` set. The constraint at `projects/bar` and `organizations/foo` will not be
+             enforced.
+            
+             Example 2 (enforcement gets replaced): `organizations/foo` has a `Policy` with: {enforced: false}
+             `projects/bar` has a `Policy` with: {enforced: true} The constraint at `organizations/foo` is not enforced.
+             The constraint at `projects/bar` is enforced.
+            
+             Example 3 (RestoreDefault): `organizations/foo` has a `Policy` with: {enforced: true} `projects/bar` has a
+             `Policy` with: {RestoreDefault: {}} The constraint at `organizations/foo` is enforced. The constraint at
+             `projects/bar` is not enforced, because `constraint_default` for the `Constraint` is `ALLOW`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.BooleanPolicy.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest">
+            <summary>The request sent to the ClearOrgPolicy method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest.Constraint">
+            <summary>Name of the `Constraint` of the `Policy` to clear.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ClearOrgPolicyRequest.ETag">
+            <summary>The current version, for concurrency control. Not sending an `etag` will cause the `Policy` to be
+            cleared blindly.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Constraint">
+             <summary>A `Constraint` describes a way in which a resource's configuration can be restricted. For example, it
+             controls which cloud services can be activated across an organization, or whether a Compute Engine instance can
+             have serial port connections established. `Constraints` can be configured by the organization's policy
+             adminstrator to fit the needs of the organzation by setting Policies for `Constraints` at different locations in
+             the organization's resource hierarchy. Policies are inherited down the resource hierarchy from higher levels,
+             but can also be overridden. For details about the inheritance rules please read about Policies.
+            
+             `Constraints` have a default behavior determined by the `constraint_default` field, which is the enforcement
+             behavior that is used in the absence of a `Policy` being defined or inherited for the resource in
+             question.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Constraint.BooleanConstraint">
+            <summary>Defines this constraint as being a BooleanConstraint.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Constraint.ConstraintDefault">
+            <summary>The evaluation behavior of this constraint in the absense of 'Policy'.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Constraint.Description">
+             <summary>Detailed description of what this `Constraint` controls as well as how and where it is enforced.
+            
+             Mutable.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Constraint.DisplayName">
+             <summary>The human readable name.
+            
+             Mutable.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Constraint.ListConstraint">
+            <summary>Defines this constraint as being a ListConstraint.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Constraint.Name">
+            <summary>Immutable value, required to globally be unique. For example,
+            `constraints/serviceuser.services`</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Constraint.Version">
+            <summary>Version of the `Constraint`. Default version is 0;</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Constraint.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Empty">
+             <summary>A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A
+             typical example is to use it as the request or the response type of an API method. For instance:
+            
+             service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
+            
+             The JSON representation for `Empty` is empty JSON object `{}`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Empty.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.FolderOperation">
+            <summary>Metadata describing a long running folder operation</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.FolderOperation.DestinationParent">
+            <summary>The resource name of the folder or organization we are either creating the folder under or moving
+            the folder to.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.FolderOperation.DisplayName">
+            <summary>The display name of the folder.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.FolderOperation.OperationType">
+            <summary>The type of this operation.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.FolderOperation.SourceParent">
+            <summary>The resource name of the folder's parent. Only applicable when the operation_type is
+            MOVE.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.FolderOperation.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.FolderOperationError">
+            <summary>A classification of the Folder Operation error.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.FolderOperationError.ErrorMessageId">
+            <summary>The type of operation error experienced.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.FolderOperationError.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.GetAncestryRequest">
+            <summary>The request sent to the GetAncestry method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.GetAncestryRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.GetAncestryResponse">
+            <summary>Response from the GetAncestry method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.GetAncestryResponse.Ancestor">
+            <summary>Ancestors are ordered from bottom to top of the resource hierarchy. The first ancestor is the
+            project itself, followed by the project's parent, etc.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.GetAncestryResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest">
+            <summary>The request sent to the GetEffectiveOrgPolicy method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest.Constraint">
+            <summary>The name of the `Constraint` to compute the effective `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.GetEffectiveOrgPolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.GetIamPolicyRequest">
+            <summary>Request message for `GetIamPolicy` method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.GetIamPolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest">
+            <summary>The request sent to the GetOrgPolicy method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest.Constraint">
+            <summary>Name of the `Constraint` to get the `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.GetOrgPolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Lien">
+            <summary>A Lien represents an encumbrance on the actions that can be performed on a resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Lien.CreateTime">
+            <summary>The creation time of this Lien.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Lien.Name">
+             <summary>A system-generated unique identifier for this Lien.
+            
+             Example: `liens/1234abcd`</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Lien.Origin">
+             <summary>A stable, user-visible/meaningful string identifying the origin of the Lien, intended to be
+             inspected programmatically. Maximum length of 200 characters.
+            
+             Example: 'compute.googleapis.com'</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Lien.Parent">
+             <summary>A reference to the resource this Lien is attached to. The server will validate the parent against
+             those for which Liens are supported.
+            
+             Example: `projects/1234`</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Lien.Reason">
+             <summary>Concise user-visible strings indicating why an action cannot be performed on a resource. Maximum
+             lenth of 200 characters.
+            
+             Example: 'Holds production API key'</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Lien.Restrictions">
+             <summary>The types of operations which should be blocked as a result of this Lien. Each value should
+             correspond to an IAM permission. The server will validate the permissions against those for which Liens are
+             supported.
+            
+             An empty list is meaningless and will be rejected.
+            
+             Example: ['resourcemanager.projects.delete']</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Lien.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest">
+            <summary>The request sent to the [ListAvailableOrgPolicyConstraints]
+            google.cloud.OrgPolicy.v1.ListAvailableOrgPolicyConstraints] method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest.PageSize">
+            <summary>Size of the pages to be returned. This is currently unsupported and will be ignored. The server may
+            at any point start using this field to limit page size.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest.PageToken">
+            <summary>Page token used to retrieve the next page. This is currently unsupported and will be ignored. The
+            server may at any point start using this field.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsResponse">
+            <summary>The response returned from the ListAvailableOrgPolicyConstraints method. Returns all `Constraints` that
+            could be set at this level of the hierarchy (contrast with the response from `ListPolicies`, which returns all
+            policies which are set).</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsResponse.Constraints">
+            <summary>The collection of constraints that are settable on the request resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsResponse.NextPageToken">
+            <summary>Page token used to retrieve the next page. This is currently not used.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListAvailableOrgPolicyConstraintsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ListConstraint">
+            <summary>A `Constraint` that allows or disallows a list of string values, which are configured by an
+            Organization's policy administrator with a `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListConstraint.SuggestedValue">
+            <summary>Optional. The Google Cloud Console will try to default to a configuration that matches the value
+            specified in this `Constraint`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListConstraint.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ListLiensResponse">
+            <summary>The response message for Liens.ListLiens.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListLiensResponse.Liens">
+            <summary>A list of Liens.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListLiensResponse.NextPageToken">
+            <summary>Token to retrieve the next page of results, or empty if there are no more results in the
+            list.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListLiensResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest">
+            <summary>The request sent to the ListOrgPolicies method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest.PageSize">
+            <summary>Size of the pages to be returned. This is currently unsupported and will be ignored. The server may
+            at any point start using this field to limit page size.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest.PageToken">
+            <summary>Page token used to retrieve the next page. This is currently unsupported and will be ignored. The
+            server may at any point start using this field.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesResponse">
+            <summary>The response returned from the ListOrgPolicies method. It will be empty if no `Policies` are set on the
+            resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesResponse.NextPageToken">
+            <summary>Page token used to retrieve the next page. This is currently not used, but the server may at any
+            point start supplying a valid token.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesResponse.Policies">
+            <summary>The `Policies` that are set on the resource. It will be empty if no `Policies` are set.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListOrgPoliciesResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ListPolicy">
+             <summary>Used in `policy_type` to specify how `list_policy` behaves at this resource.
+            
+             A `ListPolicy` can define specific values that are allowed or denied by setting either the `allowed_values` or
+             `denied_values` fields. It can also be used to allow or deny all values, by setting the `all_values` field. If
+             `all_values` is `ALL_VALUES_UNSPECIFIED`, exactly one of `allowed_values` or `denied_values` must be set
+             (attempting to set both or neither will result in a failed request). If `all_values` is set to either `ALLOW` or
+             `DENY`, `allowed_values` and `denied_values` must be unset.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListPolicy.AllValues">
+            <summary>The policy all_values state.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListPolicy.AllowedValues">
+            <summary>List of values allowed  at this resource. Can only be set if no values are set for `denied_values`
+            and `all_values` is set to `ALL_VALUES_UNSPECIFIED`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListPolicy.DeniedValues">
+            <summary>List of values denied at this resource. Can only be set if no values are set for `allowed_values`
+            and `all_values` is set to `ALL_VALUES_UNSPECIFIED`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListPolicy.InheritFromParent">
+             <summary>Determines the inheritance behavior for this `Policy`.
+            
+             By default, a `ListPolicy` set at a resource supercedes any `Policy` set anywhere up the resource hierarchy.
+             However, if `inherit_from_parent` is set to `true`, then the values from the effective `Policy` of the
+             parent resource are inherited, meaning the values set in this `Policy` are added to the values inherited up
+             the hierarchy.
+            
+             Setting `Policy` hierarchies that inherit both allowed values and denied values isn't recommended in most
+             circumstances to keep the configuration simple and understandable. However, it is possible to set a `Policy`
+             with `allowed_values` set that inherits a `Policy` with `denied_values` set. In this case, the values that
+             are allowed must be in `allowed_values` and not present in `denied_values`.
+            
+             For example, suppose you have a `Constraint` `constraints/serviceuser.services`, which has a
+             `constraint_type` of `list_constraint`, and with `constraint_default` set to `ALLOW`. Suppose that at the
+             Organization level, a `Policy` is applied that restricts the allowed API activations to {`E1`, `E2`}. Then,
+             if a `Policy` is applied to a project below the Organization that has `inherit_from_parent` set to `false`
+             and field all_values set to DENY, then an attempt to activate any API will be denied.
+            
+             The following examples demonstrate different possible layerings:
+            
+             Example 1 (no inherited values): `organizations/foo` has a `Policy` with values: {allowed_values: “E1”
+             allowed_values:”E2”} ``projects/bar`` has `inherit_from_parent` `false` and values: {allowed_values: "E3"
+             allowed_values: "E4"} The accepted values at `organizations/foo` are `E1`, `E2`. The accepted values at
+             `projects/bar` are `E3`, and `E4`.
+            
+             Example 2 (inherited values): `organizations/foo` has a `Policy` with values: {allowed_values: “E1”
+             allowed_values:”E2”} `projects/bar` has a `Policy` with values: {value: “E3” value: ”E4”
+             inherit_from_parent: true} The accepted values at `organizations/foo` are `E1`, `E2`. The accepted values at
+             `projects/bar` are `E1`, `E2`, `E3`, and `E4`.
+            
+             Example 3 (inheriting both allowed and denied values): `organizations/foo` has a `Policy` with values:
+             {allowed_values: "E1" allowed_values: "E2"} `projects/bar` has a `Policy` with: {denied_values: "E1"} The
+             accepted values at `organizations/foo` are `E1`, `E2`. The value accepted at `projects/bar` is `E2`.
+            
+             Example 4 (RestoreDefault): `organizations/foo` has a `Policy` with values: {allowed_values: “E1”
+             allowed_values:”E2”} `projects/bar` has a `Policy` with values: {RestoreDefault: {}} The accepted values at
+             `organizations/foo` are `E1`, `E2`. The accepted values at `projects/bar` are either all or none depending
+             on the value of `constraint_default` (if `ALLOW`, all; if `DENY`, none).
+            
+             Example 5 (no policy inherits parent policy): `organizations/foo` has no `Policy` set. `projects/bar` has no
+             `Policy` set. The accepted values at both levels are either all or none depending on the value of
+             `constraint_default` (if `ALLOW`, all; if `DENY`, none).
+            
+             Example 6 (ListConstraint allowing all): `organizations/foo` has a `Policy` with values: {allowed_values:
+             “E1” allowed_values: ”E2”} `projects/bar` has a `Policy` with: {all: ALLOW} The accepted values at
+             `organizations/foo` are `E1`, E2`. Any value is accepted at `projects/bar`.
+            
+             Example 7 (ListConstraint allowing none): `organizations/foo` has a `Policy` with values: {allowed_values:
+             “E1” allowed_values: ”E2”} `projects/bar` has a `Policy` with: {all: DENY} The accepted values at
+             `organizations/foo` are `E1`, E2`. No value is accepted at `projects/bar`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListPolicy.SuggestedValue">
+            <summary>Optional. The Google Cloud Console will try to default to a configuration that matches the value
+            specified in this `Policy`. If `suggested_value` is not set, it will inherit the value specified higher in
+            the hierarchy, unless `inherit_from_parent` is `false`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListPolicy.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ListProjectsResponse">
+             <summary>A page of the response received from the ListProjects method.
+            
+             A paginated response where more pages are available has `next_page_token` set. This token can be used in a
+             subsequent request to retrieve the next request page.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListProjectsResponse.NextPageToken">
+             <summary>Pagination token.
+            
+             If the result set is too large to fit in a single response, this token is returned. It encodes the position
+             of the current result cursor. Feeding this value into a new list request with the `page_token` parameter
+             gives the next page of the results.
+            
+             When `next_page_token` is not filled in, there is no next page and the list returned is the last page in the
+             result set.
+            
+             Pagination tokens have a limited lifetime.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListProjectsResponse.Projects">
+            <summary>The list of Projects that matched the list filter. This list can be paginated.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ListProjectsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Operation">
+            <summary>This resource represents a long-running operation that is the result of a network API call.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Operation.Done">
+            <summary>If the value is `false`, it means the operation is still in progress. If `true`, the operation is
+            completed, and either `error` or `response` is available.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Operation.Error">
+            <summary>The error result of the operation in case of failure or cancellation.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Operation.Metadata">
+            <summary>Service-specific metadata associated with the operation.  It typically contains progress
+            information and common metadata such as create time. Some services might not provide such metadata.  Any
+            method that returns a long-running operation should document the metadata type, if any.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Operation.Name">
+            <summary>The server-assigned name, which is only unique within the same service that originally returns it.
+            If you use the default HTTP mapping, the `name` should have the format of
+            `operations/some/unique/name`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Operation.Response">
+            <summary>The normal response of the operation in case of success.  If the original method returns no data on
+            success, such as `Delete`, the response is `google.protobuf.Empty`.  If the original method is standard
+            `Get`/`Create`/`Update`, the response should be the resource.  For other methods, the response should have
+            the type `XxxResponse`, where `Xxx` is the original method name.  For example, if the original method name
+            is `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Operation.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.OrgPolicy">
+            <summary>Defines a Cloud Organization `Policy` which is used to specify `Constraints` for configurations of
+            Cloud Platform resources.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrgPolicy.BooleanPolicy">
+            <summary>For boolean `Constraints`, whether to enforce the `Constraint` or not.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrgPolicy.Constraint">
+             <summary>The name of the `Constraint` the `Policy` is configuring, for example,
+             `constraints/serviceuser.services`.
+            
+             Immutable after creation.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrgPolicy.ETag">
+             <summary>An opaque tag indicating the current version of the `Policy`, used for concurrency control.
+            
+             When the `Policy` is returned from either a `GetPolicy` or a `ListOrgPolicy` request, this `etag` indicates
+             the version of the current `Policy` to use when executing a read-modify-write loop.
+            
+             When the `Policy` is returned from a `GetEffectivePolicy` request, the `etag` will be unset.
+            
+             When the `Policy` is used in a `SetOrgPolicy` method, use the `etag` value that was returned from a
+             `GetOrgPolicy` request as part of a read-modify-write loop for concurrency control. Not setting the `etag`in
+             a `SetOrgPolicy` request will result in an unconditional write of the `Policy`.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrgPolicy.ListPolicy">
+            <summary>List of values either allowed or disallowed.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrgPolicy.RestoreDefault">
+            <summary>Restores the default behavior of the constraint; independent of `Constraint` type.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrgPolicy.UpdateTime">
+            <summary>The time stamp the `Policy` was previously updated. This is set by the server, not specified by the
+            caller, and represents the last time a call to `SetOrgPolicy` was made for that `Policy`. Any value set by
+            the client will be ignored.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrgPolicy.Version">
+            <summary>Version of the `Policy`. Default version is 0;</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Organization">
+            <summary>The root node in the resource hierarchy to which a particular entity's (e.g., company) resources
+            belong.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Organization.CreationTime">
+            <summary>Timestamp when the Organization was created. Assigned by the server. @OutputOnly</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Organization.DisplayName">
+            <summary>A friendly string to be used to refer to the Organization in the UI. Assigned by the server, set to
+            the primary domain of the G Suite customer that owns the organization. @OutputOnly</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Organization.LifecycleState">
+            <summary>The organization's current lifecycle state. Assigned by the server. @OutputOnly</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Organization.Name">
+            <summary>Output Only. The resource name of the organization. This is the organization's relative path in the
+            API. Its format is "organizations/[organization_id]". For example, "organizations/1234".</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Organization.Owner">
+            <summary>The owner of this Organization. The owner should be specified on creation. Once set, it cannot be
+            changed. This field is required.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Organization.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.OrganizationOwner">
+            <summary>The entity that owns an Organization. The lifetime of the Organization and all of its descendants are
+            bound to the `OrganizationOwner`. If the `OrganizationOwner` is deleted, the Organization and all its
+            descendants will be deleted.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrganizationOwner.DirectoryCustomerId">
+            <summary>The Google for Work customer id used in the Directory API.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.OrganizationOwner.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Policy">
+             <summary>Defines an Identity and Access Management (IAM) policy. It is used to specify access control policies
+             for Cloud Platform resources.
+            
+             A `Policy` consists of a list of `bindings`. A `Binding` binds a list of `members` to a `role`, where the
+             members can be user accounts, Google groups, Google domains, and service accounts. A `role` is a named list of
+             permissions defined by IAM.
+            
+             **Example**
+            
+             { "bindings": [ { "role": "roles/owner", "members": [ "user:mike@example.com", "group:admins@example.com",
+             "domain:google.com", "serviceAccount:my-other-app@appspot.gserviceaccount.com", ] }, { "role": "roles/viewer",
+             "members": ["user:sean@example.com"] } ] }
+            
+             For a description of IAM and its features, see the [IAM developer's
+             guide](https://cloud.google.com/iam).</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Policy.AuditConfigs">
+            <summary>Specifies cloud audit logging configuration for this policy.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Policy.Bindings">
+            <summary>Associates a list of `members` to a `role`. `bindings` with no members will result in an
+            error.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Policy.ETag">
+             <summary>`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of
+             a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the
+             read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned
+             in the response to `getIamPolicy`, and systems are expected to put that etag in the request to
+             `setIamPolicy` to ensure that their change will be applied to the same version of the policy.
+            
+             If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
+             blindly.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Policy.Version">
+            <summary>Version of the `Policy`. The default version is 0.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Project">
+            <summary>A Project is a high-level Google Cloud Platform entity.  It is a container for ACLs, APIs, App Engine
+            Apps, VMs, and other Google Cloud Platform resources.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Project.CreateTime">
+             <summary>Creation time.
+            
+             Read-only.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Project.Labels">
+             <summary>The labels associated with this Project.
+            
+             Label keys must be between 1 and 63 characters long and must conform to the following regular expression:
+             \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?.
+            
+             Label values must be between 0 and 63 characters long and must conform to the regular expression
+             (\[a-z\](\[-a-z0-9\]*\[a-z0-9\])?)?.
+            
+             No more than 256 labels can be associated with a given resource.
+            
+             Clients should store labels in a representation such as JSON that does not depend on specific characters
+             being disallowed.
+            
+             Example: "environment" : "dev" Read-write.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Project.LifecycleState">
+             <summary>The Project lifecycle state.
+            
+             Read-only.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Project.Name">
+             <summary>The user-assigned display name of the Project. It must be 4 to 30 characters. Allowed characters
+             are: lowercase and uppercase letters, numbers, hyphen, single-quote, double-quote, space, and exclamation
+             point.
+            
+             Example: My Project Read-write.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Project.Parent">
+             <summary>An optional reference to a parent Resource.
+            
+             The only supported parent type is "organization". Once set, the parent cannot be modified. The `parent` can
+             be set on creation or using the `UpdateProject` method; the end user must have the
+             `resourcemanager.projects.create` permission on the parent.
+            
+             Read-write.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Project.ProjectId">
+             <summary>The unique, user-assigned ID of the Project. It must be 6 to 30 lowercase letters, digits, or
+             hyphens. It must start with a letter. Trailing hyphens are prohibited.
+            
+             Example: tokyo-rain-123 Read-only after creation.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Project.ProjectNumber">
+             <summary>The number uniquely identifying the project.
+            
+             Example: 415104041262 Read-only.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Project.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ProjectCreationStatus">
+            <summary>A status object which is used as the `metadata` field for the Operation returned by CreateProject. It
+            provides insight for when significant phases of Project creation have completed.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ProjectCreationStatus.CreateTime">
+            <summary>Creation time of the project creation workflow.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ProjectCreationStatus.Gettable">
+            <summary>True if the project can be retrieved using GetProject. No other operations on the project are
+            guaranteed to work until the project creation is complete.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ProjectCreationStatus.Ready">
+            <summary>True if the project creation process is complete.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ProjectCreationStatus.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.ResourceId">
+            <summary>A container to reference an id for any resource type. A `resource` in Google Cloud Platform is a
+            generic term for something you (a developer) may want to interact with through one of our API's. Some examples
+            are an App Engine app, a Compute Engine instance, a Cloud SQL database, and so on.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ResourceId.Id">
+            <summary>Required field for the type-specific id. This should correspond to the id used in the type-specific
+            API's.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ResourceId.Type">
+            <summary>Required field representing the resource type this id is for. At present, the valid types are:
+            "organization"</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.ResourceId.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.RestoreDefault">
+             <summary>Ignores policies set above this resource and restores the `constraint_default` enforcement behavior of
+             the specific `Constraint` at this resource.
+            
+             Suppose that `constraint_default` is set to `ALLOW` for the `Constraint` `constraints/serviceuser.services`.
+             Suppose that organization foo.com sets a `Policy` at their Organization resource node that restricts the allowed
+             service activations to deny all service activations. They could then set a `Policy` with the `policy_type`
+             `restore_default` on several experimental projects, restoring the `constraint_default` enforcement of the
+             `Constraint` for only those projects, allowing those projects to have all services activated.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.RestoreDefault.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsRequest">
+            <summary>The request sent to the `SearchOrganizations` method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsRequest.Filter">
+             <summary>An optional query string used to filter the Organizations to return in the response. Filter rules
+             are case-insensitive.
+            
+             Organizations may be filtered by `owner.directoryCustomerId` or by `domain`, where the domain is a Google
+             for Work domain, for example:
+            
+             |Filter|Description| |------|-----------| |owner.directorycustomerid:123456789|Organizations with
+             `owner.directory_customer_id` equal to `123456789`.| |domain:google.com|Organizations corresponding to the
+             domain `google.com`.|
+            
+             This field is optional.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsRequest.PageSize">
+            <summary>The maximum number of Organizations to return in the response. This field is optional.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsRequest.PageToken">
+            <summary>A pagination token returned from a previous call to `SearchOrganizations` that indicates from where
+            listing should continue. This field is optional.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsResponse">
+            <summary>The response returned from the `SearchOrganizations` method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsResponse.NextPageToken">
+            <summary>A pagination token to be used to retrieve the next page of results. If the result is too large to
+            fit within the page size specified in the request, this field will be set with a token that can be used to
+            fetch the next page of results. If this field is empty, it indicates that this response contains the last
+            page of results.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsResponse.Organizations">
+            <summary>The list of Organizations that matched the search query, possibly paginated.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SearchOrganizationsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.SetIamPolicyRequest">
+            <summary>Request message for `SetIamPolicy` method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SetIamPolicyRequest.Policy">
+            <summary>REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to
+            a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects)
+            might reject them.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SetIamPolicyRequest.UpdateMask">
+            <summary>OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only the fields in the mask
+            will be modified. If no mask is provided, the following default mask is used: paths: "bindings, etag" This
+            field is only used by Cloud IAM.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SetIamPolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest">
+            <summary>The request sent to the SetOrgPolicyRequest method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest.Policy">
+            <summary>`Policy` to set on the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.SetOrgPolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.Status">
+             <summary>The `Status` type defines a logical error model that is suitable for different programming
+             environments, including REST APIs and RPC APIs. It is used by [gRPC](https://github.com/grpc). The error model
+             is designed to be:
+            
+             - Simple to use and understand for most users - Flexible enough to meet unexpected needs
+            
+             # Overview
+            
+             The `Status` message contains three pieces of data: error code, error message, and error details. The error code
+             should be an enum value of google.rpc.Code, but it may accept additional error codes if needed.  The error
+             message should be a developer-facing English message that helps developers *understand* and *resolve* the error.
+             If a localized user-facing error message is needed, put the localized message in the error details or localize
+             it in the client. The optional error details may contain arbitrary information about the error. There is a
+             predefined set of error detail types in the package `google.rpc` that can be used for common error conditions.
+            
+             # Language mapping
+            
+             The `Status` message is the logical representation of the error model, but it is not necessarily the actual wire
+             format. When the `Status` message is exposed in different client libraries and different wire protocols, it can
+             be mapped differently. For example, it will likely be mapped to some exceptions in Java, but more likely mapped
+             to some error codes in C.
+            
+             # Other uses
+            
+             The error model and the `Status` message can be used in a variety of environments, either with or without APIs,
+             to provide a consistent developer experience across different environments.
+            
+             Example uses of this error model include:
+            
+             - Partial errors. If a service needs to return partial errors to the client, it may embed the `Status` in the
+             normal response to indicate the partial errors.
+            
+             - Workflow errors. A typical workflow has multiple steps. Each step may have a `Status` message for error
+             reporting.
+            
+             - Batch operations. If a client uses batch request and batch response, the `Status` message should be used
+             directly inside batch response, one for each error sub-response.
+            
+             - Asynchronous operations. If an API call embeds asynchronous operation results in its response, the status of
+             those operations should be represented directly using the `Status` message.
+            
+             - Logging. If some API errors are stored in logs, the message `Status` could be used directly after any
+             stripping needed for security/privacy reasons.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Status.Code">
+            <summary>The status code, which should be an enum value of google.rpc.Code.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Status.Details">
+            <summary>A list of messages that carry the error details.  There is a common set of message types for APIs
+            to use.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Status.Message">
+            <summary>A developer-facing error message, which should be in English. Any user-facing error message should
+            be localized and sent in the google.rpc.Status.details field, or localized by the client.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.Status.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsRequest">
+            <summary>Request message for `TestIamPermissions` method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsRequest.Permissions">
+            <summary>The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or
+            'storage.*') are not allowed. For more information see [IAM
+            Overview](https://cloud.google.com/iam/docs/overview#permissions).</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsResponse">
+            <summary>Response message for `TestIamPermissions` method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsResponse.Permissions">
+            <summary>A subset of `TestPermissionsRequest.permissions` that the caller is allowed.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.TestIamPermissionsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.CloudResourceManager.v1.Data.UndeleteProjectRequest">
+            <summary>The request sent to the UndeleteProject method.</summary>
+        </member>
+        <member name="P:Google.Apis.CloudResourceManager.v1.Data.UndeleteProjectRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+    </members>
+</doc>

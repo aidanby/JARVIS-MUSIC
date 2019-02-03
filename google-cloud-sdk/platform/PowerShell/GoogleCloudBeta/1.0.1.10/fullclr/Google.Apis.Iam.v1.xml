@@ -1,0 +1,1798 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.Iam.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.Iam.v1.IamService">
+            <summary>The Iam Service.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.IamService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.IamService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.IamService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.IamService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.IamService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Google Identity and Access Management (IAM) API.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.IamService.Scope.CloudPlatform">
+            <summary>View and manage your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.Organizations">
+            <summary>Gets the Organizations resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.Permissions">
+            <summary>Gets the Permissions resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.Projects">
+            <summary>Gets the Projects resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamService.Roles">
+            <summary>Gets the Roles resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.IamBaseServiceRequest`1">
+            <summary>A base abstract class for Iam requests.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.IamBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new IamBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.Xgafv">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.IamBaseServiceRequest`1.XgafvEnum">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.IamBaseServiceRequest`1.XgafvEnum.Value1">
+            <summary>v1 error format</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.IamBaseServiceRequest`1.XgafvEnum.Value2">
+            <summary>v2 error format</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.AccessToken">
+            <summary>OAuth access token.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.Alt">
+            <summary>Data format for response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Iam.v1.IamBaseServiceRequest`1.AltEnum">
+            <summary>Data format for response.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.IamBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.IamBaseServiceRequest`1.AltEnum.Media">
+            <summary>Media download with context-dependent Content-Type</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.IamBaseServiceRequest`1.AltEnum.Proto">
+            <summary>Responses with Content-Type of application/x-protobuf</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.BearerToken">
+            <summary>OAuth bearer token.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.Callback">
+            <summary>JSONP</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.Pp">
+            <summary>Pretty-print response.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+            assigned to a user, but should not exceed 40 characters.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.UploadType">
+            <summary>Legacy upload protocol for media (e.g. "media", "multipart").</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.IamBaseServiceRequest`1.UploadProtocol">
+            <summary>Upload protocol for media (e.g. "raw", "multipart").</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.IamBaseServiceRequest`1.InitParameters">
+            <summary>Initializes Iam parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource">
+            <summary>The "organizations" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.OrganizationsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.Roles">
+            <summary>Gets the Roles resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource.RolesResource">
+            <summary>The "roles" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.Create(Google.Apis.Iam.v1.Data.CreateRoleRequest,System.String)">
+            <summary>Creates a new Role.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="parent">The resource name of the parent resource in one of the following formats:
+            `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest">
+            <summary>Creates a new Role.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.CreateRoleRequest,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest.Parent">
+            <summary>The resource name of the parent resource in one of the following formats:
+            `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.Delete(System.String)">
+            <summary>Soft deletes a role. The role is suspended and cannot be used to create new IAM Policy
+            Bindings. The Role will not be included in `ListRoles()` unless `show_deleted` is set in the
+            `ListRolesRequest`. The Role contains the deleted boolean set. Existing Bindings remains, but are
+            inactive. The Role can be undeleted within 7 days. After 7 days the Role is deleted and all Bindings
+            associated with the role are removed.</summary>
+            <param name="name">The resource name of the role in one of the following formats:
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.DeleteRequest">
+            <summary>Soft deletes a role. The role is suspended and cannot be used to create new IAM Policy
+            Bindings. The Role will not be included in `ListRoles()` unless `show_deleted` is set in the
+            `ListRolesRequest`. The Role contains the deleted boolean set. Existing Bindings remains, but are
+            inactive. The Role can be undeleted within 7 days. After 7 days the Role is deleted and all Bindings
+            associated with the role are removed.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.DeleteRequest.Name">
+            <summary>The resource name of the role in one of the following formats:
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}`
+            `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.DeleteRequest.Etag">
+            <summary>Used to perform a consistent read-modify-write.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.Get(System.String)">
+            <summary>Gets a Role definition.</summary>
+            <param name="name">The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.GetRequest">
+            <summary>Gets a Role definition.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.GetRequest.Name">
+            <summary>The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}`
+            `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.List(System.String)">
+            <summary>Lists the Roles defined on a resource.</summary>
+            <param name="parent">The resource name of the parent resource in one of the following formats: `` (empty string) --
+            this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest">
+            <summary>Lists the Roles defined on a resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.Parent">
+            <summary>The resource name of the parent resource in one of the following formats: `` (empty string)
+            -- this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.ShowDeleted">
+            <summary>Include Roles that have been deleted.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.PageToken">
+            <summary>Optional pagination token returned in an earlier ListRolesResponse.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.PageSize">
+            <summary>Optional limit on the number of roles to include in the response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.View">
+            <summary>Optional view for the returned Role objects.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.ViewEnum">
+            <summary>Optional view for the returned Role objects.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.Patch(Google.Apis.Iam.v1.Data.Role,System.String)">
+            <summary>Updates a Role definition.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="name">The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest">
+            <summary>Updates a Role definition.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.Role,System.String)">
+            <summary>Constructs a new Patch request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.Name">
+            <summary>The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}`
+            `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.UpdateMask">
+            <summary>A mask describing which fields in the Role have changed.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.Undelete(Google.Apis.Iam.v1.Data.UndeleteRoleRequest,System.String)">
+            <summary>Undelete a Role, bringing it back in its previous state.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="name">The resource name of the role in one of the following formats:
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest">
+            <summary>Undelete a Role, bringing it back in its previous state.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.UndeleteRoleRequest,System.String)">
+            <summary>Constructs a new Undelete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest.Name">
+            <summary>The resource name of the role in one of the following formats:
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}`
+            `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.OrganizationsResource.RolesResource.UndeleteRequest.InitParameters">
+            <summary>Initializes Undelete parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.PermissionsResource">
+            <summary>The "permissions" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.PermissionsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.PermissionsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissions(Google.Apis.Iam.v1.Data.QueryTestablePermissionsRequest)">
+            <summary>Lists the permissions testable on a resource. A permission is testable if it can be tested for an
+            identity on a resource.</summary>
+            <param name="body">The body of the request.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissionsRequest">
+            <summary>Lists the permissions testable on a resource. A permission is testable if it can be tested for an
+            identity on a resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissionsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.QueryTestablePermissionsRequest)">
+            <summary>Constructs a new QueryTestablePermissions request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissionsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissionsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissionsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissionsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissionsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.PermissionsResource.QueryTestablePermissionsRequest.InitParameters">
+            <summary>Initializes QueryTestablePermissions parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource">
+            <summary>The "projects" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.ProjectsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.Roles">
+            <summary>Gets the Roles resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.RolesResource">
+            <summary>The "roles" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.ProjectsResource.RolesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.Create(Google.Apis.Iam.v1.Data.CreateRoleRequest,System.String)">
+            <summary>Creates a new Role.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="parent">The resource name of the parent resource in one of the following formats:
+            `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest">
+            <summary>Creates a new Role.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.CreateRoleRequest,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest.Parent">
+            <summary>The resource name of the parent resource in one of the following formats:
+            `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.Delete(System.String)">
+            <summary>Soft deletes a role. The role is suspended and cannot be used to create new IAM Policy
+            Bindings. The Role will not be included in `ListRoles()` unless `show_deleted` is set in the
+            `ListRolesRequest`. The Role contains the deleted boolean set. Existing Bindings remains, but are
+            inactive. The Role can be undeleted within 7 days. After 7 days the Role is deleted and all Bindings
+            associated with the role are removed.</summary>
+            <param name="name">The resource name of the role in one of the following formats:
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.RolesResource.DeleteRequest">
+            <summary>Soft deletes a role. The role is suspended and cannot be used to create new IAM Policy
+            Bindings. The Role will not be included in `ListRoles()` unless `show_deleted` is set in the
+            `ListRolesRequest`. The Role contains the deleted boolean set. Existing Bindings remains, but are
+            inactive. The Role can be undeleted within 7 days. After 7 days the Role is deleted and all Bindings
+            associated with the role are removed.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.DeleteRequest.Name">
+            <summary>The resource name of the role in one of the following formats:
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}`
+            `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.DeleteRequest.Etag">
+            <summary>Used to perform a consistent read-modify-write.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.Get(System.String)">
+            <summary>Gets a Role definition.</summary>
+            <param name="name">The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.RolesResource.GetRequest">
+            <summary>Gets a Role definition.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.GetRequest.Name">
+            <summary>The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}`
+            `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.List(System.String)">
+            <summary>Lists the Roles defined on a resource.</summary>
+            <param name="parent">The resource name of the parent resource in one of the following formats: `` (empty string) --
+            this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest">
+            <summary>Lists the Roles defined on a resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.Parent">
+            <summary>The resource name of the parent resource in one of the following formats: `` (empty string)
+            -- this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.ShowDeleted">
+            <summary>Include Roles that have been deleted.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.PageToken">
+            <summary>Optional pagination token returned in an earlier ListRolesResponse.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.PageSize">
+            <summary>Optional limit on the number of roles to include in the response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.View">
+            <summary>Optional view for the returned Role objects.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.ViewEnum">
+            <summary>Optional view for the returned Role objects.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.Patch(Google.Apis.Iam.v1.Data.Role,System.String)">
+            <summary>Updates a Role definition.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="name">The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest">
+            <summary>Updates a Role definition.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.Role,System.String)">
+            <summary>Constructs a new Patch request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.Name">
+            <summary>The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}`
+            `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.UpdateMask">
+            <summary>A mask describing which fields in the Role have changed.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.PatchRequest.InitParameters">
+            <summary>Initializes Patch parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.Undelete(Google.Apis.Iam.v1.Data.UndeleteRoleRequest,System.String)">
+            <summary>Undelete a Role, bringing it back in its previous state.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="name">The resource name of the role in one of the following formats:
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest">
+            <summary>Undelete a Role, bringing it back in its previous state.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.UndeleteRoleRequest,System.String)">
+            <summary>Constructs a new Undelete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest.Name">
+            <summary>The resource name of the role in one of the following formats:
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}`
+            `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.RolesResource.UndeleteRequest.InitParameters">
+            <summary>Initializes Undelete parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccounts">
+            <summary>Gets the ServiceAccounts resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource">
+            <summary>The "serviceAccounts" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.Keys">
+            <summary>Gets the Keys resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource">
+            <summary>The "keys" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.Create(Google.Apis.Iam.v1.Data.CreateServiceAccountKeyRequest,System.String)">
+            <summary>Creates a ServiceAccountKey and returns it.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="name">The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will infer the
+            project from the account. The `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+            account.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest">
+            <summary>Creates a ServiceAccountKey and returns it.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.CreateServiceAccountKeyRequest,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest.Name">
+            <summary>The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID`
+            will infer the project from the account. The `ACCOUNT` value can be the `email` address or the
+            `unique_id` of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.Delete(System.String)">
+            <summary>Deletes a ServiceAccountKey.</summary>
+            <param name="name">The resource name of the service account key in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the `PROJECT_ID` will
+            infer the project from the account. The `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+            account.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.DeleteRequest">
+            <summary>Deletes a ServiceAccountKey.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.DeleteRequest.Name">
+            <summary>The resource name of the service account key in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`. Using `-` as a wildcard for the
+            `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the `email`
+            address or the `unique_id` of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.Get(System.String)">
+             <summary>Gets the ServiceAccountKey by key id.</summary>
+             <param name="name">The resource name of the service account key in the following format:
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+            
+             Using `-` as a wildcard for the `PROJECT_ID` will infer the project from the account. The `ACCOUNT` value can be the
+             `email` address or the `unique_id` of the service account.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest">
+            <summary>Gets the ServiceAccountKey by key id.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest.Name">
+             <summary>The resource name of the service account key in the following format:
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+            
+             Using `-` as a wildcard for the `PROJECT_ID` will infer the project from the account. The
+             `ACCOUNT` value can be the `email` address or the `unique_id` of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest.PublicKeyType">
+            <summary>The output format of the public key requested. X509_PEM is the default output
+            format.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest.PublicKeyTypeEnum">
+            <summary>The output format of the public key requested. X509_PEM is the default output
+            format.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.List(System.String)">
+             <summary>Lists ServiceAccountKeys.</summary>
+             <param name="name">The resource name of the service account in the following format:
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+            
+             Using `-` as a wildcard for the `PROJECT_ID`, will infer the project from the account. The `ACCOUNT` value can be
+             the `email` address or the `unique_id` of the service account.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest">
+            <summary>Lists ServiceAccountKeys.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest.Name">
+             <summary>The resource name of the service account in the following format:
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+            
+             Using `-` as a wildcard for the `PROJECT_ID`, will infer the project from the account. The
+             `ACCOUNT` value can be the `email` address or the `unique_id` of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest.KeyTypes">
+            <summary>Filters the types of keys the user wants to include in the list response. Duplicate key
+            types are not allowed. If no key type is provided, all keys are returned.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest.KeyTypesEnum">
+            <summary>Filters the types of keys the user wants to include in the list response. Duplicate key
+            types are not allowed. If no key type is provided, all keys are returned.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.KeysResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.Create(Google.Apis.Iam.v1.Data.CreateServiceAccountRequest,System.String)">
+            <summary>Creates a ServiceAccount and returns it.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="name">Required. The resource name of the project associated with the service accounts, such as
+            `projects/my-project-123`.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest">
+            <summary>Creates a ServiceAccount and returns it.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.CreateServiceAccountRequest,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest.Name">
+            <summary>Required. The resource name of the project associated with the service accounts, such as
+            `projects/my-project-123`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.Delete(System.String)">
+            <summary>Deletes a ServiceAccount.</summary>
+            <param name="name">The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will infer the
+            project from the account. The `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+            account.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.DeleteRequest">
+            <summary>Deletes a ServiceAccount.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.DeleteRequest.Name">
+            <summary>The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will
+            infer the project from the account. The `ACCOUNT` value can be the `email` address or the
+            `unique_id` of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.Get(System.String)">
+            <summary>Gets a ServiceAccount.</summary>
+            <param name="name">The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will infer the
+            project from the account. The `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+            account.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetRequest">
+            <summary>Gets a ServiceAccount.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetRequest.Name">
+            <summary>The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will
+            infer the project from the account. The `ACCOUNT` value can be the `email` address or the
+            `unique_id` of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetIamPolicy(System.String)">
+            <summary>Returns the IAM access control policy for a ServiceAccount.</summary>
+            <param name="resource">REQUIRED: The resource for which the policy is being requested. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetIamPolicyRequest">
+            <summary>Returns the IAM access control policy for a ServiceAccount.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new GetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.GetIamPolicyRequest.InitParameters">
+            <summary>Initializes GetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.List(System.String)">
+            <summary>Lists ServiceAccounts for a project.</summary>
+            <param name="name">Required. The resource name of the project associated with the service accounts, such as
+            `projects/my-project-123`.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest">
+            <summary>Lists ServiceAccounts for a project.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest.Name">
+            <summary>Required. The resource name of the project associated with the service accounts, such as
+            `projects/my-project-123`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest.PageToken">
+            <summary>Optional pagination token returned in an earlier
+            ListServiceAccountsResponse.next_page_token.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest.PageSize">
+            <summary>Optional limit on the number of service accounts to include in the response. Further
+            accounts can subsequently be obtained by including the ListServiceAccountsResponse.next_page_token
+            in a subsequent request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicy(Google.Apis.Iam.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Sets the IAM access control policy for a ServiceAccount.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">REQUIRED: The resource for which the policy is being specified. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest">
+            <summary>Sets the IAM access control policy for a ServiceAccount.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Constructs a new SetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being specified. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SetIamPolicyRequest.InitParameters">
+            <summary>Initializes SetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlob(Google.Apis.Iam.v1.Data.SignBlobRequest,System.String)">
+            <summary>Signs a blob using a service account's system-managed private key.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="name">The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will infer the
+            project from the account. The `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+            account.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest">
+            <summary>Signs a blob using a service account's system-managed private key.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.SignBlobRequest,System.String)">
+            <summary>Constructs a new SignBlob request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest.Name">
+            <summary>The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will
+            infer the project from the account. The `ACCOUNT` value can be the `email` address or the
+            `unique_id` of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignBlobRequest.InitParameters">
+            <summary>Initializes SignBlob parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwt(Google.Apis.Iam.v1.Data.SignJwtRequest,System.String)">
+             <summary>Signs a JWT using a service account's system-managed private key.
+            
+             If no expiry time (`exp`) is provided in the `SignJwtRequest`, IAM sets an an expiry time of one hour by
+             default. If you request an expiry time of more than one hour, the request will fail.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="name">The resource name of the service account in the following format:
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will infer the
+             project from the account. The `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+             account.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest">
+             <summary>Signs a JWT using a service account's system-managed private key.
+            
+             If no expiry time (`exp`) is provided in the `SignJwtRequest`, IAM sets an an expiry time of one hour by
+             default. If you request an expiry time of more than one hour, the request will fail.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.SignJwtRequest,System.String)">
+            <summary>Constructs a new SignJwt request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest.Name">
+            <summary>The resource name of the service account in the following format:
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will
+            infer the project from the account. The `ACCOUNT` value can be the `email` address or the
+            `unique_id` of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.SignJwtRequest.InitParameters">
+            <summary>Initializes SignJwt parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissions(Google.Apis.Iam.v1.Data.TestIamPermissionsRequest,System.String)">
+            <summary>Tests the specified permissions against the IAM access control policy for a
+            ServiceAccount.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">REQUIRED: The resource for which the policy detail is being requested. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest">
+            <summary>Tests the specified permissions against the IAM access control policy for a
+            ServiceAccount.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.TestIamPermissionsRequest,System.String)">
+            <summary>Constructs a new TestIamPermissions request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy detail is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.TestIamPermissionsRequest.InitParameters">
+            <summary>Initializes TestIamPermissions parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.Update(Google.Apis.Iam.v1.Data.ServiceAccount,System.String)">
+             <summary>Updates a ServiceAccount.
+            
+             Currently, only the following fields are updatable: `display_name` . The `etag` is mandatory.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="name">The resource name of the service account in the following format:
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+            
+             Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the `account` and the `ACCOUNT`
+             value can be the `email` address or the `unique_id` of the service account.
+            
+             In responses the resource name will always be in the format
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest">
+             <summary>Updates a ServiceAccount.
+            
+             Currently, only the following fields are updatable: `display_name` . The `etag` is mandatory.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.ServiceAccount,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest.Name">
+             <summary>The resource name of the service account in the following format:
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+            
+             Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the `account` and
+             the `ACCOUNT` value can be the `email` address or the `unique_id` of the service account.
+            
+             In responses the resource name will always be in the format
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.ProjectsResource.ServiceAccountsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.RolesResource">
+            <summary>The "roles" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Iam.v1.RolesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.Get(System.String)">
+            <summary>Gets a Role definition.</summary>
+            <param name="name">The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.RolesResource.GetRequest">
+            <summary>Gets a Role definition.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.GetRequest.Name">
+            <summary>The resource name of the role in one of the following formats: `roles/{ROLE_NAME}`
+            `organizations/{ORGANIZATION_ID}/roles/{ROLE_NAME}` `projects/{PROJECT_ID}/roles/{ROLE_NAME}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.List">
+            <summary>Lists the Roles defined on a resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.RolesResource.ListRequest">
+            <summary>Lists the Roles defined on a resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.ListRequest.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.ListRequest.ShowDeleted">
+            <summary>Include Roles that have been deleted.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.ListRequest.PageToken">
+            <summary>Optional pagination token returned in an earlier ListRolesResponse.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.ListRequest.PageSize">
+            <summary>Optional limit on the number of roles to include in the response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.ListRequest.View">
+            <summary>Optional view for the returned Role objects.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.RolesResource.ListRequest.ViewEnum">
+            <summary>Optional view for the returned Role objects.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.ListRequest.Parent">
+            <summary>The resource name of the parent resource in one of the following formats: `` (empty string) --
+            this refers to curated roles. `organizations/{ORGANIZATION_ID}` `projects/{PROJECT_ID}`</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.QueryGrantableRoles(Google.Apis.Iam.v1.Data.QueryGrantableRolesRequest)">
+            <summary>Queries roles that can be granted on a particular resource. A role is grantable if it can be used
+            as the role in a binding for a policy for that resource.</summary>
+            <param name="body">The body of the request.</param>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.RolesResource.QueryGrantableRolesRequest">
+            <summary>Queries roles that can be granted on a particular resource. A role is grantable if it can be used
+            as the role in a binding for a policy for that resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.QueryGrantableRolesRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Iam.v1.Data.QueryGrantableRolesRequest)">
+            <summary>Constructs a new QueryGrantableRoles request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.QueryGrantableRolesRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.QueryGrantableRolesRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.QueryGrantableRolesRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.QueryGrantableRolesRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.RolesResource.QueryGrantableRolesRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Iam.v1.RolesResource.QueryGrantableRolesRequest.InitParameters">
+            <summary>Initializes QueryGrantableRoles parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.AuditData">
+            <summary>Audit log information specific to Cloud IAM. This message is serialized as an `Any` type in the
+            `ServiceData` message of an `AuditLog` message.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.AuditData.PolicyDelta">
+            <summary>Policy delta between the original policy and the newly set policy.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.AuditData.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.Binding">
+            <summary>Associates `members` with a `role`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Binding.Members">
+             <summary>Specifies the identities requesting access for a Cloud Platform resource. `members` can have the
+             following values:
+            
+             * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google
+             account.
+            
+             * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google
+             account or a service account.
+            
+             * `user:{emailid}`: An email address that represents a specific Google account. For example,
+             `alice@gmail.com` or `joe@example.com`.
+            
+             * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-
+             app@appspot.gserviceaccount.com`.
+            
+             * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`.
+            
+             * `domain:{domain}`: A Google Apps domain name that represents all the users of that domain. For example,
+             `google.com` or `example.com`.
+            
+             </summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Binding.Role">
+            <summary>Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
+            Required</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Binding.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.BindingDelta">
+            <summary>One delta entry for Binding. Each individual change (only one member in each entry) to a binding will
+            be a separate entry.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.BindingDelta.Action">
+            <summary>The action that was performed on a Binding. Required</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.BindingDelta.Condition">
+            <summary>The condition that is associated with this binding. This field is GOOGLE_INTERNAL. This field is
+            not logged in IAM side because it's only for audit logging. Optional</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.BindingDelta.Member">
+            <summary>A single identity requesting access for a Cloud Platform resource. Follows the same format of
+            Binding.members. Required</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.BindingDelta.Role">
+            <summary>Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
+            Required</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.BindingDelta.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.CreateRoleRequest">
+            <summary>The request to create a new role.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateRoleRequest.Role">
+            <summary>The Role resource to create.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateRoleRequest.RoleId">
+            <summary>The role id to use for this role.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateRoleRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.CreateServiceAccountKeyRequest">
+            <summary>The service account key create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateServiceAccountKeyRequest.KeyAlgorithm">
+            <summary>Which type of key and algorithm to use for the key. The default is currently a 2K RSA key.  However
+            this may change in the future.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateServiceAccountKeyRequest.PrivateKeyType">
+            <summary>The output format of the private key. `GOOGLE_CREDENTIALS_FILE` is the default output
+            format.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateServiceAccountKeyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.CreateServiceAccountRequest">
+            <summary>The service account create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateServiceAccountRequest.AccountId">
+            <summary>Required. The account id that is used to generate the service account email address and a stable
+            unique id. It is unique within a project, must be 6-30 characters long, and match the regular expression
+            `[a-z]([-a-z0-9]*[a-z0-9])` to comply with RFC1035.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateServiceAccountRequest.ServiceAccount">
+            <summary>The ServiceAccount resource to create. Currently, only the following values are user assignable:
+            `display_name` .</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.CreateServiceAccountRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.Empty">
+             <summary>A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A
+             typical example is to use it as the request or the response type of an API method. For instance:
+            
+             service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
+            
+             The JSON representation for `Empty` is empty JSON object `{}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Empty.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.Expr">
+             <summary>Represents an expression text. Example:
+            
+             title: "User account presence" description: "Determines whether the request has a user account" expression:
+             "size(request.user) > 0"</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Expr.Description">
+            <summary>An optional description of the expression. This is a longer text which describes the expression,
+            e.g. when hovered over it in a UI.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Expr.Expression">
+             <summary>Textual representation of an expression in Common Expression Language syntax.
+            
+             The application context of the containing message determines which well-known feature set of CEL is
+             supported.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Expr.Location">
+            <summary>An optional string indicating the location of the expression for error reporting, e.g. a file name
+            and a position in the file.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Expr.Title">
+            <summary>An optional title for the expression, i.e. a short string describing its purpose. This can be used
+            e.g. in UIs which allow to enter the expression.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Expr.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.ListRolesResponse">
+            <summary>The response containing the roles defined under a resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ListRolesResponse.NextPageToken">
+            <summary>To retrieve the next page of results, set `ListRolesRequest.page_token` to this value.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ListRolesResponse.Roles">
+            <summary>The Roles defined on this resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ListRolesResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.ListServiceAccountKeysResponse">
+            <summary>The service account keys list response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ListServiceAccountKeysResponse.Keys">
+            <summary>The public keys for the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ListServiceAccountKeysResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.ListServiceAccountsResponse">
+            <summary>The service account list response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ListServiceAccountsResponse.Accounts">
+            <summary>The list of matching service accounts.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ListServiceAccountsResponse.NextPageToken">
+            <summary>To retrieve the next page of results, set ListServiceAccountsRequest.page_token to this
+            value.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ListServiceAccountsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.Permission">
+            <summary>A permission which can be included by a role.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Permission.CustomRolesSupportLevel">
+            <summary>The current custom role support level.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Permission.Description">
+            <summary>A brief description of what this Permission is used for.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Permission.Name">
+            <summary>The name of this Permission.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Permission.OnlyInPredefinedRoles">
+            <summary>This permission can ONLY be used in predefined roles.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Permission.Stage">
+            <summary>The current launch stage of the permission.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Permission.Title">
+            <summary>The title of this Permission.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Permission.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.Policy">
+             <summary>Defines an Identity and Access Management (IAM) policy. It is used to specify access control policies
+             for Cloud Platform resources.
+            
+             A `Policy` consists of a list of `bindings`. A `Binding` binds a list of `members` to a `role`, where the
+             members can be user accounts, Google groups, Google domains, and service accounts. A `role` is a named list of
+             permissions defined by IAM.
+            
+             **Example**
+            
+             { "bindings": [ { "role": "roles/owner", "members": [ "user:mike@example.com", "group:admins@example.com",
+             "domain:google.com", "serviceAccount:my-other-app@appspot.gserviceaccount.com", ] }, { "role": "roles/viewer",
+             "members": ["user:sean@example.com"] } ] }
+            
+             For a description of IAM and its features, see the [IAM developer's
+             guide](https://cloud.google.com/iam).</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Policy.Bindings">
+            <summary>Associates a list of `members` to a `role`. `bindings` with no members will result in an
+            error.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Policy.ETag">
+             <summary>`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of
+             a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the
+             read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned
+             in the response to `getIamPolicy`, and systems are expected to put that etag in the request to
+             `setIamPolicy` to ensure that their change will be applied to the same version of the policy.
+            
+             If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
+             blindly.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Policy.Version">
+            <summary>Version of the `Policy`. The default version is 0.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.PolicyDelta">
+            <summary>The difference delta between two policies.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.PolicyDelta.BindingDeltas">
+            <summary>The delta for Bindings between two policies.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.PolicyDelta.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.QueryGrantableRolesRequest">
+            <summary>The grantable role query request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryGrantableRolesRequest.FullResourceName">
+             <summary>Required. The full resource name to query from the list of grantable roles.
+            
+             The name follows the Google Cloud Platform resource format. For example, a Cloud Platform project with id
+             `my-project` will be named `//cloudresourcemanager.googleapis.com/projects/my-project`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryGrantableRolesRequest.PageSize">
+            <summary>Optional limit on the number of roles to include in the response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryGrantableRolesRequest.PageToken">
+            <summary>Optional pagination token returned in an earlier QueryGrantableRolesResponse.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryGrantableRolesRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.QueryGrantableRolesResponse">
+            <summary>The grantable role query response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryGrantableRolesResponse.NextPageToken">
+            <summary>To retrieve the next page of results, set `QueryGrantableRolesRequest.page_token` to this
+            value.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryGrantableRolesResponse.Roles">
+            <summary>The list of matching roles.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryGrantableRolesResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.QueryTestablePermissionsRequest">
+            <summary>A request to get permissions which can be tested on a resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryTestablePermissionsRequest.FullResourceName">
+             <summary>Required. The full resource name to query from the list of testable permissions.
+            
+             The name follows the Google Cloud Platform resource format. For example, a Cloud Platform project with id
+             `my-project` will be named `//cloudresourcemanager.googleapis.com/projects/my-project`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryTestablePermissionsRequest.PageSize">
+            <summary>Optional limit on the number of permissions to include in the response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryTestablePermissionsRequest.PageToken">
+            <summary>Optional pagination token returned in an earlier QueryTestablePermissionsRequest.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryTestablePermissionsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.QueryTestablePermissionsResponse">
+            <summary>The response containing permissions which can be tested on a resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryTestablePermissionsResponse.NextPageToken">
+            <summary>To retrieve the next page of results, set `QueryTestableRolesRequest.page_token` to this
+            value.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryTestablePermissionsResponse.Permissions">
+            <summary>The Permissions testable on the requested resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.QueryTestablePermissionsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.Role">
+            <summary>A role in the Identity and Access Management API.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Role.Deleted">
+            <summary>The current deleted state of the role. This field is read only. It will be ignored in calls to
+            CreateRole and UpdateRole.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Role.Description">
+            <summary>Optional.  A human-readable description for the role.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Role.ETag">
+            <summary>Used to perform a consistent read-modify-write.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Role.IncludedPermissions">
+            <summary>The names of the permissions this role grants when bound in an IAM policy.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Role.Name">
+             <summary>The name of the role.
+            
+             When Role is used in CreateRole, the role name must not be set.
+            
+             When Role is used in output and other input such as UpdateRole, the role name is the complete path, e.g.,
+             roles/logging.viewer for curated roles and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom
+             roles.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Role.Stage">
+            <summary>The current launch stage of the role.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.Role.Title">
+            <summary>Optional.  A human-readable title for the role.  Typically this is limited to 100 UTF-8
+            bytes.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.ServiceAccount">
+             <summary>A service account in the Identity and Access Management API.
+            
+             To create a service account, specify the `project_id` and the `account_id` for the account.  The `account_id` is
+             unique within the project, and is used to generate the service account email address and a stable `unique_id`.
+            
+             If the account already exists, the account's resource name is returned in util::Status's
+             ResourceInfo.resource_name in the format of projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}. The caller can use
+             the name in other methods to access the account.
+            
+             All other methods can identify the service account using the format
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`. Using `-` as a wildcard for the `PROJECT_ID` will infer the
+             project from the account. The `ACCOUNT` value can be the `email` address or the `unique_id` of the service
+             account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccount.DisplayName">
+            <summary>Optional. A user-specified description of the service account.  Must be fewer than 100 UTF-8
+            bytes.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccount.Email">
+            <summary>@OutputOnly The email address of the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccount.ETag">
+            <summary>Used to perform a consistent read-modify-write.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccount.Name">
+             <summary>The resource name of the service account in the following format:
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+            
+             Requests using `-` as a wildcard for the `PROJECT_ID` will infer the project from the `account` and the
+             `ACCOUNT` value can be the `email` address or the `unique_id` of the service account.
+            
+             In responses the resource name will always be in the format
+             `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccount.Oauth2ClientId">
+            <summary>@OutputOnly. The OAuth2 client id for the service account. This is used in conjunction with the
+            OAuth2 clientconfig API to make three legged OAuth2 (3LO) flows to access the data of Google
+            users.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccount.ProjectId">
+            <summary>@OutputOnly The id of the project that owns the service account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccount.UniqueId">
+            <summary>@OutputOnly The unique and stable id of the service account.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.ServiceAccountKey">
+             <summary>Represents a service account key.
+            
+             A service account has two sets of key-pairs: user-managed, and system-managed.
+            
+             User-managed key-pairs can be created and deleted by users.  Users are responsible for rotating these keys
+             periodically to ensure security of their service accounts.  Users retain the private key of these key-pairs, and
+             Google retains ONLY the public key.
+            
+             System-managed key-pairs are managed automatically by Google, and rotated daily without user intervention.  The
+             private key never leaves Google's servers to maximize security.
+            
+             Public keys for all service accounts are also published at the OAuth2 Service Account API.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccountKey.KeyAlgorithm">
+            <summary>Specifies the algorithm (and possibly key size) for the key.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccountKey.Name">
+            <summary>The resource name of the service account key in the following format
+            `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccountKey.PrivateKeyData">
+            <summary>The private key data. Only provided in `CreateServiceAccountKey` responses. Make sure to keep the
+            private key data secure because it allows for the assertion of the service account identity. When decoded,
+            the private key data can be used to authenticate with Google API client libraries and with gcloud auth
+            activate-service-account.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccountKey.PrivateKeyType">
+             <summary>The output format for the private key. Only provided in `CreateServiceAccountKey` responses, not in
+             `GetServiceAccountKey` or `ListServiceAccountKey` responses.
+            
+             Google never exposes system-managed private keys, and never retains user-managed private keys.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccountKey.PublicKeyData">
+            <summary>The public key data. Only provided in `GetServiceAccountKey` responses.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccountKey.ValidAfterTime">
+            <summary>The key can be used after this timestamp.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccountKey.ValidBeforeTime">
+            <summary>The key can be used before this timestamp.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.ServiceAccountKey.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.SetIamPolicyRequest">
+            <summary>Request message for `SetIamPolicy` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SetIamPolicyRequest.Policy">
+            <summary>REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to
+            a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects)
+            might reject them.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SetIamPolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.SignBlobRequest">
+            <summary>The service account sign blob request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignBlobRequest.BytesToSign">
+            <summary>The bytes to sign.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignBlobRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.SignBlobResponse">
+            <summary>The service account sign blob response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignBlobResponse.KeyId">
+            <summary>The id of the key used to sign the blob.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignBlobResponse.Signature">
+            <summary>The signed blob.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignBlobResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.SignJwtRequest">
+            <summary>The service account sign JWT request.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignJwtRequest.Payload">
+            <summary>The JWT payload to sign, a JSON JWT Claim set.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignJwtRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.SignJwtResponse">
+            <summary>The service account sign JWT response.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignJwtResponse.KeyId">
+            <summary>The id of the key used to sign the JWT.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignJwtResponse.SignedJwt">
+            <summary>The signed JWT.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.SignJwtResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.TestIamPermissionsRequest">
+            <summary>Request message for `TestIamPermissions` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.TestIamPermissionsRequest.Permissions">
+            <summary>The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or
+            'storage.*') are not allowed. For more information see [IAM
+            Overview](https://cloud.google.com/iam/docs/overview#permissions).</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.TestIamPermissionsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.TestIamPermissionsResponse">
+            <summary>Response message for `TestIamPermissions` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.TestIamPermissionsResponse.Permissions">
+            <summary>A subset of `TestPermissionsRequest.permissions` that the caller is allowed.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.TestIamPermissionsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Iam.v1.Data.UndeleteRoleRequest">
+            <summary>The request to undelete an existing role.</summary>
+        </member>
+        <member name="P:Google.Apis.Iam.v1.Data.UndeleteRoleRequest.ETag">
+            <summary>Used to perform a consistent read-modify-write.</summary>
+        </member>
+    </members>
+</doc>

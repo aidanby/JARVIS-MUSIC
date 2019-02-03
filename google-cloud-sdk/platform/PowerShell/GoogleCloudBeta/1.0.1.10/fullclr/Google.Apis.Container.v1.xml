@@ -1,0 +1,2498 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.Container.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.Container.v1.ContainerService">
+            <summary>The Container Service.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ContainerService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ContainerService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ContainerService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ContainerService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ContainerService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Google Container Engine API.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ContainerService.Scope.CloudPlatform">
+            <summary>View and manage your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerService.Projects">
+            <summary>Gets the Projects resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ContainerBaseServiceRequest`1">
+            <summary>A base abstract class for Container requests.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new ContainerBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.Xgafv">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.XgafvEnum">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.XgafvEnum.Value1">
+            <summary>v1 error format</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.XgafvEnum.Value2">
+            <summary>v2 error format</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.AccessToken">
+            <summary>OAuth access token.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.Alt">
+            <summary>Data format for response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.AltEnum">
+            <summary>Data format for response.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.AltEnum.Media">
+            <summary>Media download with context-dependent Content-Type</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.AltEnum.Proto">
+            <summary>Responses with Content-Type of application/x-protobuf</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.BearerToken">
+            <summary>OAuth bearer token.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.Callback">
+            <summary>JSONP</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.Pp">
+            <summary>Pretty-print response.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+            assigned to a user, but should not exceed 40 characters.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.UploadType">
+            <summary>Legacy upload protocol for media (e.g. "media", "multipart").</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.UploadProtocol">
+            <summary>Upload protocol for media (e.g. "raw", "multipart").</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ContainerBaseServiceRequest`1.InitParameters">
+            <summary>Initializes Container parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource">
+            <summary>The "projects" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ProjectsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.Zones">
+            <summary>Gets the Zones resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource">
+            <summary>The "zones" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ProjectsResource.ZonesResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.Clusters">
+            <summary>Gets the Clusters resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource">
+            <summary>The "clusters" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePools">
+            <summary>Gets the NodePools resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource">
+            <summary>The "nodePools" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.Autoscaling(Google.Apis.Container.v1.Data.SetNodePoolAutoscalingRequest,System.String,System.String,System.String,System.String)">
+            <summary>Sets the autoscaling settings of a specific node pool.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+            <param name="nodePoolId">The name of the node
+            pool to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest">
+            <summary>Sets the autoscaling settings of a specific node pool.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetNodePoolAutoscalingRequest,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new Autoscaling request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.NodePoolId">
+            <summary>The name of the node pool to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.AutoscalingRequest.InitParameters">
+            <summary>Initializes Autoscaling parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.Create(Google.Apis.Container.v1.Data.CreateNodePoolRequest,System.String,System.String,System.String)">
+             <summary>Creates a node pool for a cluster.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://developers.google.com/console/help/new/#projectnumber).</param>
+             <param name="zone">The name
+             of the Google Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            
+             <param name="clusterId">The name of the cluster.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest">
+            <summary>Creates a node pool for a cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.CreateNodePoolRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://developers.google.com/console/help/new/#projectnumber).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.ClusterId">
+            <summary>The name of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.Delete(System.String,System.String,System.String,System.String)">
+             <summary>Deletes a node pool from a cluster.</summary>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://developers.google.com/console/help/new/#projectnumber).</param>
+             <param name="zone">The name
+             of the Google Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            
+             <param name="clusterId">The name of the cluster.</param>
+             <param name="nodePoolId">The name of the node pool
+             to delete.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest">
+            <summary>Deletes a node pool from a cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://developers.google.com/console/help/new/#projectnumber).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.ClusterId">
+            <summary>The name of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.NodePoolId">
+            <summary>The name of the node pool to delete.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.Get(System.String,System.String,System.String,System.String)">
+             <summary>Retrieves the node pool requested.</summary>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://developers.google.com/console/help/new/#projectnumber).</param>
+             <param name="zone">The name
+             of the Google Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            
+             <param name="clusterId">The name of the cluster.</param>
+             <param name="nodePoolId">The name of the node
+             pool.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest">
+            <summary>Retrieves the node pool requested.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://developers.google.com/console/help/new/#projectnumber).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.ClusterId">
+            <summary>The name of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.NodePoolId">
+            <summary>The name of the node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.List(System.String,System.String,System.String)">
+             <summary>Lists the node pools for a cluster.</summary>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://developers.google.com/console/help/new/#projectnumber).</param>
+             <param name="zone">The name
+             of the Google Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            
+             <param name="clusterId">The name of the cluster.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest">
+            <summary>Lists the node pools for a cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://developers.google.com/console/help/new/#projectnumber).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest.ClusterId">
+            <summary>The name of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.Rollback(Google.Apis.Container.v1.Data.RollbackNodePoolUpgradeRequest,System.String,System.String,System.String,System.String)">
+            <summary>Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if
+            the last upgrade successfully completed.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to rollback.</param>
+            <param name="nodePoolId">The name of the node
+            pool to rollback.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest">
+            <summary>Roll back the previously Aborted or Failed NodePool upgrade. This will be an no-op if
+            the last upgrade successfully completed.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.RollbackNodePoolUpgradeRequest,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new Rollback request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.ClusterId">
+            <summary>The name of the cluster to rollback.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.NodePoolId">
+            <summary>The name of the node pool to rollback.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.RollbackRequest.InitParameters">
+            <summary>Initializes Rollback parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagement(Google.Apis.Container.v1.Data.SetNodePoolManagementRequest,System.String,System.String,System.String,System.String)">
+            <summary>Sets the NodeManagement options for a node pool.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to update.</param>
+            <param name="nodePoolId">The name of the node
+            pool to update.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest">
+            <summary>Sets the NodeManagement options for a node pool.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetNodePoolManagementRequest,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new SetManagement request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.ClusterId">
+            <summary>The name of the cluster to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.NodePoolId">
+            <summary>The name of the node pool to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetManagementRequest.InitParameters">
+            <summary>Initializes SetManagement parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSize(Google.Apis.Container.v1.Data.SetNodePoolSizeRequest,System.String,System.String,System.String,System.String)">
+            <summary>Sets the size of a specific node pool.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to update.</param>
+            <param name="nodePoolId">The name of the node
+            pool to update.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest">
+            <summary>Sets the size of a specific node pool.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetNodePoolSizeRequest,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new SetSize request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.ClusterId">
+            <summary>The name of the cluster to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.NodePoolId">
+            <summary>The name of the node pool to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.SetSizeRequest.InitParameters">
+            <summary>Initializes SetSize parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.Update(Google.Apis.Container.v1.Data.UpdateNodePoolRequest,System.String,System.String,System.String,System.String)">
+            <summary>Updates the version and/or image type of a specific node pool.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+            <param name="nodePoolId">The name of the node
+            pool to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest">
+            <summary>Updates the version and/or image type of a specific node pool.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.UpdateNodePoolRequest,System.String,System.String,System.String,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in
+            which the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.NodePoolId">
+            <summary>The name of the node pool to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.NodePoolsResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Addons(Google.Apis.Container.v1.Data.SetAddonsConfigRequest,System.String,System.String,System.String)">
+            <summary>Sets the addons of a specific cluster.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest">
+            <summary>Sets the addons of a specific cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetAddonsConfigRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new Addons request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.AddonsRequest.InitParameters">
+            <summary>Initializes Addons parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotation(Google.Apis.Container.v1.Data.CompleteIPRotationRequest,System.String,System.String,System.String)">
+             <summary>Completes master IP rotation.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://developers.google.com/console/help/new/#projectnumber).</param>
+             <param name="zone">The name
+             of the Google Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            
+             <param name="clusterId">The name of the cluster.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest">
+            <summary>Completes master IP rotation.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.CompleteIPRotationRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new CompleteIpRotation request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://developers.google.com/console/help/new/#projectnumber).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.ClusterId">
+            <summary>The name of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CompleteIpRotationRequest.InitParameters">
+            <summary>Initializes CompleteIpRotation parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Create(Google.Apis.Container.v1.Data.CreateClusterRequest,System.String,System.String)">
+             <summary>Creates a cluster, consisting of the specified number and type of Google Compute Engine
+             instances.
+            
+             By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
+             firewalls#networks).
+            
+             One firewall is added for the cluster. After cluster creation, the cluster creates routes for each
+             node to allow the containers on that node to communicate with all other instances in the cluster.
+            
+             Finally, an entry is added to the project's global metadata indicating which CIDR range is being
+             used by the cluster.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://support.google.com/cloud/answer/6158840).</param>
+             <param name="zone">The name of the Google
+             Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest">
+             <summary>Creates a cluster, consisting of the specified number and type of Google Compute Engine
+             instances.
+            
+             By default, the cluster is created in the project's [default network](/compute/docs/networks-and-
+             firewalls#networks).
+            
+             One firewall is added for the cluster. After cluster creation, the cluster creates routes for each
+             node to allow the containers on that node to communicate with all other instances in the cluster.
+            
+             Finally, an entry is added to the project's global metadata indicating which CIDR range is being
+             used by the cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.CreateClusterRequest,System.String,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Delete(System.String,System.String,System.String)">
+             <summary>Deletes the cluster, including the Kubernetes endpoint and all worker nodes.
+            
+             Firewalls and routes that were configured during cluster creation are also deleted.
+            
+             Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
+             resources) will not be deleted if they weren't present at the initial create time.</summary>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://support.google.com/cloud/answer/6158840).</param>
+             <param name="zone">The name of the Google
+             Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+             <param
+             name="clusterId">The name of the cluster to delete.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest">
+             <summary>Deletes the cluster, including the Kubernetes endpoint and all worker nodes.
+            
+             Firewalls and routes that were configured during cluster creation are also deleted.
+            
+             Other Google Compute Engine resources that might be in use by the cluster (e.g. load balancer
+             resources) will not be deleted if they weren't present at the initial create time.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest.ClusterId">
+            <summary>The name of the cluster to delete.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Get(System.String,System.String,System.String)">
+            <summary>Gets the details of a specific cluster.</summary>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to retrieve.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest">
+            <summary>Gets the details of a specific cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest.ClusterId">
+            <summary>The name of the cluster to retrieve.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbac(Google.Apis.Container.v1.Data.SetLegacyAbacRequest,System.String,System.String,System.String)">
+            <summary>Enables or disables the ABAC authorization mechanism on a cluster.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to update.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest">
+            <summary>Enables or disables the ABAC authorization mechanism on a cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetLegacyAbacRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new LegacyAbac request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.ClusterId">
+            <summary>The name of the cluster to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LegacyAbacRequest.InitParameters">
+            <summary>Initializes LegacyAbac parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.List(System.String,System.String)">
+            <summary>Lists all clusters owned by a project in either the specified zone or all zones.</summary>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides, or "-" for all
+            zones.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ListRequest">
+            <summary>Lists all clusters owned by a project in either the specified zone or all zones.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ListRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ListRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides, or "-" for all zones.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Locations(Google.Apis.Container.v1.Data.SetLocationsRequest,System.String,System.String,System.String)">
+            <summary>Sets the locations of a specific cluster.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest">
+            <summary>Sets the locations of a specific cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetLocationsRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new Locations request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LocationsRequest.InitParameters">
+            <summary>Initializes Locations parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Logging(Google.Apis.Container.v1.Data.SetLoggingServiceRequest,System.String,System.String,System.String)">
+            <summary>Sets the logging service of a specific cluster.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest">
+            <summary>Sets the logging service of a specific cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetLoggingServiceRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new Logging request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.LoggingRequest.InitParameters">
+            <summary>Initializes Logging parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Master(Google.Apis.Container.v1.Data.UpdateMasterRequest,System.String,System.String,System.String)">
+            <summary>Updates the master of a specific cluster.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest">
+            <summary>Updates the master of a specific cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.UpdateMasterRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new Master request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MasterRequest.InitParameters">
+            <summary>Initializes Master parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Monitoring(Google.Apis.Container.v1.Data.SetMonitoringServiceRequest,System.String,System.String,System.String)">
+            <summary>Sets the monitoring service of a specific cluster.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest">
+            <summary>Sets the monitoring service of a specific cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetMonitoringServiceRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new Monitoring request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.MonitoringRequest.InitParameters">
+            <summary>Initializes Monitoring parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabels(Google.Apis.Container.v1.Data.SetLabelsRequest,System.String,System.String,System.String)">
+             <summary>Sets labels on a cluster.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://developers.google.com/console/help/new/#projectnumber).</param>
+             <param name="zone">The name
+             of the Google Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            
+             <param name="clusterId">The name of the cluster.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest">
+            <summary>Sets labels on a cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetLabelsRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new ResourceLabels request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://developers.google.com/console/help/new/#projectnumber).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.ClusterId">
+            <summary>The name of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.ResourceLabelsRequest.InitParameters">
+            <summary>Initializes ResourceLabels parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicy(Google.Apis.Container.v1.Data.SetMaintenancePolicyRequest,System.String,System.String,System.String)">
+            <summary>Sets the maintenance policy for a cluster.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to update.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest">
+            <summary>Sets the maintenance policy for a cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetMaintenancePolicyRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new SetMaintenancePolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.ClusterId">
+            <summary>The name of the cluster to update.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMaintenancePolicyRequest.InitParameters">
+            <summary>Initializes SetMaintenancePolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuth(Google.Apis.Container.v1.Data.SetMasterAuthRequest,System.String,System.String,System.String)">
+            <summary>Used to set master auth materials. Currently supports :- Changing the admin password of a
+            specific cluster. This can be either via password generation or explicitly set the
+            password.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest">
+            <summary>Used to set master auth materials. Currently supports :- Changing the admin password of a
+            specific cluster. This can be either via password generation or explicitly set the
+            password.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetMasterAuthRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new SetMasterAuth request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetMasterAuthRequest.InitParameters">
+            <summary>Initializes SetMasterAuth parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicy(Google.Apis.Container.v1.Data.SetNetworkPolicyRequest,System.String,System.String,System.String)">
+             <summary>Enables/Disables Network Policy for a cluster.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://developers.google.com/console/help/new/#projectnumber).</param>
+             <param name="zone">The name
+             of the Google Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            
+             <param name="clusterId">The name of the cluster.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest">
+            <summary>Enables/Disables Network Policy for a cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.SetNetworkPolicyRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new SetNetworkPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://developers.google.com/console/help/new/#projectnumber).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.ClusterId">
+            <summary>The name of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.SetNetworkPolicyRequest.InitParameters">
+            <summary>Initializes SetNetworkPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotation(Google.Apis.Container.v1.Data.StartIPRotationRequest,System.String,System.String,System.String)">
+             <summary>Start master IP rotation.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="projectId">The Google Developers Console [project ID or project
+             number](https://developers.google.com/console/help/new/#projectnumber).</param>
+             <param name="zone">The name
+             of the Google Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            
+             <param name="clusterId">The name of the cluster.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest">
+            <summary>Start master IP rotation.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.StartIPRotationRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new StartIpRotation request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://developers.google.com/console/help/new/#projectnumber).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.ClusterId">
+            <summary>The name of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.StartIpRotationRequest.InitParameters">
+            <summary>Initializes StartIpRotation parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.Update(Google.Apis.Container.v1.Data.UpdateClusterRequest,System.String,System.String,System.String)">
+            <summary>Updates the settings of a specific cluster.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="clusterId">The name of the cluster to upgrade.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest">
+            <summary>Updates the settings of a specific cluster.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.UpdateClusterRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new Update request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.ClusterId">
+            <summary>The name of the cluster to upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.ClustersResource.UpdateRequest.InitParameters">
+            <summary>Initializes Update parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.Operations">
+            <summary>Gets the Operations resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource">
+            <summary>The "operations" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.Cancel(Google.Apis.Container.v1.Data.CancelOperationRequest,System.String,System.String,System.String)">
+            <summary>Cancels the specified operation.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the operation resides.</param>
+            <param
+            name="operationId">The server-assigned `name` of the operation.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest">
+            <summary>Cancels the specified operation.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Container.v1.Data.CancelOperationRequest,System.String,System.String,System.String)">
+            <summary>Constructs a new Cancel request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the operation resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.OperationId">
+            <summary>The server-assigned `name` of the operation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.CancelRequest.InitParameters">
+            <summary>Initializes Cancel parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.Get(System.String,System.String,System.String)">
+            <summary>Gets the specified operation.</summary>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) in which the cluster resides.</param>
+            <param
+            name="operationId">The server-assigned `name` of the operation.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest">
+            <summary>Gets the specified operation.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest.OperationId">
+            <summary>The server-assigned `name` of the operation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.List(System.String,System.String)">
+            <summary>Lists all operations in a project in a specific zone or all zones.</summary>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) to return operations for, or `-` for all zones.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.ListRequest">
+            <summary>Lists all operations in a project in a specific zone or all zones.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.ListRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.ListRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
+            operations for, or `-` for all zones.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.OperationsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfig(System.String,System.String)">
+            <summary>Returns configuration info about the Container Engine service.</summary>
+            <param name="projectId">The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</param>
+            <param name="zone">The name of the Google
+            Compute Engine [zone](/compute/docs/zones#available) to return operations for.</param>
+        </member>
+        <member name="T:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfigRequest">
+            <summary>Returns configuration info about the Container Engine service.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfigRequest.#ctor(Google.Apis.Services.IClientService,System.String,System.String)">
+            <summary>Constructs a new GetServerconfig request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfigRequest.ProjectId">
+            <summary>The Google Developers Console [project ID or project
+            number](https://support.google.com/cloud/answer/6158840).</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfigRequest.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) to return
+            operations for.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfigRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfigRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfigRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Container.v1.ProjectsResource.ZonesResource.GetServerconfigRequest.InitParameters">
+            <summary>Initializes GetServerconfig parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.AcceleratorConfig">
+            <summary>AcceleratorConfig represents a Hardware Accelerator request.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AcceleratorConfig.AcceleratorCount">
+            <summary>The number of the accelerator cards exposed to an instance.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AcceleratorConfig.AcceleratorType">
+            <summary>The accelerator type resource name. List of supported accelerators
+            [here](/compute/docs/gpus/#Introduction)</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AcceleratorConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.AddonsConfig">
+            <summary>Configuration for the addons that can be automatically spun up in the cluster, enabling additional
+            functionality.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AddonsConfig.HorizontalPodAutoscaling">
+            <summary>Configuration for the horizontal pod autoscaling feature, which increases or decreases the number
+            of replica pods a replication controller has based on the resource usage of the existing pods.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AddonsConfig.HttpLoadBalancing">
+            <summary>Configuration for the HTTP (L7) load balancing controller addon, which makes it easy to set up HTTP
+            load balancers for services in a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AddonsConfig.KubernetesDashboard">
+            <summary>Configuration for the Kubernetes Dashboard.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AddonsConfig.NetworkPolicyConfig">
+            <summary>Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the
+            Master, it does not track whether network policy is enabled for the nodes.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AddonsConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.AutoUpgradeOptions">
+            <summary>AutoUpgradeOptions defines the set of options for the user to control how the Auto Upgrades will
+            proceed.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AutoUpgradeOptions.AutoUpgradeStartTime">
+            <summary>[Output only] This field is set when upgrades are about to commence with the approximate start time
+            for the upgrades, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AutoUpgradeOptions.Description">
+            <summary>[Output only] This field is set when upgrades are about to commence with the description of the
+            upgrade.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.AutoUpgradeOptions.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.CancelOperationRequest">
+            <summary>CancelOperationRequest cancels a single operation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CancelOperationRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.CidrBlock">
+            <summary>CidrBlock contains an optional name and one CIDR block.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CidrBlock.CidrBlockValue">
+            <summary>cidr_block must be specified in CIDR notation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CidrBlock.DisplayName">
+            <summary>display_name is an optional field for users to identify CIDR blocks.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CidrBlock.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.ClientCertificateConfig">
+            <summary>Configuration for client certificates on the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClientCertificateConfig.IssueClientCertificate">
+            <summary>Issue a client certificate.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClientCertificateConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.Cluster">
+            <summary>A Google Container Engine cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.AddonsConfig">
+            <summary>Configurations for the various addons available to run in the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.ClusterIpv4Cidr">
+            <summary>The IP address range of the container pods in this cluster, in [CIDR](http://en.wikipedia.org/wiki
+            /Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`). Leave blank to have one automatically
+            chosen or specify a `/14` block in `10.0.0.0/8`.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.CreateTime">
+            <summary>[Output only] The time the cluster was created, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+            text format.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.CurrentMasterVersion">
+            <summary>[Output only] The current software version of the master endpoint.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.CurrentNodeCount">
+            <summary>[Output only] The number of nodes currently in the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.CurrentNodeVersion">
+            <summary>[Output only] The current version of the node software components. If they are currently at
+            multiple versions because they're in the process of being upgraded, this reflects the minimum version of all
+            nodes.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.Description">
+            <summary>An optional description of this cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.EnableKubernetesAlpha">
+            <summary>Kubernetes alpha features are enabled on this cluster. This includes alpha API groups (e.g.
+            v1alpha1) and features that may not be production ready in the kubernetes version of the master and nodes.
+            The cluster has no SLA for uptime and master/node upgrades are disabled. Alpha enabled clusters are
+            automatically deleted thirty days after creation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.Endpoint">
+             <summary>[Output only] The IP address of this cluster's master endpoint. The endpoint can be accessed from
+             the internet at `https://username:password@endpoint/`.
+            
+             See the `masterAuth` property of this resource for username and password information.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.ExpireTime">
+            <summary>[Output only] The time the cluster will be automatically deleted in
+            [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) text format.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.InitialClusterVersion">
+            <summary>The initial Kubernetes version for this cluster.  Valid versions are those found in
+            validMasterVersions returned by getServerConfig.  The version can be upgraded over time; such upgrades are
+            reflected in currentMasterVersion and currentNodeVersion.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.InitialNodeCount">
+            <summary>The number of nodes to create in this cluster. You must ensure that your Compute Engine resource
+            quota is sufficient for this number of instances. You must also have available firewall and routes quota.
+            For requests, this field should only be used in lieu of a "node_pool" object, since this configuration
+            (along with the "node_config") will be used to create a "NodePool" object with an auto-generated name. Do
+            not use this and a node_pool at the same time.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.InstanceGroupUrls">
+            <summary>[Output only] The resource URLs of [instance groups](/compute/docs/instance-groups/) associated
+            with this cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.IpAllocationPolicy">
+            <summary>Configuration for cluster IP allocation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.LabelFingerprint">
+            <summary>The fingerprint of the set of labels for this cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.LegacyAbac">
+            <summary>Configuration for the legacy ABAC authorization mode.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.Locations">
+            <summary>The list of Google Compute Engine [locations](/compute/docs/zones#available) in which the cluster's
+            nodes should be located.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.LoggingService">
+             <summary>The logging service the cluster should use to write logs. Currently available options:
+            
+             * `logging.googleapis.com` - the Google Cloud Logging service. * `none` - no logs will be exported from the
+             cluster. * if left as an empty string,`logging.googleapis.com` will be used.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.MaintenancePolicy">
+            <summary>Configure the maintenance policy for this cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.MasterAuth">
+            <summary>The authentication information for accessing the master endpoint.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.MasterAuthorizedNetworksConfig">
+            <summary>Master authorized networks is a Beta feature. The configuration options for master authorized
+            networks feature.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.MonitoringService">
+             <summary>The monitoring service the cluster should use to write metrics. Currently available options:
+            
+             * `monitoring.googleapis.com` - the Google Cloud Monitoring service. * `none` - no metrics will be exported
+             from the cluster. * if left as an empty string, `monitoring.googleapis.com` will be used.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.Name">
+             <summary>The name of this cluster. The name must be unique within this project and zone, and can be up to 40
+             characters with the following restrictions:
+            
+             * Lowercase letters, numbers, and hyphens only. * Must start with a letter. * Must end with a number or a
+             letter.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.Network">
+            <summary>The name of the Google Compute Engine [network](/compute/docs/networks-and-firewalls#networks) to
+            which the cluster is connected. If left unspecified, the `default` network will be used.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.NetworkPolicy">
+            <summary>Configuration options for the NetworkPolicy feature.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.NodeConfig">
+             <summary>Parameters used in creating the cluster's nodes. See `nodeConfig` for the description of its
+             properties. For requests, this field should only be used in lieu of a "node_pool" object, since this
+             configuration (along with the "initial_node_count") will be used to create a "NodePool" object with an auto-
+             generated name. Do not use this and a node_pool at the same time. For responses, this field will be
+             populated with the node configuration of the first node pool.
+            
+             If unspecified, the defaults are used.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.NodeIpv4CidrSize">
+            <summary>[Output only] The size of the address space on each node for hosting containers. This is
+            provisioned from within the `container_ipv4_cidr` range.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.NodePools">
+            <summary>The node pools associated with this cluster. This field should not be set if "node_config" or
+            "initial_node_count" are specified.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.ResourceLabels">
+            <summary>The resource labels for the cluster to use to annotate any related Google Compute Engine
+            resources.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.SelfLink">
+            <summary>[Output only] Server-defined URL for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.ServicesIpv4Cidr">
+            <summary>[Output only] The IP address range of the Kubernetes services in this cluster, in
+            [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `1.2.3.4/29`). Service
+            addresses are typically put in the last `/16` from the container CIDR.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.Status">
+            <summary>[Output only] The current status of this cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.StatusMessage">
+            <summary>[Output only] Additional information about the current status of this cluster, if
+            available.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.Subnetwork">
+            <summary>The name of the Google Compute Engine [subnetwork](/compute/docs/subnetworks) to which the cluster
+            is connected.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.Zone">
+            <summary>[Output only] The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which
+            the cluster resides.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Cluster.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.ClusterUpdate">
+            <summary>ClusterUpdate describes an update to the cluster. Exactly one update can be applied to a cluster with
+            each request, so at most one field can be provided.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredAddonsConfig">
+            <summary>Configurations for the various addons available to run in the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredImageType">
+            <summary>The desired image type for the node pool. NOTE: Set the "desired_node_pool" field as
+            well.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredLocations">
+             <summary>The desired list of Google Compute Engine [locations](/compute/docs/zones#available) in which the
+             cluster's nodes should be located. Changing the locations a cluster is in will result in nodes being either
+             created or removed from the cluster, depending on whether locations are being added or removed.
+            
+             This list must always include the cluster's primary zone.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredMasterAuthorizedNetworksConfig">
+            <summary>Master authorized networks is a Beta feature. The desired configuration options for master
+            authorized networks feature.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredMasterVersion">
+            <summary>The Kubernetes version to change the master to. The only valid value is the latest supported
+            version. Use "-" to have the server automatically select the latest version.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredMonitoringService">
+             <summary>The monitoring service the cluster should use to write metrics. Currently available options:
+            
+             * "monitoring.googleapis.com" - the Google Cloud Monitoring service * "none" - no metrics will be exported
+             from the cluster</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredNodePoolAutoscaling">
+            <summary>Autoscaler configuration for the node pool specified in desired_node_pool_id. If there is only one
+            pool in the cluster and desired_node_pool_id is not provided then the change applies to that single node
+            pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredNodePoolId">
+            <summary>The node pool to be upgraded. This field is mandatory if "desired_node_version",
+            "desired_image_family" or "desired_node_pool_autoscaling" is specified and there is more than one node pool
+            on the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.DesiredNodeVersion">
+            <summary>The Kubernetes version to change the nodes to (typically an upgrade). Use `-` to upgrade to the
+            latest version supported by the server.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ClusterUpdate.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.CompleteIPRotationRequest">
+            <summary>CompleteIPRotationRequest moves the cluster master back into single-IP mode.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CompleteIPRotationRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.CreateClusterRequest">
+            <summary>CreateClusterRequest creates a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CreateClusterRequest.Cluster">
+            <summary>A [cluster resource](/container-engine/reference/rest/v1/projects.zones.clusters)</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CreateClusterRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.CreateNodePoolRequest">
+            <summary>CreateNodePoolRequest creates a node pool for a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CreateNodePoolRequest.NodePool">
+            <summary>The node pool to create.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.CreateNodePoolRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.DailyMaintenanceWindow">
+            <summary>Time window specified for daily maintenance operations.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.DailyMaintenanceWindow.Duration">
+            <summary>[Output only] Duration of the time window, automatically chosen to be smallest possible in the
+            given scenario. Duration will be in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format
+            "PTnHnMnS".</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.DailyMaintenanceWindow.StartTime">
+            <summary>Time within the maintenance window to start the maintenance operations. Time format should be in
+            [RFC3339](https://www.ietf.org/rfc/rfc3339.txt) format "HH:MM”, where HH : [00-23] and MM : [00-59]
+            GMT.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.DailyMaintenanceWindow.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.Empty">
+             <summary>A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A
+             typical example is to use it as the request or the response type of an API method. For instance:
+            
+             service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
+            
+             The JSON representation for `Empty` is empty JSON object `{}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Empty.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.HorizontalPodAutoscaling">
+            <summary>Configuration options for the horizontal pod autoscaling feature, which increases or decreases the
+            number of replica pods a replication controller has based on the resource usage of the existing pods.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.HorizontalPodAutoscaling.Disabled">
+            <summary>Whether the Horizontal Pod Autoscaling feature is enabled in the cluster. When enabled, it ensures
+            that a Heapster pod is running in the cluster, which is also used by the Cloud Monitoring service.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.HorizontalPodAutoscaling.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.HttpLoadBalancing">
+            <summary>Configuration options for the HTTP (L7) load balancing controller addon, which makes it easy to set up
+            HTTP load balancers for services in a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.HttpLoadBalancing.Disabled">
+            <summary>Whether the HTTP Load Balancing controller is enabled in the cluster. When enabled, it runs a small
+            pod in the cluster that manages the load balancers.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.HttpLoadBalancing.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.IPAllocationPolicy">
+            <summary>Configuration for controlling how IPs are allocated in the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.ClusterIpv4Cidr">
+            <summary>This field is deprecated, use cluster_ipv4_cidr_block.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.ClusterIpv4CidrBlock">
+             <summary>The IP address range for the cluster pod IPs. If this field is set, then
+             `cluster.cluster_ipv4_cidr` must be left blank.
+            
+             This field is only applicable when `use_ip_aliases` is true.
+            
+             Set to blank to have a range chosen with the default size.
+            
+             Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
+            
+             Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`)
+             from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific
+             range to use.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.ClusterSecondaryRangeName">
+             <summary>The name of the secondary range to be used for the cluster CIDR block.  The secondary range will be
+             used for pod IP addresses. This must be an existing secondary range associated with the cluster subnetwork.
+            
+             This field is only applicable with use_ip_aliases is true and create_subnetwork is false.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.CreateSubnetwork">
+             <summary>Whether a new subnetwork will be created automatically for the cluster.
+            
+             This field is only applicable when `use_ip_aliases` is true.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.NodeIpv4Cidr">
+            <summary>This field is deprecated, use node_ipv4_cidr_block.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.NodeIpv4CidrBlock">
+             <summary>The IP address range of the instance IPs in this cluster.
+            
+             This is applicable only if `create_subnetwork` is true.
+            
+             Set to blank to have a range chosen with the default size.
+            
+             Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
+            
+             Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`)
+             from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific
+             range to use.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.ServicesIpv4Cidr">
+            <summary>This field is deprecated, use services_ipv4_cidr_block.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.ServicesIpv4CidrBlock">
+             <summary>The IP address range of the services IPs in this cluster. If blank, a range will be automatically
+             chosen with the default size.
+            
+             This field is only applicable when `use_ip_aliases` is true.
+            
+             Set to blank to have a range chosen with the default size.
+            
+             Set to /netmask (e.g. `/14`) to have a range chosen with a specific netmask.
+            
+             Set to a [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation (e.g. `10.96.0.0/14`)
+             from the RFC-1918 private networks (e.g. `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific
+             range to use.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.ServicesSecondaryRangeName">
+             <summary>The name of the secondary range to be used as for the services CIDR block.  The secondary range
+             will be used for service ClusterIPs. This must be an existing secondary range associated with the cluster
+             subnetwork.
+            
+             This field is only applicable with use_ip_aliases is true and create_subnetwork is false.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.SubnetworkName">
+            <summary>A custom subnetwork name to be used if `create_subnetwork` is true.  If this field is empty, then
+            an automatic name will be chosen for the new subnetwork.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.UseIpAliases">
+            <summary>Whether alias IPs will be used for pod IPs in the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.IPAllocationPolicy.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.KubernetesDashboard">
+            <summary>Configuration for the Kubernetes Dashboard.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.KubernetesDashboard.Disabled">
+            <summary>Whether the Kubernetes Dashboard is enabled for this cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.KubernetesDashboard.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.LegacyAbac">
+            <summary>Configuration for the legacy Attribute Based Access Control authorization mode.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.LegacyAbac.Enabled">
+            <summary>Whether the ABAC authorizer is enabled for this cluster. When enabled, identities in the system,
+            including service accounts, nodes, and controllers, will have statically granted permissions beyond those
+            provided by the RBAC configuration or IAM.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.LegacyAbac.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.ListClustersResponse">
+            <summary>ListClustersResponse is the result of ListClustersRequest.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ListClustersResponse.Clusters">
+            <summary>A list of clusters in the project in the specified zone, or across all ones.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ListClustersResponse.MissingZones">
+            <summary>If any zones are listed here, the list of clusters returned may be missing those zones.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ListClustersResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.ListNodePoolsResponse">
+            <summary>ListNodePoolsResponse is the result of ListNodePoolsRequest.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ListNodePoolsResponse.NodePools">
+            <summary>A list of node pools for a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ListNodePoolsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.ListOperationsResponse">
+            <summary>ListOperationsResponse is the result of ListOperationsRequest.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ListOperationsResponse.MissingZones">
+            <summary>If any zones are listed here, the list of operations returned may be missing the operations from
+            those zones.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ListOperationsResponse.Operations">
+            <summary>A list of operations in the project in the specified zone.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ListOperationsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.MaintenancePolicy">
+            <summary>MaintenancePolicy defines the maintenance policy to be used for the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MaintenancePolicy.Window">
+            <summary>Specifies the maintenance window in which maintenance may be performed.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MaintenancePolicy.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.MaintenanceWindow">
+            <summary>MaintenanceWindow defines the maintenance window to be used for the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MaintenanceWindow.DailyMaintenanceWindow">
+            <summary>DailyMaintenanceWindow specifies a daily maintenance operation window.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MaintenanceWindow.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.MasterAuth">
+            <summary>The authentication information for accessing the master endpoint. Authentication can be done using HTTP
+            basic auth or using client certificates.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuth.ClientCertificate">
+            <summary>[Output only] Base64-encoded public certificate used by clients to authenticate to the cluster
+            endpoint.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuth.ClientCertificateConfig">
+            <summary>Configuration for client certificate authentication on the cluster.  If no configuration is
+            specified, a client certificate is issued.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuth.ClientKey">
+            <summary>[Output only] Base64-encoded private key used by clients to authenticate to the cluster
+            endpoint.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuth.ClusterCaCertificate">
+            <summary>[Output only] Base64-encoded public certificate that is the root of trust for the
+            cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuth.Password">
+            <summary>The password to use for HTTP basic authentication to the master endpoint. Because the master
+            endpoint is open to the Internet, you should create a strong password.  If a password is provided for
+            cluster creation, username must be non-empty.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuth.Username">
+            <summary>The username to use for HTTP basic authentication to the master endpoint. For clusters v1.6.0 and
+            later, you can disable basic authentication by providing an empty username.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuth.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.MasterAuthorizedNetworksConfig">
+            <summary>Master authorized networks is a Beta feature. Configuration options for the master authorized networks
+            feature. Enabled master authorized networks will disallow all external traffic to access Kubernetes master
+            through HTTPS except traffic from the given CIDR blocks, Google Compute Engine Public IPs and Google Prod
+            IPs.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuthorizedNetworksConfig.CidrBlocks">
+            <summary>cidr_blocks define up to 10 external networks that could access Kubernetes master through
+            HTTPS.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuthorizedNetworksConfig.Enabled">
+            <summary>Whether or not master authorized networks is enabled.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.MasterAuthorizedNetworksConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.NetworkPolicy">
+            <summary>Configuration options for the NetworkPolicy feature. https://kubernetes.io/docs/concepts/services-
+            networking/networkpolicies/</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NetworkPolicy.Enabled">
+            <summary>Whether network policy is enabled on the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NetworkPolicy.Provider">
+            <summary>The selected network policy provider.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NetworkPolicy.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.NetworkPolicyConfig">
+            <summary>Configuration for NetworkPolicy. This only tracks whether the addon is enabled or not on the Master, it
+            does not track whether network policy is enabled for the nodes.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NetworkPolicyConfig.Disabled">
+            <summary>Whether NetworkPolicy is enabled for this cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NetworkPolicyConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.NodeConfig">
+            <summary>Parameters that describe the nodes in a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.Accelerators">
+            <summary>A list of hardware accelerators to be attached to each node. See
+            https://cloud.google.com/compute/docs/gpus for more information about support for GPUs.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.DiskSizeGb">
+             <summary>Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 10GB.
+            
+             If unspecified, the default disk size is 100GB.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.ImageType">
+            <summary>The image type to use for this node. Note that for a given image type, the latest version of it
+            will be used.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.Labels">
+            <summary>The map of Kubernetes labels (key/value pairs) to be applied to each node. These will added in
+            addition to any default label(s) that Kubernetes may apply to the node. In case of conflict in label keys,
+            the applied set may differ depending on the Kubernetes version -- it's best to assume the behavior is
+            undefined and conflicts should be avoided. For more information, including usage and the valid values, see:
+            https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.LocalSsdCount">
+             <summary>The number of local SSD disks to be attached to the node.
+            
+             The limit for this value is dependant upon the maximum number of disks available on a machine per zone. See:
+             https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits for more information.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.MachineType">
+             <summary>The name of a Google Compute Engine [machine type](/compute/docs/machine-types) (e.g.
+             `n1-standard-1`).
+            
+             If unspecified, the default machine type is `n1-standard-1`.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.Metadata">
+             <summary>The metadata key/value pairs assigned to instances in the cluster.
+            
+             Keys must conform to the regexp [a-zA-Z0-9-_]+ and be less than 128 bytes in length. These are reflected as
+             part of a URL in the metadata server. Additionally, to avoid ambiguity, keys must not conflict with any
+             other metadata keys for the project or be one of the four reserved keys: "instance-template", "kube-env",
+             "startup-script", and "user-data"
+            
+             Values are free-form strings, and only have meaning as interpreted by the image running in the instance. The
+             only restriction placed on them is that each value's size must be less than or equal to 32 KB.
+            
+             The total size of all keys and values must be less than 512 KB.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.MinCpuPlatform">
+            <summary>Minimum CPU platform to be used by this instance. The instance may be scheduled on the specified or
+            newer CPU platform. Applicable values are the friendly names of CPU platforms, such as minCpuPlatform: Intel
+            Haswell or minCpuPlatform: Intel Sandy Bridge. For more information, read [how to specify min CPU
+            platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.OauthScopes">
+             <summary>The set of Google API scopes to be made available on all of the node VMs under the "default"
+             service account.
+            
+             The following scopes are recommended, but not required, and by default are not included:
+            
+             * `https://www.googleapis.com/auth/compute` is required for mounting persistent storage on your nodes. *
+             `https://www.googleapis.com/auth/devstorage.read_only` is required for communicating with **gcr.io** (the
+             [Google Container Registry](/container-registry/)).
+            
+             If unspecified, no scopes are added, unless Cloud Logging or Cloud Monitoring are enabled, in which case
+             their required scopes will be added.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.Preemptible">
+            <summary>Whether the nodes are created as preemptible VM instances. See:
+            https://cloud.google.com/compute/docs/instances/preemptible for more information about preemptible VM
+            instances.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.ServiceAccount">
+            <summary>The Google Cloud Platform Service Account to be used by the node VMs. If no Service Account is
+            specified, the "default" service account is used.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.Tags">
+            <summary>The list of instance tags applied to all nodes. Tags are used to identify valid sources or targets
+            for network firewalls and are specified by the client during cluster or node pool creation. Each tag within
+            the list must comply with RFC1035.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.NodeManagement">
+            <summary>NodeManagement defines the set of node management services turned on for the node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeManagement.AutoRepair">
+            <summary>A flag that specifies whether the node auto-repair is enabled for the node pool. If enabled, the
+            nodes in this node pool will be monitored and, if they fail health checks too many times, an automatic
+            repair action will be triggered.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeManagement.AutoUpgrade">
+            <summary>A flag that specifies whether node auto-upgrade is enabled for the node pool. If enabled, node
+            auto-upgrade helps keep the nodes in your node pool up to date with the latest release version of
+            Kubernetes.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeManagement.UpgradeOptions">
+            <summary>Specifies the Auto Upgrade knobs for the node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodeManagement.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.NodePool">
+            <summary>NodePool contains the name and configuration for a cluster's node pool. Node pools are a set of nodes
+            (i.e. VM's), with a common configuration and specification, under the control of the cluster master. They may
+            have a set of Kubernetes labels applied to them, which may be used to reference them during pod scheduling. They
+            may also be resized up or down, to accommodate the workload.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.Autoscaling">
+            <summary>Autoscaler configuration for this NodePool. Autoscaler is enabled only if a valid configuration is
+            present.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.Config">
+            <summary>The node configuration of the pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.InitialNodeCount">
+            <summary>The initial node count for the pool. You must ensure that your Compute Engine resource quota is
+            sufficient for this number of instances. You must also have available firewall and routes quota.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.InstanceGroupUrls">
+            <summary>[Output only] The resource URLs of [instance groups](/compute/docs/instance-groups/) associated
+            with this node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.Management">
+            <summary>NodeManagement configuration for this NodePool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.Name">
+            <summary>The name of the node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.SelfLink">
+            <summary>[Output only] Server-defined URL for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.Status">
+            <summary>[Output only] The status of the nodes in this pool instance.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.StatusMessage">
+            <summary>[Output only] Additional information about the current status of this node pool instance, if
+            available.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.Version">
+            <summary>[Output only] The version of the Kubernetes of this node.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePool.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.NodePoolAutoscaling">
+            <summary>NodePoolAutoscaling contains information required by cluster autoscaler to adjust the size of the node
+            pool to the current cluster usage.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePoolAutoscaling.Enabled">
+            <summary>Is autoscaling enabled for this node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.NodePoolAutoscaling.MaxNodeCount">
+            <summary>Maximum number of nodes in the NodePool. Must be >= min_node_count. There has to enough quota to
+            scale up the cluster.</summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Google.Apis.Container.v1.Data.NodePoolAutoscaling.MinNodeCount" -->
+        <member name="P:Google.Apis.Container.v1.Data.NodePoolAutoscaling.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.Operation">
+            <summary>This operation resource represents operations that may have happened or are happening on the cluster.
+            All fields are output only.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.Detail">
+            <summary>Detailed operation progress, if available.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.EndTime">
+            <summary>[Output only] The time the operation completed, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+            text format.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.Name">
+            <summary>The server-assigned ID for the operation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.OperationType">
+            <summary>The operation type.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.SelfLink">
+            <summary>Server-defined URL for the resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.StartTime">
+            <summary>[Output only] The time the operation started, in [RFC3339](https://www.ietf.org/rfc/rfc3339.txt)
+            text format.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.Status">
+            <summary>The current status of the operation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.StatusMessage">
+            <summary>If an error has occurred, a textual description of the error.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.TargetLink">
+            <summary>Server-defined URL for the target of the operation.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.Zone">
+            <summary>The name of the Google Compute Engine [zone](/compute/docs/zones#available) in which the operation
+            is taking place.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.Operation.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.RollbackNodePoolUpgradeRequest">
+            <summary>RollbackNodePoolUpgradeRequest rollbacks the previously Aborted or Failed NodePool upgrade. This will
+            be an no-op if the last upgrade successfully completed.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.RollbackNodePoolUpgradeRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.ServerConfig">
+            <summary>Container Engine service configuration.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ServerConfig.DefaultClusterVersion">
+            <summary>Version of Kubernetes the service deploys by default.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ServerConfig.DefaultImageType">
+            <summary>Default image type.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ServerConfig.ValidImageTypes">
+            <summary>List of valid image types.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ServerConfig.ValidMasterVersions">
+            <summary>List of valid master versions.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ServerConfig.ValidNodeVersions">
+            <summary>List of valid node upgrade target versions.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.ServerConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetAddonsConfigRequest">
+            <summary>SetAddonsConfigRequest sets the addons associated with the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetAddonsConfigRequest.AddonsConfig">
+            <summary>The desired configurations for the various addons available to run in the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetAddonsConfigRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetLabelsRequest">
+            <summary>SetLabelsRequest sets the Google Cloud Platform labels on a Google Container Engine cluster, which will
+            in turn set them for Google Compute Engine resources used by that cluster</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLabelsRequest.LabelFingerprint">
+            <summary>The fingerprint of the previous set of labels for this resource, used to detect conflicts. The
+            fingerprint is initially generated by Container Engine and changes after every request to modify or update
+            labels. You must always provide an up-to-date fingerprint hash when updating or changing labels. Make a
+            get() request to the resource to get the latest fingerprint.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLabelsRequest.ResourceLabels">
+            <summary>The labels to set for that cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLabelsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetLegacyAbacRequest">
+            <summary>SetLegacyAbacRequest enables or disables the ABAC authorization mechanism for a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLegacyAbacRequest.Enabled">
+            <summary>Whether ABAC authorization will be enabled in the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLegacyAbacRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetLocationsRequest">
+            <summary>SetLocationsRequest sets the locations of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLocationsRequest.Locations">
+             <summary>The desired list of Google Compute Engine [locations](/compute/docs/zones#available) in which the
+             cluster's nodes should be located. Changing the locations a cluster is in will result in nodes being either
+             created or removed from the cluster, depending on whether locations are being added or removed.
+            
+             This list must always include the cluster's primary zone.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLocationsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetLoggingServiceRequest">
+            <summary>SetLoggingServiceRequest sets the logging service of a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLoggingServiceRequest.LoggingService">
+             <summary>The logging service the cluster should use to write metrics. Currently available options:
+            
+             * "logging.googleapis.com" - the Google Cloud Logging service * "none" - no metrics will be exported from
+             the cluster</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetLoggingServiceRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetMaintenancePolicyRequest">
+            <summary>SetMaintenancePolicyRequest sets the maintenance policy for a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetMaintenancePolicyRequest.MaintenancePolicy">
+            <summary>The maintenance policy to be set for the cluster. An empty field clears the existing maintenance
+            policy.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetMaintenancePolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetMasterAuthRequest">
+            <summary>SetMasterAuthRequest updates the admin password of a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetMasterAuthRequest.Action">
+            <summary>The exact form of action to be taken on the master auth</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetMasterAuthRequest.Update">
+            <summary>A description of the update.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetMasterAuthRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetMonitoringServiceRequest">
+            <summary>SetMonitoringServiceRequest sets the monitoring service of a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetMonitoringServiceRequest.MonitoringService">
+             <summary>The monitoring service the cluster should use to write metrics. Currently available options:
+            
+             * "monitoring.googleapis.com" - the Google Cloud Monitoring service * "none" - no metrics will be exported
+             from the cluster</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetMonitoringServiceRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetNetworkPolicyRequest">
+            <summary>SetNetworkPolicyRequest enables/disables network policy for a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetNetworkPolicyRequest.NetworkPolicy">
+            <summary>Configuration options for the NetworkPolicy feature.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetNetworkPolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetNodePoolAutoscalingRequest">
+            <summary>SetNodePoolAutoscalingRequest sets the autoscaler settings of a node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetNodePoolAutoscalingRequest.Autoscaling">
+            <summary>Autoscaling configuration for the node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetNodePoolAutoscalingRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetNodePoolManagementRequest">
+            <summary>SetNodePoolManagementRequest sets the node management properties of a node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetNodePoolManagementRequest.Management">
+            <summary>NodeManagement configuration for the node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetNodePoolManagementRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.SetNodePoolSizeRequest">
+            <summary>SetNodePoolSizeRequest sets the size a node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetNodePoolSizeRequest.NodeCount">
+            <summary>The desired node count for the pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.SetNodePoolSizeRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.StartIPRotationRequest">
+            <summary>StartIPRotationRequest creates a new IP for the cluster and then performs a node upgrade on each node
+            pool to point to the new IP.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.StartIPRotationRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.UpdateClusterRequest">
+            <summary>UpdateClusterRequest updates the settings of a cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.UpdateClusterRequest.Update">
+            <summary>A description of the update.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.UpdateClusterRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.UpdateMasterRequest">
+            <summary>UpdateMasterRequest updates the master of the cluster.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.UpdateMasterRequest.MasterVersion">
+            <summary>The Kubernetes version to change the master to. The only valid value is the latest supported
+            version. Use "-" to have the server automatically select the latest version.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.UpdateMasterRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Container.v1.Data.UpdateNodePoolRequest">
+            <summary>UpdateNodePoolRequests update a node pool's image and/or version.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.UpdateNodePoolRequest.ImageType">
+            <summary>The desired image type for the node pool.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.UpdateNodePoolRequest.NodeVersion">
+            <summary>The Kubernetes version to change the nodes to (typically an upgrade). Use `-` to upgrade to the
+            latest version supported by the server.</summary>
+        </member>
+        <member name="P:Google.Apis.Container.v1.Data.UpdateNodePoolRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+    </members>
+</doc>

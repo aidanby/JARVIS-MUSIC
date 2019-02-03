@@ -1,0 +1,1365 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Google.Apis.Pubsub.v1</name>
+    </assembly>
+    <members>
+        <member name="T:Google.Apis.Pubsub.v1.PubsubService">
+            <summary>The Pubsub Service.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubService.Version">
+            <summary>The API version.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubService.DiscoveryVersionUsed">
+            <summary>The discovery version used to generate this service.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.PubsubService.#ctor">
+            <summary>Constructs a new service.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.PubsubService.#ctor(Google.Apis.Services.BaseClientService.Initializer)">
+            <summary>Constructs a new service.</summary>
+            <param name="initializer">The service initializer.</param>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubService.Features">
+            <summary>Gets the service supported features.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubService.Name">
+            <summary>Gets the service name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubService.BaseUri">
+            <summary>Gets the service base URI.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubService.BasePath">
+            <summary>Gets the service base path.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubService.BatchUri">
+            <summary>Gets the batch base URI; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubService.BatchPath">
+            <summary>Gets the batch base path; <c>null</c> if unspecified.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.PubsubService.Scope">
+            <summary>Available OAuth 2.0 scopes for use with the Google Cloud Pub/Sub API.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubService.Scope.CloudPlatform">
+            <summary>View and manage your data across Google Cloud Platform services</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubService.Scope.Pubsub">
+            <summary>View and manage Pub/Sub topics and subscriptions</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubService.Projects">
+            <summary>Gets the Projects resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1">
+            <summary>A base abstract class for Pubsub requests.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new PubsubBaseServiceRequest instance.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.Xgafv">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.XgafvEnum">
+            <summary>V1 error format.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.XgafvEnum.Value1">
+            <summary>v1 error format</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.XgafvEnum.Value2">
+            <summary>v2 error format</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.AccessToken">
+            <summary>OAuth access token.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.Alt">
+            <summary>Data format for response.</summary>
+            [default: json]
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.AltEnum">
+            <summary>Data format for response.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.AltEnum.Json">
+            <summary>Responses with Content-Type of application/json</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.AltEnum.Media">
+            <summary>Media download with context-dependent Content-Type</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.AltEnum.Proto">
+            <summary>Responses with Content-Type of application/x-protobuf</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.BearerToken">
+            <summary>OAuth bearer token.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.Callback">
+            <summary>JSONP</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.Fields">
+            <summary>Selector specifying which fields to include in a partial response.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.Key">
+            <summary>API key. Your API key identifies your project and provides you with API access, quota, and reports.
+            Required unless you provide an OAuth 2.0 token.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.OauthToken">
+            <summary>OAuth 2.0 token for the current user.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.Pp">
+            <summary>Pretty-print response.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.PrettyPrint">
+            <summary>Returns response with indentations and line breaks.</summary>
+            [default: true]
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.QuotaUser">
+            <summary>Available to use for quota purposes for server-side applications. Can be any arbitrary string
+            assigned to a user, but should not exceed 40 characters.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.UploadType">
+            <summary>Legacy upload protocol for media (e.g. "media", "multipart").</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.UploadProtocol">
+            <summary>Upload protocol for media (e.g. "raw", "multipart").</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.PubsubBaseServiceRequest`1.InitParameters">
+            <summary>Initializes Pubsub parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource">
+            <summary>The "projects" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.ProjectsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.Snapshots">
+            <summary>Gets the Snapshots resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource">
+            <summary>The "snapshots" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.GetIamPolicy(System.String)">
+            <summary>Gets the access control policy for a resource. Returns an empty policy if the resource exists
+            and does not have a policy set.</summary>
+            <param name="resource">REQUIRED: The resource for which the policy is being requested. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.GetIamPolicyRequest">
+            <summary>Gets the access control policy for a resource. Returns an empty policy if the resource exists
+            and does not have a policy set.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new GetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.GetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.GetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.GetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.GetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.GetIamPolicyRequest.InitParameters">
+            <summary>Initializes GetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicy(Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Sets the access control policy on the specified resource. Replaces any existing
+            policy.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">REQUIRED: The resource for which the policy is being specified. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest">
+            <summary>Sets the access control policy on the specified resource. Replaces any existing
+            policy.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Constructs a new SetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being specified. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.SetIamPolicyRequest.InitParameters">
+            <summary>Initializes SetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissions(Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest,System.String)">
+             <summary>Returns permissions that a caller has on the specified resource. If the resource does not
+             exist, this will return an empty set of permissions, not a NOT_FOUND error.
+            
+             Note: This operation is designed to be used for building permission-aware UIs and command-line tools,
+             not for authorization checking. This operation may "fail open" without warning.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy detail is being requested. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest">
+             <summary>Returns permissions that a caller has on the specified resource. If the resource does not
+             exist, this will return an empty set of permissions, not a NOT_FOUND error.
+            
+             Note: This operation is designed to be used for building permission-aware UIs and command-line tools,
+             not for authorization checking. This operation may "fail open" without warning.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest,System.String)">
+            <summary>Constructs a new TestIamPermissions request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy detail is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SnapshotsResource.TestIamPermissionsRequest.InitParameters">
+            <summary>Initializes TestIamPermissions parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.Subscriptions">
+            <summary>Gets the Subscriptions resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource">
+            <summary>The "subscriptions" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.Acknowledge(Google.Apis.Pubsub.v1.Data.AcknowledgeRequest,System.String)">
+             <summary>Acknowledges the messages associated with the `ack_ids` in the `AcknowledgeRequest`. The
+             Pub/Sub system can remove the relevant messages from the subscription.
+            
+             Acknowledging a message whose ack deadline has expired may succeed, but such a message may be
+             redelivered later. Acknowledging a message more than once will not result in an error.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="subscription">The subscription whose message is being acknowledged. Format is
+             `projects/{project}/subscriptions/{sub}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest">
+             <summary>Acknowledges the messages associated with the `ack_ids` in the `AcknowledgeRequest`. The
+             Pub/Sub system can remove the relevant messages from the subscription.
+            
+             Acknowledging a message whose ack deadline has expired may succeed, but such a message may be
+             redelivered later. Acknowledging a message more than once will not result in an error.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.AcknowledgeRequest,System.String)">
+            <summary>Constructs a new Acknowledge request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest.Subscription">
+            <summary>The subscription whose message is being acknowledged. Format is
+            `projects/{project}/subscriptions/{sub}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.AcknowledgeRequest.InitParameters">
+            <summary>Initializes Acknowledge parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.Create(Google.Apis.Pubsub.v1.Data.Subscription,System.String)">
+             <summary>Creates a subscription to a given topic. If the subscription already exists, returns
+             `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+            
+             If the name is not provided in the request, the server will assign a random name for this subscription
+             on the same project as the topic, conforming to the [resource name
+             format](https://cloud.google.com/pubsub/docs/overview#names). The generated name is populated in the
+             returned Subscription object. Note that for REST API requests, you must specify a name in the
+             request.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="name">The name of the subscription. It must have the format
+             `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter, and contain only
+             letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or
+             percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start with
+             `"goog"`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest">
+             <summary>Creates a subscription to a given topic. If the subscription already exists, returns
+             `ALREADY_EXISTS`. If the corresponding topic doesn't exist, returns `NOT_FOUND`.
+            
+             If the name is not provided in the request, the server will assign a random name for this subscription
+             on the same project as the topic, conforming to the [resource name
+             format](https://cloud.google.com/pubsub/docs/overview#names). The generated name is populated in the
+             returned Subscription object. Note that for REST API requests, you must specify a name in the
+             request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.Subscription,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest.Name">
+            <summary>The name of the subscription. It must have the format
+            `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter, and
+            contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods
+            (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in
+            length, and it must not start with `"goog"`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.Delete(System.String)">
+            <summary>Deletes an existing subscription. All messages retained in the subscription are immediately
+            dropped. Calls to `Pull` after deletion will return `NOT_FOUND`. After a subscription is deleted, a new
+            one may be created with the same name, but the new one has no association with the old subscription or
+            its topic unless the same topic is specified.</summary>
+            <param name="subscription">The subscription to delete. Format is
+            `projects/{project}/subscriptions/{sub}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.DeleteRequest">
+            <summary>Deletes an existing subscription. All messages retained in the subscription are immediately
+            dropped. Calls to `Pull` after deletion will return `NOT_FOUND`. After a subscription is deleted, a new
+            one may be created with the same name, but the new one has no association with the old subscription or
+            its topic unless the same topic is specified.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.DeleteRequest.Subscription">
+            <summary>The subscription to delete. Format is `projects/{project}/subscriptions/{sub}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.Get(System.String)">
+            <summary>Gets the configuration details of a subscription.</summary>
+            <param name="subscription">The name of the subscription to get. Format is
+            `projects/{project}/subscriptions/{sub}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetRequest">
+            <summary>Gets the configuration details of a subscription.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetRequest.Subscription">
+            <summary>The name of the subscription to get. Format is
+            `projects/{project}/subscriptions/{sub}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetIamPolicy(System.String)">
+            <summary>Gets the access control policy for a resource. Returns an empty policy if the resource exists
+            and does not have a policy set.</summary>
+            <param name="resource">REQUIRED: The resource for which the policy is being requested. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetIamPolicyRequest">
+            <summary>Gets the access control policy for a resource. Returns an empty policy if the resource exists
+            and does not have a policy set.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new GetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.GetIamPolicyRequest.InitParameters">
+            <summary>Initializes GetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.List(System.String)">
+            <summary>Lists matching subscriptions.</summary>
+            <param name="project">The name of the cloud project that subscriptions belong to. Format is
+            `projects/{project}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest">
+            <summary>Lists matching subscriptions.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest.Project">
+            <summary>The name of the cloud project that subscriptions belong to. Format is
+            `projects/{project}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest.PageToken">
+            <summary>The value returned by the last `ListSubscriptionsResponse`; indicates that this is a
+            continuation of a prior `ListSubscriptions` call, and that the system should return the next page of
+            data.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest.PageSize">
+            <summary>Maximum number of subscriptions to return.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadline(Google.Apis.Pubsub.v1.Data.ModifyAckDeadlineRequest,System.String)">
+            <summary>Modifies the ack deadline for a specific message. This method is useful to indicate that more
+            time is needed to process a message by the subscriber, or to make the message available for redelivery
+            if the processing was interrupted. Note that this does not modify the subscription-level
+            `ackDeadlineSeconds` used for subsequent messages.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="subscription">The name of the subscription. Format is
+            `projects/{project}/subscriptions/{sub}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest">
+            <summary>Modifies the ack deadline for a specific message. This method is useful to indicate that more
+            time is needed to process a message by the subscriber, or to make the message available for redelivery
+            if the processing was interrupted. Note that this does not modify the subscription-level
+            `ackDeadlineSeconds` used for subsequent messages.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.ModifyAckDeadlineRequest,System.String)">
+            <summary>Constructs a new ModifyAckDeadline request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest.Subscription">
+            <summary>The name of the subscription. Format is `projects/{project}/subscriptions/{sub}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyAckDeadlineRequest.InitParameters">
+            <summary>Initializes ModifyAckDeadline parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfig(Google.Apis.Pubsub.v1.Data.ModifyPushConfigRequest,System.String)">
+             <summary>Modifies the `PushConfig` for a specified subscription.
+            
+             This may be used to change a push subscription to a pull one (signified by an empty `PushConfig`) or
+             vice versa, or change the endpoint URL and other attributes of a push subscription. Messages will
+             accumulate for delivery continuously through the call regardless of changes to the
+             `PushConfig`.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="subscription">The name of the subscription. Format is
+             `projects/{project}/subscriptions/{sub}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest">
+             <summary>Modifies the `PushConfig` for a specified subscription.
+            
+             This may be used to change a push subscription to a pull one (signified by an empty `PushConfig`) or
+             vice versa, or change the endpoint URL and other attributes of a push subscription. Messages will
+             accumulate for delivery continuously through the call regardless of changes to the
+             `PushConfig`.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.ModifyPushConfigRequest,System.String)">
+            <summary>Constructs a new ModifyPushConfig request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest.Subscription">
+            <summary>The name of the subscription. Format is `projects/{project}/subscriptions/{sub}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.ModifyPushConfigRequest.InitParameters">
+            <summary>Initializes ModifyPushConfig parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.Pull(Google.Apis.Pubsub.v1.Data.PullRequest,System.String)">
+            <summary>Pulls messages from the server. Returns an empty list if there are no messages available in the
+            backlog. The server may return `UNAVAILABLE` if there are too many concurrent pull requests pending for
+            the given subscription.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="subscription">The subscription from which messages should be pulled. Format is
+            `projects/{project}/subscriptions/{sub}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest">
+            <summary>Pulls messages from the server. Returns an empty list if there are no messages available in the
+            backlog. The server may return `UNAVAILABLE` if there are too many concurrent pull requests pending for
+            the given subscription.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.PullRequest,System.String)">
+            <summary>Constructs a new Pull request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest.Subscription">
+            <summary>The subscription from which messages should be pulled. Format is
+            `projects/{project}/subscriptions/{sub}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.PullRequest.InitParameters">
+            <summary>Initializes Pull parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicy(Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Sets the access control policy on the specified resource. Replaces any existing
+            policy.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">REQUIRED: The resource for which the policy is being specified. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest">
+            <summary>Sets the access control policy on the specified resource. Replaces any existing
+            policy.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Constructs a new SetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being specified. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.SetIamPolicyRequest.InitParameters">
+            <summary>Initializes SetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissions(Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest,System.String)">
+             <summary>Returns permissions that a caller has on the specified resource. If the resource does not
+             exist, this will return an empty set of permissions, not a NOT_FOUND error.
+            
+             Note: This operation is designed to be used for building permission-aware UIs and command-line tools,
+             not for authorization checking. This operation may "fail open" without warning.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy detail is being requested. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest">
+             <summary>Returns permissions that a caller has on the specified resource. If the resource does not
+             exist, this will return an empty set of permissions, not a NOT_FOUND error.
+            
+             Note: This operation is designed to be used for building permission-aware UIs and command-line tools,
+             not for authorization checking. This operation may "fail open" without warning.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest,System.String)">
+            <summary>Constructs a new TestIamPermissions request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy detail is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.SubscriptionsResource.TestIamPermissionsRequest.InitParameters">
+            <summary>Initializes TestIamPermissions parameter list.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.Topics">
+            <summary>Gets the Topics resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource">
+            <summary>The "topics" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.Subscriptions">
+            <summary>Gets the Subscriptions resource.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource">
+            <summary>The "subscriptions" collection of methods.</summary>
+        </member>
+        <member name="F:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.service">
+            <summary>The service which this resource belongs to.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.#ctor(Google.Apis.Services.IClientService)">
+            <summary>Constructs a new resource.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.List(System.String)">
+            <summary>Lists the name of the subscriptions for this topic.</summary>
+            <param name="topic">The name of the topic that subscriptions are attached to. Format is
+            `projects/{project}/topics/{topic}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest">
+            <summary>Lists the name of the subscriptions for this topic.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest.Topic">
+            <summary>The name of the topic that subscriptions are attached to. Format is
+            `projects/{project}/topics/{topic}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest.PageToken">
+            <summary>The value returned by the last `ListTopicSubscriptionsResponse`; indicates that this is
+            a continuation of a prior `ListTopicSubscriptions` call, and that the system should return the
+            next page of data.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest.PageSize">
+            <summary>Maximum number of subscription names to return.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SubscriptionsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.Create(Google.Apis.Pubsub.v1.Data.Topic,System.String)">
+            <summary>Creates the given topic with the given name.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="name">The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}`
+            must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`),
+            periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length,
+            and it must not start with `"goog"`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest">
+            <summary>Creates the given topic with the given name.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.Topic,System.String)">
+            <summary>Constructs a new Create request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest.Name">
+            <summary>The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`.
+            `{topic}` must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes
+            (`-`), underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be
+            between 3 and 255 characters in length, and it must not start with `"goog"`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.CreateRequest.InitParameters">
+            <summary>Initializes Create parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.Delete(System.String)">
+            <summary>Deletes the topic with the given name. Returns `NOT_FOUND` if the topic does not exist. After a
+            topic is deleted, a new topic may be created with the same name; this is an entirely new topic with none
+            of the old configuration or subscriptions. Existing subscriptions to this topic are not deleted, but
+            their `topic` field is set to `_deleted-topic_`.</summary>
+            <param name="topic">Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.DeleteRequest">
+            <summary>Deletes the topic with the given name. Returns `NOT_FOUND` if the topic does not exist. After a
+            topic is deleted, a new topic may be created with the same name; this is an entirely new topic with none
+            of the old configuration or subscriptions. Existing subscriptions to this topic are not deleted, but
+            their `topic` field is set to `_deleted-topic_`.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.DeleteRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Delete request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.DeleteRequest.Topic">
+            <summary>Name of the topic to delete. Format is `projects/{project}/topics/{topic}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.DeleteRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.DeleteRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.DeleteRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.DeleteRequest.InitParameters">
+            <summary>Initializes Delete parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.Get(System.String)">
+            <summary>Gets the configuration of a topic.</summary>
+            <param name="topic">The name of the topic to get. Format is `projects/{project}/topics/{topic}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetRequest">
+            <summary>Gets the configuration of a topic.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new Get request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetRequest.Topic">
+            <summary>The name of the topic to get. Format is `projects/{project}/topics/{topic}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetRequest.InitParameters">
+            <summary>Initializes Get parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetIamPolicy(System.String)">
+            <summary>Gets the access control policy for a resource. Returns an empty policy if the resource exists
+            and does not have a policy set.</summary>
+            <param name="resource">REQUIRED: The resource for which the policy is being requested. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetIamPolicyRequest">
+            <summary>Gets the access control policy for a resource. Returns an empty policy if the resource exists
+            and does not have a policy set.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new GetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.GetIamPolicyRequest.InitParameters">
+            <summary>Initializes GetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.List(System.String)">
+            <summary>Lists matching topics.</summary>
+            <param name="project">The name of the cloud project that topics belong to. Format is
+            `projects/{project}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest">
+            <summary>Lists matching topics.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest.#ctor(Google.Apis.Services.IClientService,System.String)">
+            <summary>Constructs a new List request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest.Project">
+            <summary>The name of the cloud project that topics belong to. Format is
+            `projects/{project}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest.PageToken">
+            <summary>The value returned by the last `ListTopicsResponse`; indicates that this is a continuation
+            of a prior `ListTopics` call, and that the system should return the next page of data.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest.PageSize">
+            <summary>Maximum number of topics to return.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.ListRequest.InitParameters">
+            <summary>Initializes List parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.Publish(Google.Apis.Pubsub.v1.Data.PublishRequest,System.String)">
+            <summary>Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic does not exist. The
+            message payload must not be empty; it must contain either a non-empty data field, or at least one
+            attribute.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="topic">The messages in the request will be published on this topic. Format is
+            `projects/{project}/topics/{topic}`.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest">
+            <summary>Adds one or more messages to the topic. Returns `NOT_FOUND` if the topic does not exist. The
+            message payload must not be empty; it must contain either a non-empty data field, or at least one
+            attribute.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.PublishRequest,System.String)">
+            <summary>Constructs a new Publish request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest.Topic">
+            <summary>The messages in the request will be published on this topic. Format is
+            `projects/{project}/topics/{topic}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.PublishRequest.InitParameters">
+            <summary>Initializes Publish parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicy(Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Sets the access control policy on the specified resource. Replaces any existing
+            policy.</summary>
+            <param name="body">The body of the request.</param>
+            <param name="resource">REQUIRED: The resource for which the policy is being specified. See the operation
+            documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest">
+            <summary>Sets the access control policy on the specified resource. Replaces any existing
+            policy.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest,System.String)">
+            <summary>Constructs a new SetIamPolicy request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy is being specified. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.SetIamPolicyRequest.InitParameters">
+            <summary>Initializes SetIamPolicy parameter list.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissions(Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest,System.String)">
+             <summary>Returns permissions that a caller has on the specified resource. If the resource does not
+             exist, this will return an empty set of permissions, not a NOT_FOUND error.
+            
+             Note: This operation is designed to be used for building permission-aware UIs and command-line tools,
+             not for authorization checking. This operation may "fail open" without warning.</summary>
+             <param name="body">The body of the request.</param>
+             <param name="resource">REQUIRED: The resource for which the policy detail is being requested. See the operation
+             documentation for the appropriate value for this field.</param>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest">
+             <summary>Returns permissions that a caller has on the specified resource. If the resource does not
+             exist, this will return an empty set of permissions, not a NOT_FOUND error.
+            
+             Note: This operation is designed to be used for building permission-aware UIs and command-line tools,
+             not for authorization checking. This operation may "fail open" without warning.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest.#ctor(Google.Apis.Services.IClientService,Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest,System.String)">
+            <summary>Constructs a new TestIamPermissions request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest.Resource">
+            <summary>REQUIRED: The resource for which the policy detail is being requested. See the operation
+            documentation for the appropriate value for this field.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest.Body">
+            <summary>Gets or sets the body of this request.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest.GetBody">
+            <summary>Returns the body of the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest.MethodName">
+            <summary>Gets the method name.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest.HttpMethod">
+            <summary>Gets the HTTP method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest.RestPath">
+            <summary>Gets the REST path.</summary>
+        </member>
+        <member name="M:Google.Apis.Pubsub.v1.ProjectsResource.TopicsResource.TestIamPermissionsRequest.InitParameters">
+            <summary>Initializes TestIamPermissions parameter list.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.AcknowledgeRequest">
+            <summary>Request for the Acknowledge method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.AcknowledgeRequest.AckIds">
+            <summary>The acknowledgment ID for the messages being acknowledged that was returned by the Pub/Sub system
+            in the `Pull` response. Must not be empty.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.AcknowledgeRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.Binding">
+            <summary>Associates `members` with a `role`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Binding.Members">
+             <summary>Specifies the identities requesting access for a Cloud Platform resource. `members` can have the
+             following values:
+            
+             * `allUsers`: A special identifier that represents anyone who is on the internet; with or without a Google
+             account.
+            
+             * `allAuthenticatedUsers`: A special identifier that represents anyone who is authenticated with a Google
+             account or a service account.
+            
+             * `user:{emailid}`: An email address that represents a specific Google account. For example,
+             `alice@gmail.com` or `joe@example.com`.
+            
+             * `serviceAccount:{emailid}`: An email address that represents a service account. For example, `my-other-
+             app@appspot.gserviceaccount.com`.
+            
+             * `group:{emailid}`: An email address that represents a Google group. For example, `admins@example.com`.
+            
+             * `domain:{domain}`: A Google Apps domain name that represents all the users of that domain. For example,
+             `google.com` or `example.com`.
+            
+             </summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Binding.Role">
+            <summary>Role that is assigned to `members`. For example, `roles/viewer`, `roles/editor`, or `roles/owner`.
+            Required</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Binding.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.Empty">
+             <summary>A generic empty message that you can re-use to avoid defining duplicated empty messages in your APIs. A
+             typical example is to use it as the request or the response type of an API method. For instance:
+            
+             service Foo { rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty); }
+            
+             The JSON representation for `Empty` is empty JSON object `{}`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Empty.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.ListSubscriptionsResponse">
+            <summary>Response for the `ListSubscriptions` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListSubscriptionsResponse.NextPageToken">
+            <summary>If not empty, indicates that there may be more subscriptions that match the request; this value
+            should be passed in a new `ListSubscriptionsRequest` to get more subscriptions.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListSubscriptionsResponse.Subscriptions">
+            <summary>The subscriptions that match the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListSubscriptionsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.ListTopicSubscriptionsResponse">
+            <summary>Response for the `ListTopicSubscriptions` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListTopicSubscriptionsResponse.NextPageToken">
+            <summary>If not empty, indicates that there may be more subscriptions that match the request; this value
+            should be passed in a new `ListTopicSubscriptionsRequest` to get more subscriptions.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListTopicSubscriptionsResponse.Subscriptions">
+            <summary>The names of the subscriptions that match the request.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListTopicSubscriptionsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.ListTopicsResponse">
+            <summary>Response for the `ListTopics` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListTopicsResponse.NextPageToken">
+            <summary>If not empty, indicates that there may be more topics that match the request; this value should be
+            passed in a new `ListTopicsRequest`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListTopicsResponse.Topics">
+            <summary>The resulting topics.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ListTopicsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.ModifyAckDeadlineRequest">
+            <summary>Request for the ModifyAckDeadline method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ModifyAckDeadlineRequest.AckDeadlineSeconds">
+            <summary>The new ack deadline with respect to the time this request was sent to the Pub/Sub system. For
+            example, if the value is 10, the new ack deadline will expire 10 seconds after the `ModifyAckDeadline` call
+            was made. Specifying zero may immediately make the message available for another pull request. The minimum
+            deadline you can specify is 0 seconds. The maximum deadline you can specify is 600 seconds (10
+            minutes).</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ModifyAckDeadlineRequest.AckIds">
+            <summary>List of acknowledgment IDs.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ModifyAckDeadlineRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.ModifyPushConfigRequest">
+            <summary>Request for the ModifyPushConfig method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ModifyPushConfigRequest.PushConfig">
+             <summary>The push configuration for future deliveries.
+            
+             An empty `pushConfig` indicates that the Pub/Sub system should stop pushing messages from the given
+             subscription and allow messages to be pulled and acknowledged - effectively pausing the subscription if
+             `Pull` or `StreamingPull` is not called.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ModifyPushConfigRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.Policy">
+             <summary>Defines an Identity and Access Management (IAM) policy. It is used to specify access control policies
+             for Cloud Platform resources.
+            
+             A `Policy` consists of a list of `bindings`. A `Binding` binds a list of `members` to a `role`, where the
+             members can be user accounts, Google groups, Google domains, and service accounts. A `role` is a named list of
+             permissions defined by IAM.
+            
+             **Example**
+            
+             { "bindings": [ { "role": "roles/owner", "members": [ "user:mike@example.com", "group:admins@example.com",
+             "domain:google.com", "serviceAccount:my-other-app@appspot.gserviceaccount.com", ] }, { "role": "roles/viewer",
+             "members": ["user:sean@example.com"] } ] }
+            
+             For a description of IAM and its features, see the [IAM developer's
+             guide](https://cloud.google.com/iam).</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Policy.Bindings">
+            <summary>Associates a list of `members` to a `role`. `bindings` with no members will result in an
+            error.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Policy.ETag">
+             <summary>`etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of
+             a policy from overwriting each other. It is strongly suggested that systems make use of the `etag` in the
+             read-modify-write cycle to perform policy updates in order to avoid race conditions: An `etag` is returned
+             in the response to `getIamPolicy`, and systems are expected to put that etag in the request to
+             `setIamPolicy` to ensure that their change will be applied to the same version of the policy.
+            
+             If no `etag` is provided in the call to `setIamPolicy`, then the existing policy is overwritten
+             blindly.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Policy.Version">
+            <summary>Version of the `Policy`. The default version is 0.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.PublishRequest">
+            <summary>Request for the Publish method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PublishRequest.Messages">
+            <summary>The messages to publish.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PublishRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.PublishResponse">
+            <summary>Response for the `Publish` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PublishResponse.MessageIds">
+            <summary>The server-assigned ID of each published message, in the same order as the messages in the request.
+            IDs are guaranteed to be unique within the topic.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PublishResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.PubsubMessage">
+            <summary>A message data and its attributes. The message payload must not be empty; it must contain either a non-
+            empty data field, or at least one attribute.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PubsubMessage.Attributes">
+            <summary>Optional attributes for this message.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PubsubMessage.Data">
+            <summary>The message payload.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PubsubMessage.MessageId">
+            <summary>ID of this message, assigned by the server when the message is published. Guaranteed to be unique
+            within the topic. This value may be read by a subscriber that receives a `PubsubMessage` via a `Pull` call
+            or a push delivery. It must not be populated by the publisher in a `Publish` call.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PubsubMessage.PublishTime">
+            <summary>The time at which the message was published, populated by the server when it receives the `Publish`
+            call. It must not be populated by the publisher in a `Publish` call.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PubsubMessage.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.PullRequest">
+            <summary>Request for the `Pull` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PullRequest.MaxMessages">
+            <summary>The maximum number of messages returned for this request. The Pub/Sub system may return fewer than
+            the number specified.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PullRequest.ReturnImmediately">
+            <summary>If this field set to true, the system will respond immediately even if it there are no messages
+            available to return in the `Pull` response. Otherwise, the system may wait (for a bounded amount of time)
+            until at least one message is available, rather than returning no messages. The client may cancel the
+            request if it does not wish to wait any longer for the response.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PullRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.PullResponse">
+            <summary>Response for the `Pull` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PullResponse.ReceivedMessages">
+            <summary>Received Pub/Sub messages. The Pub/Sub system will return zero messages if there are no more
+            available in the backlog. The Pub/Sub system may return fewer than the `maxMessages` requested even if there
+            are more messages available in the backlog.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PullResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.PushConfig">
+            <summary>Configuration for a push delivery endpoint.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PushConfig.Attributes">
+             <summary>Endpoint configuration attributes.
+            
+             Every endpoint has a set of API supported attributes that can be used to control different aspects of the
+             message delivery.
+            
+             The currently supported attribute is `x-goog-version`, which you can use to change the format of the pushed
+             message. This attribute indicates the version of the data expected by the endpoint. This controls the shape
+             of the pushed message (i.e., its fields and metadata). The endpoint version is based on the version of the
+             Pub/Sub API.
+            
+             If not present during the `CreateSubscription` call, it will default to the version of the API used to make
+             such call. If not present during a `ModifyPushConfig` call, its value will not be changed. `GetSubscription`
+             calls will always return a valid version, even if the subscription was created without this attribute.
+            
+             The possible values for this attribute are:
+            
+             * `v1beta1`: uses the push format defined in the v1beta1 Pub/Sub API. * `v1` or `v1beta2`: uses the push
+             format defined in the v1 Pub/Sub API.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PushConfig.PushEndpoint">
+            <summary>A URL locating the endpoint to which messages should be pushed. For example, a Webhook endpoint
+            might use "https://example.com/push".</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.PushConfig.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.ReceivedMessage">
+            <summary>A message and its corresponding acknowledgment ID.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ReceivedMessage.AckId">
+            <summary>This ID can be used to acknowledge the received message.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ReceivedMessage.Message">
+            <summary>The message.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.ReceivedMessage.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest">
+            <summary>Request message for `SetIamPolicy` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest.Policy">
+            <summary>REQUIRED: The complete policy to be applied to the `resource`. The size of the policy is limited to
+            a few 10s of KB. An empty policy is a valid policy but certain Cloud Platform services (such as Projects)
+            might reject them.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.SetIamPolicyRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.Subscription">
+            <summary>A subscription resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Subscription.AckDeadlineSeconds">
+             <summary>This value is the maximum time after a subscriber receives a message before the subscriber should
+             acknowledge the message. After message delivery but before the ack deadline expires and before the message
+             is acknowledged, it is an outstanding message and will not be delivered again during that time (on a best-
+             effort basis).
+            
+             For pull subscriptions, this value is used as the initial value for the ack deadline. To override this value
+             for a given message, call `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming pull or
+             send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using streaming pull. The minimum custom
+             deadline you can specify is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10
+             minutes). If this parameter is 0, a default value of 10 seconds is used.
+            
+             For push delivery, this value is also used to set the request timeout for the call to the push endpoint.
+            
+             If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
+             message.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Subscription.Name">
+            <summary>The name of the subscription. It must have the format
+            `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must start with a letter, and contain
+            only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
+            plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters in length, and it must not start
+            with `"goog"`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Subscription.PushConfig">
+            <summary>If push delivery is used with this subscription, this field is used to configure it. An empty
+            `pushConfig` signifies that the subscriber will pull and ack messages using API methods.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Subscription.Topic">
+            <summary>The name of the topic from which this subscription is receiving messages. Format is
+            `projects/{project}/topics/{topic}`. The value of this field will be `_deleted-topic_` if the topic has been
+            deleted.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Subscription.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest">
+            <summary>Request message for `TestIamPermissions` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest.Permissions">
+            <summary>The set of permissions to check for the `resource`. Permissions with wildcards (such as '*' or
+            'storage.*') are not allowed. For more information see [IAM
+            Overview](https://cloud.google.com/iam/docs/overview#permissions).</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.TestIamPermissionsRequest.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.TestIamPermissionsResponse">
+            <summary>Response message for `TestIamPermissions` method.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.TestIamPermissionsResponse.Permissions">
+            <summary>A subset of `TestPermissionsRequest.permissions` that the caller is allowed.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.TestIamPermissionsResponse.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+        <member name="T:Google.Apis.Pubsub.v1.Data.Topic">
+            <summary>A topic resource.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Topic.Name">
+            <summary>The name of the topic. It must have the format `"projects/{project}/topics/{topic}"`. `{topic}`
+            must start with a letter, and contain only letters (`[A-Za-z]`), numbers (`[0-9]`), dashes (`-`),
+            underscores (`_`), periods (`.`), tildes (`~`), plus (`+`) or percent signs (`%`). It must be between 3 and
+            255 characters in length, and it must not start with `"goog"`.</summary>
+        </member>
+        <member name="P:Google.Apis.Pubsub.v1.Data.Topic.ETag">
+            <summary>The ETag of the item.</summary>
+        </member>
+    </members>
+</doc>
