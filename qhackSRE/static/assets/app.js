@@ -128,7 +128,10 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
         type: 'POST',
         async: true,
         success: function(returnedData){
-            alert(returnedData);
+            // console.log("Hello World")
+            console.log(returnedData.translation)
+            document.getElementById('user_text').value = returnedData.translation
+//            alert(returnedData);
         },
         error: function(request, status, error){
             if(request.responseText.length < 100){
