@@ -3,9 +3,12 @@ from django.http import HttpResponse
 from django.template import loader
 from django.core.files.storage import FileSystemStorage
 from lyricsMatch.semantic_search.unsupervised_search import search_lyrics
+from django.template import RequestContext
+from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
+    context_instance=RequestContext(request)
     template = loader.get_template('lyricsMatch/index.html')
     context = {'user_text': "This is a test"}
     return HttpResponse(template.render(context, request))
@@ -33,13 +36,23 @@ def find_lyrics(request):
 
 
 def save_audio_file(request):
-    audio_file = request.FILES['audio']
-    print(audio_file.name)
+    audio_file = request.body
     fs = FileSystemStorage()
-    file_name = fs.save(audio_file.name, audio_file)
+    f = open('audio.flac', 'wb')
+    f.write(audio_file)
+    f.close()
+    print('finish output')
+    #file_name = fs.save('audio', audio_file)
     template = loader.get_template('lyricsMatch/index.html')
     context = {'translated_text': "voice_to_text"}
     return HttpResponse(template.render(context, request))
+    #audio_file = request.FILES['audio']
+    #print(audio_file.name)
+    #fs = FileSystemStorage()
+    #file_name = fs.save(audio_file.name, audio_file)
+    #template = loader.get_template('lyricsMatch/index.html')
+    #context = {'translated_text': "voice_to_text"}
+    #return HttpResponse(template.render(context, request))
 
 
 

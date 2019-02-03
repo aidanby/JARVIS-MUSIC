@@ -15,7 +15,7 @@
 
         <!--<script src="{% static 'assets/libflac3-1.3.2.min.js.mem' %}"></script>-->
         <!--<script src="{% static 'assets/libflac3-1.3.2.min.js' %}"></script>-->
-		<script src="{% static 'assets/encoder.js' %}"></script>
+		<!--script src="{% static 'assets/encoder.js' %}"></script-->
 		<script src="{% static 'assets/app.js' %}"></script>
 
 		<style type="text/css" .red-btn { color: #D00000; } .green-btn { color: #00D000; } .blue-btn { color: #0000D0; } .inline { display: inline; } .code-em{ font-family: monospace; }> </style>
@@ -31,7 +31,8 @@
 				
 			</div>
 			<div class="row">
-				<div class="offset3 span3 text-center"><button class="btn" ng-click="startRecording()" ng-disabled="recording"><i class="icon-circle" ng-class="recordButtonStyle"></i>&nbsp;Start recording</button></div>
+				<div class="offset3 span3 text-center"><button class="btn" ng-click="startRecording()" ng-disabled="recording"> {% csrf_token %} 
+                        <i class="icon-circle" ng-class="recordButtonStyle"></i>&nbsp;Start recording</button></div>
 				<div class="span3 text-center"><button class="btn" ng-click="stopRecording()" ng-disabled="!recording"><i class="icon-download-alt"></i>&nbsp;Stop recording</button></div>
 			</div>
 			<div class="row">

@@ -1,3 +1,5 @@
+importScripts('libflac3-1.3.2.min.js');
+
 var flac_encoder,
 	BUFSIZE = 4096,
 	CHANNELS = 1,

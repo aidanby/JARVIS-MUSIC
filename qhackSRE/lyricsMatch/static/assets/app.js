@@ -1,4 +1,35 @@
 var recorderApp = angular.module('recorder', [ ]);
+// using jQuery
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+
 
 recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 	$scope.audio_context = null;
@@ -85,7 +116,26 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 				if(resultMode === 'file'){
 
 	                var fname = $scope.wav_format ? $scope.outfilename_wav : $scope.outfilename_flac;
-					$scope.forceDownload(e.data.buf, fname);
+        var data = new FormData();
+		data.append('audio', e.data.buf)
+		console.log(typeof e.data.buf)
+		$.ajax({
+        url: 'http://127.0.0.1:8000/lyricsmatch/audioupload/',
+        data: e.data.buf,
+        cache: false,
+        contentType: true,
+        processData: false,
+        type: 'POST',
+        async: true,
+        success: function(returnedData){
+            alert(returnedData);
+        },
+        error: function(request, status, error){
+            if(request.responseText.length < 100){
+            }
+        }
+	});
+					//$scope.forceDownload(e.data.buf, fname);
 					
 				}
 				else if(resultMode === 'asr'){
@@ -211,28 +261,6 @@ recorderApp.controller('RecorderController', [ '$scope' , function($scope) {
 	
 	//create A-element for data BLOB and trigger download
 		$scope.forceDownload = function(blob, filename){
-			 var data = new FormData();
-			 data.append('audio', blob)
-			console.log(typeof blob)
-    var data = new FormData();
-		data.append('audio', blob)
-		console.log(typeof blob)
-		$.ajax({
-        url: 'http://127.0.0.1:8000/lyricsmatch/audioupload',
-        data: data,
-        cache: false,
-        contentType: true,
-        processData: false,
-        type: 'POST',
-        async: true,
-        success: function(returnedData){
-            alert(returnedData);
-        },
-        error: function(request, status, error){
-            if(request.responseText.length < 100){
-            }
-        }
-	});
 
 		 
 		 var url = (window.URL || window.webkitURL).createObjectURL(blob);
